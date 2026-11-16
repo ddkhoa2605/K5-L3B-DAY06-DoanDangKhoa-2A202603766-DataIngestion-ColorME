@@ -1,0 +1,21 @@
+{
+  "collection": "colorme3_B4",
+  "chunks": 457,
+  "by_content_type": {
+    "visual": 276,
+    "text": 181
+  },
+  "embed_tokens": 132815,
+  "time_s": 6.0,
+  "upsert_first": {
+    "before": 0,
+    "after": 457,
+    "stale_deleted": 0
+  },
+  "upsert_reload": {
+    "before": 457,
+    "after": 457,
+    "stale_deleted": 0
+  },
+  "run_at": "2026-11-15T18:09:14+00:00"
+}

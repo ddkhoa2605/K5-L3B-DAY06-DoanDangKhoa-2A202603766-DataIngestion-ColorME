@@ -1,0 +1,372 @@
+{
+  "v2_mini": {
+    "model": "gpt-4.1-mini",
+    "prompt": "v2",
+    "pass": 12,
+    "N": 13,
+    "cost_usd_10_pages": 0.0222,
+    "rows": [
+      {
+        "page": 9,
+        "fact": "10 lý do kèm 10 biểu tượng (không phải 11)",
+        "pass": false
+      },
+      {
+        "page": 12,
+        "fact": "6 ảnh 50/100/150/200/250/300 pixels per inch",
+        "pass": true
+      },
+      {
+        "page": 42,
+        "fact": "simmer 20 to 30 minutes; recipes serve 4",
+        "pass": true
+      },
+      {
+        "page": 57,
+        "fact": "vòng 12 ô; 3 ô đậm vàng, đỏ, xanh dương",
+        "pass": true
+      },
+      {
+        "page": 63,
+        "fact": "supercolor 50 COLORS. 50 CHOICES.",
+        "pass": true
+      },
+      {
+        "page": 68,
+        "fact": "3 vòng tròn màu",
+        "pass": true
+      },
+      {
+        "page": 82,
+        "fact": "7 chai neon: đỏ, cam, vàng, xanh lá, xanh dương, tím, hồng",
+        "pass": true
+      },
+      {
+        "page": 149,
+        "fact": "2 logo nền xanh dương (Windows, Apple) + 7 logo nền xanh lá",
+        "pass": true
+      },
+      {
+        "page": 150,
+        "fact": "8 biểu tượng trắng trên nền tròn đỏ",
+        "pass": true
+      },
+      {
+        "page": 49,
+        "fact": "gương mặt Brad Pitt ở điểm giao trên bên trái",
+        "pass": true
+      },
+      {
+        "page": 6,
+        "fact": "bong bóng xanh lá (Thiết kế ấn phẩm truyền thông) lớn nhất",
+        "pass": true
+      },
+      {
+        "page": 50,
+        "fact": "gương mặt Santa ở điểm giao dưới bên trái",
+        "pass": true
+      },
+      {
+        "page": 10,
+        "fact": "lưới pixel 21 dòng x 19 cột",
+        "pass": true
+      }
+    ]
+  },
+  "v3_mini": {
+    "model": "gpt-4.1-mini",
+    "prompt": "v3",
+    "pass": 12,
+    "N": 13,
+    "cost_usd_10_pages": 0.0244,
+    "rows": [
+      {
+        "page": 9,
+        "fact": "10 lý do kèm 10 biểu tượng (không phải 11)",
+        "pass": false
+      },
+      {
+        "page": 12,
+        "fact": "6 ảnh 50/100/150/200/250/300 pixels per inch",
+        "pass": true
+      },
+      {
+        "page": 42,
+        "fact": "simmer 20 to 30 minutes; recipes serve 4",
+        "pass": true
+      },
+      {
+        "page": 57,
+        "fact": "vòng 12 ô; 3 ô đậm vàng, đỏ, xanh dương",
+        "pass": true
+      },
+      {
+        "page": 63,
+        "fact": "supercolor 50 COLORS. 50 CHOICES.",
+        "pass": true
+      },
+      {
+        "page": 68,
+        "fact": "3 vòng tròn màu",
+        "pass": true
+      },
+      {
+        "page": 82,
+        "fact": "7 chai neon: đỏ, cam, vàng, xanh lá, xanh dương, tím, hồng",
+        "pass": true
+      },
+      {
+        "page": 149,
+        "fact": "2 logo nền xanh dương (Windows, Apple) + 7 logo nền xanh lá",
+        "pass": true
+      },
+      {
+        "page": 150,
+        "fact": "8 biểu tượng trắng trên nền tròn đỏ",
+        "pass": true
+      },
+      {
+        "page": 49,
+        "fact": "gương mặt Brad Pitt ở điểm giao trên bên trái",
+        "pass": true
+      },
+      {
+        "page": 6,
+        "fact": "bong bóng xanh lá (Thiết kế ấn phẩm truyền thông) lớn nhất",
+        "pass": true
+      },
+      {
+        "page": 50,
+        "fact": "gương mặt Santa ở điểm giao dưới bên trái",
+        "pass": true
+      },
+      {
+        "page": 10,
+        "fact": "lưới pixel 21 dòng x 19 cột",
+        "pass": true
+      }
+    ]
+  },
+  "v3_41": {
+    "model": "gpt-4.1",
+    "prompt": "v3",
+    "pass": 10,
+    "N": 13,
+    "cost_usd_10_pages": 0.0897,
+    "rows": [
+      {
+        "page": 9,
+        "fact": "10 lý do kèm 10 biểu tượng (không phải 11)",
+        "pass": true
+      },
+      {
+        "page": 12,
+        "fact": "6 ảnh 50/100/150/200/250/300 pixels per inch",
+        "pass": true
+      },
+      {
+        "page": 42,
+        "fact": "simmer 20 to 30 minutes; recipes serve 4",
+        "pass": true
+      },
+      {
+        "page": 57,
+        "fact": "vòng 12 ô; 3 ô đậm vàng, đỏ, xanh dương",
+        "pass": true
+      },
+      {
+        "page": 63,
+        "fact": "supercolor 50 COLORS. 50 CHOICES.",
+        "pass": true
+      },
+      {
+        "page": 68,
+        "fact": "3 vòng tròn màu",
+        "pass": true
+      },
+      {
+        "page": 82,
+        "fact": "7 chai neon: đỏ, cam, vàng, xanh lá, xanh dương, tím, hồng",
+        "pass": true
+      },
+      {
+        "page": 149,
+        "fact": "2 logo nền xanh dương (Windows, Apple) + 7 logo nền xanh lá",
+        "pass": true
+      },
+      {
+        "page": 150,
+        "fact": "8 biểu tượng trắng trên nền tròn đỏ",
+        "pass": true
+      },
+      {
+        "page": 49,
+        "fact": "gương mặt Brad Pitt ở điểm giao trên bên trái",
+        "pass": false
+      },
+      {
+        "page": 6,
+        "fact": "bong bóng xanh lá (Thiết kế ấn phẩm truyền thông) lớn nhất",
+        "pass": false
+      },
+      {
+        "page": 50,
+        "fact": "gương mặt Santa ở điểm giao dưới bên trái",
+        "pass": false
+      },
+      {
+        "page": 10,
+        "fact": "lưới pixel 21 dòng x 19 cột",
+        "pass": true
+      }
+    ]
+  },
+  "v2_luna": {
+    "model": "gpt-5.6-luna",
+    "prompt": "v2",
+    "pass": 12,
+    "N": 13,
+    "cost_usd_10_pages": 0.0137,
+    "rows": [
+      {
+        "page": 9,
+        "fact": "10 lý do kèm 10 biểu tượng (không phải 11)",
+        "pass": true
+      },
+      {
+        "page": 12,
+        "fact": "6 ảnh 50/100/150/200/250/300 pixels per inch",
+        "pass": true
+      },
+      {
+        "page": 42,
+        "fact": "simmer 20 to 30 minutes; recipes serve 4",
+        "pass": true
+      },
+      {
+        "page": 57,
+        "fact": "vòng 12 ô; 3 ô đậm vàng, đỏ, xanh dương",
+        "pass": true
+      },
+      {
+        "page": 63,
+        "fact": "supercolor 50 COLORS. 50 CHOICES.",
+        "pass": true
+      },
+      {
+        "page": 68,
+        "fact": "3 vòng tròn màu",
+        "pass": true
+      },
+      {
+        "page": 82,
+        "fact": "7 chai neon: đỏ, cam, vàng, xanh lá, xanh dương, tím, hồng",
+        "pass": true
+      },
+      {
+        "page": 149,
+        "fact": "2 logo nền xanh dương (Windows, Apple) + 7 logo nền xanh lá",
+        "pass": true
+      },
+      {
+        "page": 150,
+        "fact": "8 biểu tượng trắng trên nền tròn đỏ",
+        "pass": true
+      },
+      {
+        "page": 49,
+        "fact": "gương mặt Brad Pitt ở điểm giao trên bên trái",
+        "pass": true
+      },
+      {
+        "page": 6,
+        "fact": "bong bóng xanh lá (Thiết kế ấn phẩm truyền thông) lớn nhất",
+        "pass": true
+      },
+      {
+        "page": 50,
+        "fact": "gương mặt Santa ở điểm giao dưới bên trái",
+        "pass": false
+      },
+      {
+        "page": 10,
+        "fact": "lưới pixel 21 dòng x 19 cột",
+        "pass": true
+      }
+    ]
+  },
+  "v3_luna": {
+    "model": "gpt-5.6-luna",
+    "prompt": "v3",
+    "pass": 12,
+    "N": 13,
+    "cost_usd_10_pages": 0.015,
+    "rows": [
+      {
+        "page": 9,
+        "fact": "10 lý do kèm 10 biểu tượng (không phải 11)",
+        "pass": true
+      },
+      {
+        "page": 12,
+        "fact": "6 ảnh 50/100/150/200/250/300 pixels per inch",
+        "pass": true
+      },
+      {
+        "page": 42,
+        "fact": "simmer 20 to 30 minutes; recipes serve 4",
+        "pass": true
+      },
+      {
+        "page": 57,
+        "fact": "vòng 12 ô; 3 ô đậm vàng, đỏ, xanh dương",
+        "pass": true
+      },
+      {
+        "page": 63,
+        "fact": "supercolor 50 COLORS. 50 CHOICES.",
+        "pass": true
+      },
+      {
+        "page": 68,
+        "fact": "3 vòng tròn màu",
+        "pass": true
+      },
+      {
+        "page": 82,
+        "fact": "7 chai neon: đỏ, cam, vàng, xanh lá, xanh dương, tím, hồng",
+        "pass": true
+      },
+      {
+        "page": 149,
+        "fact": "2 logo nền xanh dương (Windows, Apple) + 7 logo nền xanh lá",
+        "pass": true
+      },
+      {
+        "page": 150,
+        "fact": "8 biểu tượng trắng trên nền tròn đỏ",
+        "pass": true
+      },
+      {
+        "page": 49,
+        "fact": "gương mặt Brad Pitt ở điểm giao trên bên trái",
+        "pass": true
+      },
+      {
+        "page": 6,
+        "fact": "bong bóng xanh lá (Thiết kế ấn phẩm truyền thông) lớn nhất",
+        "pass": false
+      },
+      {
+        "page": 50,
+        "fact": "gương mặt Santa ở điểm giao dưới bên trái",
+        "pass": true
+      },
+      {
+        "page": 10,
+        "fact": "lưới pixel 21 dòng x 19 cột",
+        "pass": true
+      }
+    ]
+  }
+}

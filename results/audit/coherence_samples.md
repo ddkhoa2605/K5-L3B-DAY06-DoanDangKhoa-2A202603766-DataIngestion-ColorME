@@ -1,518 +1,305 @@
-# Coherence samples (auto-generated, labels in coherence_labels.csv)
+# Coherence samples (auto-generated; labels in coherence_labels.csv)
 
 
-## POS lib-csv#p002 @char 745: `arguments can be given to override in`
+## POS01 text p19: `Và thật may mắn, tất cả những thông số quan trọng như hệ màu, độ phân giải, kích thước ảnh bạn đều đã`
 
 
-### A: A:lib-csv:p002:c001
-
+### A: A:colorme3:p019:t00
 ```text
-l *dialect* parameter can be
-   given which is used to define a set of parameters specific to a
-   particular CSV dialect.  It may be an instance of a subclass of the
-   "Dialect" class or one of the strings returned by the
-   "list_dialects()" function.  The other optional *fmtparams* keyword
-   arguments can be given to override individual formatting parameters
-   in the current dialect.  For full details about the dialect and
-   formatting parameters, see section Dialects and Formatting
-   Pa
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Khởi tạo file mới | trang 18 (PDF p19)]
+Khởi tạo file mới
+
+Cách tạo file mới
+Không đơn giản như word, một fiel mới của Photoshop đòi hỏi bạn đưa vào rất nhiều thông số ban đầu.
+
+Và thật may mắn, tất cả những thông số quan trọng như hệ màu, độ phân giải, kích thước ảnh bạn đều đã
+nắm được rồi.
+
+Để tạo file mới trong Photoshop, bạn chỉ cần bấm ctrl+N, một bảng như trên sẽ hiện lên cho phép bạn đưa
+thông số vào.
 ```
 
 
-### B: B:lib-csv:p002:c000
-
+### B: B:colorme3:p019:t00
 ```text
-[Module Contents]
-The "csv" module defines the following functions:
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Khởi tạo file mới | trang 18 (PDF p19)]
+Khởi tạo file mới
 
-csv.reader(csvfile, /, dialect='excel', **fmtparams)
+Cách tạo file mới
+Không đơn giản như word, một fiel mới của Photoshop đòi hỏi bạn đưa vào rất nhiều thông số ban đầu.
 
-   Return a reader object that will process lines from the given
-   *csvfile*.  A csvfile must be an iterable of strings, each in the
-   reader's defined csv format. A csvfile is most commonly a file-like
-   object or list. If *csvfile* is a file object, it should be opened
-   with "newline=''". [1]  An optional *dialect* parameter can be
-   given which is used to define a set of parameters specific to a
-   particular CSV dialect.  It may be an instance of a subclass of the
-   "Dialect" class or one of the strings returned by the
-   "list_dialects()" function.  The other optional *fmtparams* keyword
-   arguments can be given to override individual formatting parameters
-   in the current dialect.  For full details about the dialect and
-   formatting parameters, see section Dialects and Formatting
-   Parameters.
+Và thật may mắn, tất cả những thông số quan trọng như hệ màu, độ phân giải, kích thước ảnh bạn đều đã
+nắm được rồi.
+
+Để tạo file mới trong Photoshop, bạn chỉ cần bấm ctrl+N, một bảng như trên sẽ hiện lên cho phép bạn đưa
+thông số vào.
 ```
 
 
-## POS lib-functools#p002 @char 822: `The *cached_property* decorator only`
+## POS02 text p55: `những năm 2008.`
 
 
-### A: A:lib-functools:p002:c001
-
+### A: A:colorme3:p055:t00
 ```text
-rs):
-              self._data = tuple(sequence_of_numbers)
+[Chương 3 – Sử dụng màu sắc | Vòng thuần sắc | trang 54 (PDF p55)]
+Vòng thuần sắc
 
-          @cached_property
-          def stdev(self):
-              return statistics.stdev(self._data)
+Ô cầu vồng
+Rất nhiều năm trước đây, bạn đã từng thấy chiếc ô này đúng không?
 
-   The mechanics of "@cached_property" are somewhat different from
-   "@property".  A regular property blocks attribute writes unless a
-   setter is defined. In contrast, a *cached_property* allows writes.
+Một chiệc ô với những vệt màu riêng biệt, một chiếc ô rất hút mắt người xem. Nó đã từng rất thịnh hành vào
+những năm 2008.
 
-   The *cached_property* decorator only runs on lookups and only when
-   an attribute of the same name doesn't exist.  When it d
+Đỏ cam vàng lục lam chàm tím, bạn có thấy chuỗi màu này quen không?
+
+Chính xác, đó là màu của cầu vồng, và nó cũng là những màu nằm bên trong một vật rất quan trọng của thế
+giới màu sắc. Một vật có tên là “Vòng Thuần Sắc”.
 ```
 
 
-### B: B:lib-functools:p002:c001
-
+### B: B:colorme3:p055:t00
 ```text
-["functools" --- Higher-order functions and operations on callable objects (cont.)]
-   The *cached_property* decorator only runs on lookups and only when
-   an attribute of the same name doesn't exist.  When it does run, the
-   *cached_property* writes to the attribute with the same name.
-   Subsequent attribute reads and writes take precedence over the
-   *cached_property* method and it works like a normal attribute.
+[Chương 3 – Sử dụng màu sắc | Vòng thuần sắc | trang 54 (PDF p55)]
+Vòng thuần sắc
 
-   The cached value can be cleared by deleting the attribute.  This
-   allows the *cached_property* method to run again.
+Ô cầu vồng
+Rất nhiều năm trước đây, bạn đã từng thấy chiếc ô này đúng không?
+
+Một chiệc ô với những vệt màu riêng biệt, một chiếc ô rất hút mắt người xem. Nó đã từng rất thịnh hành vào
+những năm 2008.
+
+Đỏ cam vàng lục lam chàm tím, bạn có thấy chuỗi màu này quen không?
+
+Chính xác, đó là màu của cầu vồng, và nó cũng là những màu nằm bên trong một vật rất quan trọng của thế
+giới màu sắc. Một vật có tên là “Vòng Thuần Sắc”.
 ```
 
 
-## POS lib-json#p002 @char 1303: `>>> json.loads('1.1', parse_float=dec`
+## POS03 text p93: `Script tự do phóng khoáng`
 
 
-### A: A:lib-json:p002:c002
-
+### A: A:colorme3:p093:t00
 ```text
-gIO('["streaming API"]')
-   >>> json.load(io)
-   ['streaming API']
+[Chương 4 – Những điều cần biết về Typography | Các nhóm font cơ bản | trang 92 (PDF p93)]
+Các nhóm font cơ bản
 
-Customizing JSON object decoding:
+Script
 
-   >>> import json
-   >>> def as_complex(dct):
-   ...     if '__complex__' in dct:
-   ...         return complex(dct['real'], dct['imag'])
-   ...     return dct
-   ...
-   >>> json.loads('{"__complex__": true, "real": 1, "imag": 2}',
-   ...     object_hook=as_complex)
-   (1+2j)
-   >>> import decimal
-   >>> json.loads('1.1', parse_float=decimal.Decimal)
-   Decimal('1.1')
+Freestyle Script
+Pristina
+Segoe Script
+Brush Script Std
+French Script MT
 
-Extending "JSONEncoder":
+Script tự do phóng khoáng
+Là những con chữ làm người ta cảm giác như chúng vừa được viết ra bởi một bàn tay tài hoa của một nghệ sĩ
+nào đó.
+
+Script đem lại cảm giác tự nhiên hoang dại. Chúng thường được sử dụng rất nhiều trong những tác phẩm liên
+quan nhiều đến nghệ thuật và sáng tạo.
+
+Tất cả những nhóm chữ không thuộc 3 nhóm kể trên được xếp vào nhóm chữ trang trí. Một nhóm chữ được
+dùng nhiều trong những tác phẩm sáng tạo, game và đồ chơi trẻ em.
 ```
 
 
-### B: B:lib-json:p002:c001
-
+### B: B:colorme3:p093:t00
 ```text
-["json" --- JSON encoder and decoder (cont.)]
-   >>> import json
-   >>> json.loads('["foo", {"bar":["baz", null, 1.0, 2]}]')
-   ['foo', {'bar': ['baz', None, 1.0, 2]}]
-   >>> json.loads('"\\"foo\\bar"')
-   '"foo\x08ar'
-   >>> from io import StringIO
-   >>> io = StringIO('["streaming API"]')
-   >>> json.load(io)
-   ['streaming API']
+[Chương 4 – Những điều cần biết về Typography | Các nhóm font cơ bản | trang 92 (PDF p93)]
+Các nhóm font cơ bản
 
-Customizing JSON object decoding:
+Script
 
-   >>> import json
-   >>> def as_complex(dct):
-   ...     if '__complex__' in dct:
-   ...         return complex(dct['real'], dct['imag'])
-   ...     return dct
-   ...
-   >>> json.loads('{"__complex__": true, "real": 1, "imag": 2}',
-   ...     object_hook=as_complex)
-   (1+2j)
-   >>> import decimal
-   >>> json.loads('1.1', parse_float=decimal.Decimal)
-   Decimal('1.1')
+Freestyle Script
+Pristina
+Segoe Script
+Brush Script Std
+French Script MT
 
-Extending "JSONEncoder":
+Script tự do phóng khoáng
+Là những con chữ làm người ta cảm giác như chúng vừa được viết ra bởi một bàn tay tài hoa của một nghệ sĩ
+nào đó.
+
+Script đem lại cảm giác tự nhiên hoang dại. Chúng thường được sử dụng rất nhiều trong những tác phẩm liên
+quan nhiều đến nghệ thuật và sáng tạo.
+
+Tất cả những nhóm chữ không thuộc 3 nhóm kể trên được xếp vào nhóm chữ trang trí. Một nhóm chữ được
+dùng nhiều trong những tác phẩm sáng tạo, game và đồ chơi trẻ em.
 ```
 
 
-## POS lib-venv#p002 @char 740: `Changed in version 3.5: The use of "venv`
-
-
-### A: A:lib-venv:p002:c001
-
+### B: B:colorme3:p093:v00
 ```text
-
-a copy or symlink of the Python executable (as appropriate for the
-platform or arguments used at environment creation time). It also
-creates a "lib/pythonX.Y/site-packages" subdirectory (on Windows, this
-is "Lib\site-packages"). If an existing directory is specified, it
-will be re-used.
-
-Changed in version 3.5: The use of "venv" is now recommended for
-creating virtual environments.
-
-Deprecated since version 3.6, removed in version 3.8: **pyvenv** was
-the recommended tool for creating virtual en
+[Chương 4 – Những điều cần biết về Typography | Các nhóm font cơ bản | trang 92 (PDF p93)]
+Nội dung trang: Trang trình bày các nhóm font chữ cơ bản thuộc nhóm Script với ví dụ font và mô tả đặc điểm của nhóm Script tự do phóng khoáng.
+Phần tử trực quan (mẫu chữ, giữa/trái): Các ví dụ font chữ thuộc nhóm Script gồm Freestyle Script, Pristina, Segoe Script, Brush Script Std, French Script MT, mỗi tên font được viết bằng chính font đó.
+Chữ trong hình: Script
+Freestyle Script
+Pristina
+Segoe Script
+Brush Script Std
+French Script MT
 ```
 
 
-### B: B:lib-venv:p002:c000
+## POS04 text p129: `Chắc hẳn bạn còn nhớ trào lưu “Ngưng ngược đãi” làm mưa làm gió nhiều ngày trên mạng xã hội?`
 
+
+### A: A:colorme3:p129:t00
 ```text
-[Creating virtual environments]
-Virtual environments are created by executing the "venv" module:
+[Chương 5 – Một số hiệu ứng cơ bản | Color Overlay | trang 128 (PDF p129)]
+Color Overlay
 
-   python -m venv /path/to/new/virtual/environment
+Color Overlay
+Chắc hẳn bạn còn nhớ trào lưu “Ngưng ngược đãi” làm mưa làm gió nhiều ngày trên mạng xã hội?
 
-This creates the target directory (including parent directories as
-needed) and places a "pyvenv.cfg" file in it with a "home" key
-pointing to the Python installation from which the command was run. It
-also creates a "bin" (or "Scripts" on Windows) subdirectory containing
-a copy or symlink of the Python executable (as appropriate for the
-platform or arguments used at environment creation time). It also
-creates a "lib/pythonX.Y/site-packages" subdirectory (on Windows, this
-is "Lib\site-packages"). If an existing directory is specified, it
-will be re-used.
+Tự tay xây dựng 1 tác phẩm với chỉ dẫn sau bạn nhé. Bạn sẽ bước đầu nắm được khái niệm về layer effect
 
-Changed in version 3.5: The use of "venv" is now recommended for
-creating virtual environments.
+https://www.youtube.com/watch?v=vSMWNfR-B7Y&list=PL9_gOzpFilwol3lyOj3jH4iDBMzVIPrea&index=4
 ```
 
 
-## POS tut-controlflow#p002 @char 970: `4 lamb
-
-In most such cases, however,`
-
-
-### A: A:tut-controlflow:p002:c002
-
+### B: B:colorme3:p129:t00
 ```text
-  ...     print(i, a[i])
-   ...
-   0 Mary
-   1 had
-   2 a
-   3 little
-   4 lamb
+[Chương 5 – Một số hiệu ứng cơ bản | Color Overlay | trang 128 (PDF p129)]
+Color Overlay
 
-In most such cases, however, it is convenient to use the "enumerate()"
-function, see Looping Techniques.
+Color Overlay
+Chắc hẳn bạn còn nhớ trào lưu “Ngưng ngược đãi” làm mưa làm gió nhiều ngày trên mạng xã hội?
 
-A strange thing happens if you just print a range:
+Tự tay xây dựng 1 tác phẩm với chỉ dẫn sau bạn nhé. Bạn sẽ bước đầu nắm được khái niệm về layer effect
 
-   >>> range(10)
-   range(0, 10)
-
-In many ways the object returned by "range()" behaves as if it is a
-list, but in fact it isn't. It is an object which returns the
-successive items of the desired sequence when you iterate over it, but
-it doesn't really make the
+https://www.youtube.com/watch?v=vSMWNfR-B7Y&list=PL9_gOzpFilwol3lyOj3jH4iDBMzVIPrea&index=4
 ```
 
 
-### B: B:tut-controlflow:p002:c000
+## POS05 text p165: `Flat Design, ban đầu còn được gọi là Metro Design. Giải thích cho cái tên này, kĩ sư trưởng của Windows 8 cho`
 
+
+### A: A:colorme3:p165:t00
 ```text
-[4.3. The "range()" Function]
-If you do need to iterate over a sequence of numbers, the built-in
-function "range()" comes in handy.  It generates arithmetic
-progressions:
+[Chương 8 – Các xu hướng thiết kế | Flat Design | trang 164 (PDF p165)]
+Flat Design
 
-   >>> for i in range(5):
-   ...     print(i)
-   ...
-   0
-   1
-   2
-   3
-   4
+Ông lớn Microsoft
+2012 chính là năm mà Windows 8 ra đời, đánh dấu một phong cách giao diện hoàn toàn khác với màn hình
+start như thế này.
 
-The given end point is never part of the generated sequence;
-"range(10)" generates 10 values, the legal indices for items of a
-sequence of length 10.  It is possible to let the range start at
-another number, or to specify a different increment (even negative;
-sometimes this is called the 'step'):
+Flat Design, ban đầu còn được gọi là Metro Design. Giải thích cho cái tên này, kĩ sư trưởng của Windows 8 cho
+biết, phong cách mà Metro Design hướng đến là phong cách thiết kế biển báo ở ga tàu điện Metro: Đơn giản,
+gọn gàng, xúc tích.
 
-   >>> list(range(5, 10))
-   [5, 6, 7, 8, 9]
+Khi mà cuộc sống của con người ngày càng trở nên nhanh hơn, những tư tưởng trên là tư tưởng được ủng hộ.
 
-   >>> list(range(0, 10, 3))
-   [0, 3, 6, 9]
-
-   >>> list(range(-10, -100, -30))
-   [-10, -40, -70]
-
-To iterate over the indices of a sequence, you can combine "range()"
-and "len()" as follows:
-
-   >>> a = ['Mary', 'had', 'a', 'little', 'lamb']
-   >>> for i in range(len(a)):
-   ...     print(i, a[i])
-   ...
-   0 Mary
-   1 had
-   2 a
-   3 little
-   4 lamb
+Từ khóa Metro một thời gian sau bị thu hồi vì lý do bản quyền.
 ```
 
 
-## POS tut-datastructures#p002 @char 812: `>>> fruits.append('grape')
-   >>> fru`
-
-
-### A: A:tut-datastructures:p002:c001
-
+### B: B:colorme3:p165:t00
 ```text
- = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
-   >>> fruits.count('apple')
-   2
-   >>> fruits.count('tangerine')
-   0
-   >>> fruits.index('banana')
-   3
-   >>> fruits.index('banana', 4)  # Find next banana starting at position 4
-   6
-   >>> fruits.reverse()
-   >>> fruits
-   ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']
-   >>> fruits.append('grape')
-   >>> fruits
-   ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']
-   >>> fruits.sor
+[Chương 8 – Các xu hướng thiết kế | Flat Design | trang 164 (PDF p165)]
+Flat Design
+
+Ông lớn Microsoft
+2012 chính là năm mà Windows 8 ra đời, đánh dấu một phong cách giao diện hoàn toàn khác với màn hình
+start như thế này.
+
+Flat Design, ban đầu còn được gọi là Metro Design. Giải thích cho cái tên này, kĩ sư trưởng của Windows 8 cho
+biết, phong cách mà Metro Design hướng đến là phong cách thiết kế biển báo ở ga tàu điện Metro: Đơn giản,
+gọn gàng, xúc tích.
+
+Khi mà cuộc sống của con người ngày càng trở nên nhanh hơn, những tư tưởng trên là tư tưởng được ủng hộ.
+
+Từ khóa Metro một thời gian sau bị thu hồi vì lý do bản quyền.
 ```
 
 
-### B: B:tut-datastructures:p002:c001
+## POS06 figure p74 (main figure)
 
+
+### A: NO CHUNK covers this position
+
+
+### B: B:colorme3:p074:v00
 ```text
-[5. Data Structures > 5.1. More on Lists (cont.)]
-   >>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
-   >>> fruits.count('apple')
-   2
-   >>> fruits.count('tangerine')
-   0
-   >>> fruits.index('banana')
-   3
-   >>> fruits.index('banana', 4)  # Find next banana starting at position 4
-   6
-   >>> fruits.reverse()
-   >>> fruits
-   ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']
-   >>> fruits.append('grape')
-   >>> fruits
-   ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']
-   >>> fruits.sort()
-   >>> fruits
-   ['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear']
-   >>> fruits.pop()
-   'pear'
-
-You might have noticed that methods like "insert", "remove" or "sort"
-that only modify the list have no return value printed -- they return
-the default "None". [1]  This is a design principle for all mutable
-data structures in Python.
+[Chương 3 – Sử dụng màu sắc |  | trang 73 (PDF p74)]
+Nội dung trang: Trang này minh họa poster quảng cáo trận đấu bóng đá giữa Seattle Sounders và Houston Dynamo ngày 4 tháng 4 năm 2015.
+Phần tử trực quan (hình minh họa, giữa): Poster chia làm hai nửa dọc. Nửa trái nền xanh lá cây với hình mặt trăng trắng lớn, có hình tháp Space Needle màu đen ở phía dưới, tượng trưng cho Seattle. Nửa phải nền đỏ cam với hình mặt trời vàng lớn, có hình tàu con thoi màu đen đang bay lên trên dãy núi màu đỏ cam, tượng trưng cho Houston.
+Chữ trong hình: APRIL 4, 2015 | SEATTLE SOUNDERS vs HOUSTON DYNAMO
 ```
 
 
-## POS tut-errors#p002 @char 861: `of the "try" statement is finished.
-
-*`
+## POS07 figure p85 (main figure)
 
 
-### A: A:tut-errors:p002:c001
+### A: NO CHUNK covers this position
 
+
+### B: B:colorme3:p085:v00
 ```text
-...     try:
-   ...         x = int(input("Please enter a number: "))
-   ...         break
-   ...     except ValueError:
-   ...         print("Oops!  That was no valid number.  Try again...")
-   ...
-
-The "try" statement works as follows.
-
-* First, the *try clause* (the statement(s) between the "try" and
-  "except" keywords) is executed.
-
-* If no exception occurs, the *except clause* is skipped and execution
-  of the "try" statement is finished.
-
-* If an exception occurs during execution of the "
+[Chương 3 – Sử dụng màu sắc |  | trang 84 (PDF p85)]
+Nội dung trang: Trang này minh họa các thiết kế đồ họa với phong cách màu sắc pastel và bố cục hiện đại.
+Phần tử trực quan (ảnh chụp, trên trái): Ảnh chụp các vật phẩm văn phòng phẩm gồm phong bì và các thẻ tên có màu sắc pastel như vàng, xanh dương nhạt, hồng, vàng nhạt, với chữ "tilli" viết tay màu đen và các đường viền đen.
+Chữ trong hình: tilli | tilli | tilli | tilli | TÌM TILLI
 ```
 
 
-### B: B:tut-errors:p002:c000
-
+### B: B:colorme3:p085:v01
 ```text
-[8.3. Handling Exceptions]
-It is possible to write programs that handle selected exceptions. Look
-at the following example, which asks the user for input until a valid
-integer has been entered, but allows the user to interrupt the program
-(using "Control"-"C" or whatever the operating system supports); note
-that a user-generated interruption is signalled by raising the
-"KeyboardInterrupt" exception.
-
-   >>> while True:
-   ...     try:
-   ...         x = int(input("Please enter a number: "))
-   ...         break
-   ...     except ValueError:
-   ...         print("Oops!  That was no valid number.  Try again...")
-   ...
-
-The "try" statement works as follows.
-
-* First, the *try clause* (the statement(s) between the "try" and
-  "except" keywords) is executed.
-
-* If no exception occurs, the *except clause* is skipped and execution
-  of the "try" statement is finished.
+[Chương 3 – Sử dụng màu sắc |  | trang 84 (PDF p85)]
+Nội dung trang: Trang này minh họa các thiết kế đồ họa với phong cách màu sắc pastel và bố cục hiện đại.
+Phần tử trực quan (ảnh chụp, dưới giữa): Ảnh chụp một poster thiết kế với nền chia làm hai phần màu tím nhạt và xanh ngọc, có họa tiết sóng màu tím trên nền tím, chữ "ØH HEY!" ở giữa, bên dưới có các thông tin nhỏ về thiết kế và ngày tháng, bên cạnh là điện thoại quay số màu tím nhạt.
+Chữ trong hình: ØH HEY! | BUY THIS MAGAZINE BECAUSE THE COVER IS CUTE | 29 06 16 | DESIGN PETER JONES | PHOTOGRAPHY ROBERT SMY | FOOD LUCIA TOM | ILLUSTRATION LUCIA TOM | ARTIST SARA LEE | COMMITMENT ISSUE 1
 ```
 
 
-## POS tut-inputoutput#p002 @char 917: `representation using either function.  S`
+## POS08 figure p121 (main figure)
 
 
-### A: A:tut-inputoutput:p002:c001
+### A: NO CHUNK covers this position
 
+
+### B: B:colorme3:p121:v00
 ```text
- "str()" function is meant to return representations of values
-which are fairly human-readable, while "repr()" is meant to generate
-representations which can be read by the interpreter (or will force a
-"SyntaxError" if there is no equivalent syntax).  For objects which
-don't have a particular representation for human consumption, "str()"
-will return the same value as "repr()".  Many values, such as numbers
-or structures like lists and dictionaries, have the same
-representation using either funct
+[Chương 4 – Những điều cần biết về Typography |  | trang 120 (PDF p121)]
+Nội dung trang: Ảnh chụp biển quảng cáo ngoài trời kêu gọi đi xe đạp thay vì xe máy hoặc ô tô.
+Phần tử trực quan (hình minh họa, giữa): Biển quảng cáo có hình vẽ một chiếc xe đạp màu nâu đậm trên nền màu be, bánh xe lớn chiếm phần dưới biển.
+Chữ trong hình: Nói KHÔNG với (biểu tượng xe máy) (biểu tượng ô tô) | Cò lô sĩ is the best! | be CÒ LÔ SĨ | let's ĐẠP XE
 ```
 
 
-### B: B:tut-inputoutput:p002:c001
+## POS09 figure p144 (main figure)
 
+
+### A: A:colorme3:p144:t00
 ```text
-[7. Input and Output > 7.1. Fancier Output Formatting (cont.)]
-The "str()" function is meant to return representations of values
-which are fairly human-readable, while "repr()" is meant to generate
-representations which can be read by the interpreter (or will force a
-"SyntaxError" if there is no equivalent syntax).  For objects which
-don't have a particular representation for human consumption, "str()"
-will return the same value as "repr()".  Many values, such as numbers
-or structures like lists and dictionaries, have the same
-representation using either function.  Strings, in particular, have
-two distinct representations.
+[Chương 6 – Nhận diện thương hiệu | Geometric Shape Logos | trang 143 (PDF p144)]
+Geometric Shape Logos
 
-Some examples:
+Logo hình khối
+Là những logo chỉ được tạo thành từ những đường thẳng
 ```
 
 
-## POS tut-modules#p002 @char 1448: `There is even a variant to import all na`
-
-
-### A: A:tut-modules:p002:c003
-
+### B: B:colorme3:p144:v00
 ```text
-m which the imports are
-taken in the local namespace (so in the example, "fibo" is not
-defined).
-
-There is even a variant to import all names that a module defines:
-
-   >>> from fibo import *
-   >>> fib(500)
-   0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
-
-This imports all names except those beginning with an underscore
-("_"). In most cases Python programmers do not use this facility since
-it introduces an unknown set of names into the interpreter, possibly
-hiding some things you have already define
+[Chương 6 – Nhận diện thương hiệu | Geometric Shape Logos | trang 143 (PDF p144)]
+Nội dung trang: Trang trình bày các ví dụ về logo hình khối được tạo thành từ những đường thẳng.
+Phần tử trực quan (ảnh chụp, giữa): Ảnh gồm 6 logo hình khối, mỗi logo được tạo thành từ các đường thẳng và hình học khác nhau.
+Chữ trong hình: BIRMINGHAM MUSEUM of ART | JB PHOTOGRAPHY | R
+Dữ liệu: Logo 1: hình khối đen trắng, chữ BIRMINGHAM MUSEUM of ART phía dưới | Logo 2: hình đa giác màu xanh lá, đỏ, xám, chữ JB PHOTOGRAPHY màu trắng ở giữa | Logo 3: hình tam giác đen có chữ R bên trong | Logo 4: chữ W nhiều màu xanh dương, tím, đỏ trên nền xanh đậm | Logo 5: chữ A đen với các đường nét hình học phía sau | Logo 6: hình khối lập phương 3D màu xanh dương các sắc độ
 ```
 
 
-### B: B:tut-modules:p002:c001
+## POS10 figure p178 (main figure)
 
+
+### A: NO CHUNK covers this position
+
+
+### B: B:colorme3:p178:v00
 ```text
-[6.1. More on Modules]
-Modules can import other modules.  It is customary but not required to
-place all "import" statements at the beginning of a module (or script,
-for that matter).  The imported module names, if placed at the top
-level of a module (outside any functions or classes), are added to the
-module's global namespace.
-
-There is a variant of the "import" statement that imports names from a
-module directly into the importing module's namespace.  For example:
-
-   >>> from fibo import fib, fib2
-   >>> fib(500)
-   0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
-
-This does not introduce the module name from which the imports are
-taken in the local namespace (so in the example, "fibo" is not
-defined).
-
-There is even a variant to import all names that a module defines:
-
-   >>> from fibo import *
-   >>> fib(500)
-   0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
-```
-
-
-## POS tut-venv#p002 @char 837: `package name  followed by "==" and the v`
-
-
-### A: A:tut-venv:p002:c001
-
-```text
-.)
-
-You can install the latest version of a package by specifying a
-package's name:
-
-   (tutorial-env) $ python -m pip install novas
-   Collecting novas
-     Downloading novas-3.1.1.3.tar.gz (136kB)
-   Installing collected packages: novas
-     Running setup.py install for novas
-   Successfully installed novas-3.1.1.3
-
-You can also install a specific version of a package by giving the
-package name  followed by "==" and the version number:
-
-   (tutorial-env) $ python -m pip install requests==2.6.0
-```
-
-
-### B: B:tut-venv:p002:c000
-
-```text
-[12.3. Managing Packages with pip]
-You can install, upgrade, and remove packages using a program called
-**pip**.  By default "pip" will install packages from the Python
-Package Index.  You can browse the Python Package Index by going to it
-in your web browser.
-
-"pip" has a number of subcommands: "install", "uninstall", "freeze",
-etc.  (Consult the Installing Python modules guide for complete
-documentation for "pip".)
-
-You can install the latest version of a package by specifying a
-package's name:
-
-   (tutorial-env) $ python -m pip install novas
-   Collecting novas
-     Downloading novas-3.1.1.3.tar.gz (136kB)
-   Installing collected packages: novas
-     Running setup.py install for novas
-   Successfully installed novas-3.1.1.3
-
-You can also install a specific version of a package by giving the
-package name  followed by "==" and the version number:
+[Phụ lục và lời kết |  | trang 177 (PDF p178)]
+Nội dung trang: Ảnh chụp lớp học với giáo viên đang giảng bài và học sinh sử dụng laptop.
+Phần tử trực quan (ảnh chụp, giữa): Lớp học trong phòng với nhiều học sinh ngồi tại bàn, sử dụng laptop. Giáo viên đứng giữa lớp, quay lưng về phía máy ảnh, tay giơ lên như đang giảng bài. Phòng có tường màu xanh dương, cửa sổ lớn phía sau có rèm màu trắng. Trần nhà có đèn treo màu đỏ và đen.
 ```

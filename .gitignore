@@ -9,7 +9,11 @@ __pycache__/
 .pytest_cache/
 *.sqlite
 
-# Day 06 solution
+# Day 06 solution (ColorME PDF)
 starter/chroma_db/
-data/raw/*.zip
-CHANGE.md
+data/raw/*.pdf
+data/page_images/
+
+# Full-book text + model descriptions of its images: redistribution right not verified (DATA_NOT_INCLUDED.md)
+data/pages.jsonl
+data/visual/

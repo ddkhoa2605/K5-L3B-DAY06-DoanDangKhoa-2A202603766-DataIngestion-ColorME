@@ -1,19 +1,22 @@
-strategy,id,score_0_2,reason,reviewed_by_student
-A,t01,1,"Evidence split across rank1 (ends 'the one from t') and rank2 (starts 'ement, the returned value...'); answer recoverable only by joining two fragments",agree
-A,t02,1,Rank1 has PYTHONPATH + installation default but the first location (script directory) is cut off; rank3 gives a simplified version,agree
-A,t03,2,Rank1 contains 'it should be opened with newline=''' for csv.reader,agree
-A,t04,0,No top-3 chunk states the maxsize=None behaviour (only maxsize=32 example / cache_info / default 128),agree
-A,t05,2,"Rank2 has the note: JSON keys always str, so dict may not equal original",agree
-A,t06,1,Only library chunks: says activation script is in 'Scripts' on Windows but the command table is cut; tutorial command absent; filter scope violated,agree
-B,t01,2,Rank1 contains the full bullet + bool_return() example,agree
-B,t02,2,Rank3 contains the full 3-item list (rank1 is a simplified 6.2 version),agree
-B,t03,2,Rank1 contains the full csv.reader paragraph with newline='',agree
-B,t04,2,Rank1 contains the maxsize=None sentence,agree
-B,t05,2,Rank2 contains the full note (rank1 is an off-scope tutorial dict chunk),agree
-B,t06,2,"Rank3 has 'On Windows, run: tutorial-env\Scripts\activate'; ranks 1-2 are off-scope library chunks",agree
-C,t01,2,Same as B (no filter for this question),agree
-C,t02,2,Same as B (no filter),agree
-C,t03,2,Same as B (no filter),agree
-C,t04,2,Same as B (no filter),agree
-C,t05,2,Rank1 is the gold note; all top-3 in library scope,agree
-C,t06,2,Rank1 is the gold tutorial chunk; all top-3 tutorial,agree
+strategy,id,score_0_2,reason,labeler,reviewed_by_student
+A,t01,2,p8 chứa 'thiên nặng về retouch và blend',agent,
+A,t02,2,p109 (rank 2) chứa quy tắc nghịch đảo màu,agent,
+A,t03,2,p146 (rank 2) chứa 'bắt nguồn từ hãng chuyển phát nhanh fedex',agent,
+A,t04,2,p130 rank 1 định nghĩa layer style,agent,
+A,t05,0,"Không có bảng màu-từ khóa (bảng là ảnh, A chỉ có text)",agent,
+A,t06,1,Có danh sách tính từ p136 nhưng không có màu tương ứng (thiếu điều kiện màu),agent,
+A,t07,2,p174 chứa 'CTRL + J: Nhân đôi Layer',agent,
+B,t01,2,p8 text rank 1,agent,
+B,t02,2,p109 rank 3,agent,
+B,t03,0,"Cả top-3 là p147 (ngựa/1234), thiếu p146 FedEx: chunk visual cùng trang đẩy p146 ra",agent,
+B,t04,2,p130 rank 1,agent,
+B,t05,2,"chunk visual p77: 'cam: HEALTH, ATTRACTION, STAND OUT...' (đã đối chiếu ảnh)",agent,
+B,t06,2,"chunk visual p136: 'xanh dương: Uy quyền, đỉnh đạc...' (đã đối chiếu ảnh)",agent,
+B,t07,2,p174 rank 1,agent,
+C,t01,2,giống B (filter không đổi top-3): p8 text rank 1,agent,
+C,t02,2,giống B (filter không đổi top-3): p109 rank 3,agent,
+C,t03,0,"giống B (filter không đổi top-3): Cả top-3 là p147 (ngựa/1234), thiếu p146 FedEx: chunk visual cùng trang đẩy p146 ra",agent,
+C,t04,2,giống B (filter không đổi top-3): p130 rank 1,agent,
+C,t05,2,"giống B (filter không đổi top-3): chunk visual p77: 'cam: HEALTH, ATTRACTION, STAND OUT...' (đã đối chiếu ảnh)",agent,
+C,t06,2,"giống B (filter không đổi top-3): chunk visual p136: 'xanh dương: Uy quyền, đỉnh đạc...' (đã đối chiếu ảnh)",agent,
+C,t07,2,giống B (filter không đổi top-3): p174 rank 1,agent,

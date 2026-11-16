@@ -1,1270 +1,1975 @@
 {
-  "corpus": "Python 3.13 documentation — tutorial + library subset",
-  "archive_url": "https://docs.python.org/3.13/archives/python-3.13-docs-text.zip",
-  "page_rule": "No physical pages. Each document is split in reading order at headings; consecutive sections are merged until a unit has >= 1500 normalized chars (a short tail merges into the previous unit). All units are counted (the selected files contain no cover/TOC/blank pages).",
-  "normalization": "UTF-8 decode, Unicode NFC, CRLF->LF, NBSP->space, tab->4 spaces, strip trailing spaces, collapse 3+ newlines to 2",
-  "total_documents": 10,
-  "total_pages": 117,
-  "total_chars": 246878,
-  "pages_below_min_chars": [],
-  "errors": [],
+  "corpus": "EBOOK COLORME 3 – sách hướng dẫn thiết kế đồ họa/Photoshop (tiếng Việt), colorME",
   "documents": [
     {
-      "source_id": "tut-controlflow",
-      "title": "4. More Control Flow Tools",
-      "source_path_or_url": "https://docs.python.org/3.13/tutorial/controlflow.html",
-      "archive_member": "python-3.13-docs-text/tutorial/controlflow.txt",
-      "local_copy": "data/corpus/tutorial__controlflow.txt",
-      "doc_type": "tutorial",
-      "version": "Python 3.13 documentation (text archive)",
-      "license_or_permission": "PSF License Agreement for Python 3.13 (docs © 2001-2024 PSF); code examples under Zero-Clause BSD — see license.txt in archive",
-      "accessed_at": "2026-11-13",
-      "raw_sha256": "5d0860d1d58a3f4f803899ca49e188e0e6617c874c8d06412d466d81ab39d09b",
-      "raw_bytes": 38492,
-      "pages": [
-        {
-          "page": 1,
-          "page_id": "tut-controlflow#p001",
-          "chars": 2376,
-          "first_section": "4. More Control Flow Tools",
-          "sections": [
-            "4. More Control Flow Tools",
-            "4. More Control Flow Tools > 4.1. \"if\" Statements",
-            "4. More Control Flow Tools > 4.2. \"for\" Statements"
-          ]
-        },
-        {
-          "page": 2,
-          "page_id": "tut-controlflow#p002",
-          "chars": 1948,
-          "first_section": "4. More Control Flow Tools > 4.3. The \"range()\" Function",
-          "sections": [
-            "4. More Control Flow Tools > 4.3. The \"range()\" Function"
-          ]
-        },
-        {
-          "page": 3,
-          "page_id": "tut-controlflow#p003",
-          "chars": 2914,
-          "first_section": "4. More Control Flow Tools > 4.4. \"break\" and \"continue\" Statements",
-          "sections": [
-            "4. More Control Flow Tools > 4.4. \"break\" and \"continue\" Statements",
-            "4. More Control Flow Tools > 4.5. \"else\" Clauses on Loops"
-          ]
-        },
-        {
-          "page": 4,
-          "page_id": "tut-controlflow#p004",
-          "chars": 2517,
-          "first_section": "4. More Control Flow Tools > 4.6. \"pass\" Statements",
-          "sections": [
-            "4. More Control Flow Tools > 4.6. \"pass\" Statements",
-            "4. More Control Flow Tools > 4.7. \"match\" Statements"
-          ]
-        },
-        {
-          "page": 5,
-          "page_id": "tut-controlflow#p005",
-          "chars": 1919,
-          "first_section": "4. More Control Flow Tools > 4.7. \"match\" Statements (cont.)",
-          "sections": [
-            "4. More Control Flow Tools > 4.7. \"match\" Statements (cont.)"
-          ]
-        },
-        {
-          "page": 6,
-          "page_id": "tut-controlflow#p006",
-          "chars": 2749,
-          "first_section": "4. More Control Flow Tools > 4.7. \"match\" Statements (cont.)",
-          "sections": [
-            "4. More Control Flow Tools > 4.7. \"match\" Statements (cont.)"
-          ]
-        },
-        {
-          "page": 7,
-          "page_id": "tut-controlflow#p007",
-          "chars": 1902,
-          "first_section": "4. More Control Flow Tools > 4.8. Defining Functions",
-          "sections": [
-            "4. More Control Flow Tools > 4.8. Defining Functions"
-          ]
-        },
-        {
-          "page": 8,
-          "page_id": "tut-controlflow#p008",
-          "chars": 2803,
-          "first_section": "4. More Control Flow Tools > 4.8. Defining Functions (cont.)",
-          "sections": [
-            "4. More Control Flow Tools > 4.8. Defining Functions (cont.)"
-          ]
-        },
-        {
-          "page": 9,
-          "page_id": "tut-controlflow#p009",
-          "chars": 2099,
-          "first_section": "4. More Control Flow Tools > 4.9. More on Defining Functions",
-          "sections": [
-            "4. More Control Flow Tools > 4.9. More on Defining Functions",
-            "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.1. Default Argument Values"
-          ]
-        },
-        {
-          "page": 10,
-          "page_id": "tut-controlflow#p010",
-          "chars": 1863,
-          "first_section": "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.2. Keyword Arguments",
-          "sections": [
-            "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.2. Keyword Arguments"
-          ]
-        },
-        {
-          "page": 11,
-          "page_id": "tut-controlflow#p011",
-          "chars": 1692,
-          "first_section": "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.2. Keyword Arguments (cont.)",
-          "sections": [
-            "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.2. Keyword Arguments (cont.)"
-          ]
-        },
-        {
-          "page": 12,
-          "page_id": "tut-controlflow#p012",
-          "chars": 1797,
-          "first_section": "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.3. Special parameters",
-          "sections": [
-            "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.3. Special parameters",
-            "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.3. Special parameters > 4.9.3.1. Positional-or-Keyword Arguments",
-            "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.3. Special parameters > 4.9.3.2. Positional-Only Parameters"
-          ]
-        },
-        {
-          "page": 13,
-          "page_id": "tut-controlflow#p013",
-          "chars": 3153,
-          "first_section": "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.3. Special parameters > 4.9.3.3. Keyword-Only Arguments",
-          "sections": [
-            "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.3. Special parameters > 4.9.3.3. Keyword-Only Arguments",
-            "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.3. Special parameters > 4.9.3.4. Function Examples"
-          ]
-        },
-        {
-          "page": 14,
-          "page_id": "tut-controlflow#p014",
-          "chars": 1815,
-          "first_section": "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.3. Special parameters > 4.9.3.5. Recap",
-          "sections": [
-            "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.3. Special parameters > 4.9.3.5. Recap",
-            "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.4. Arbitrary Argument Lists"
-          ]
-        },
-        {
-          "page": 15,
-          "page_id": "tut-controlflow#p015",
-          "chars": 2226,
-          "first_section": "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.5. Unpacking Argument Lists",
-          "sections": [
-            "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.5. Unpacking Argument Lists",
-            "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.6. Lambda Expressions"
-          ]
-        },
-        {
-          "page": 16,
-          "page_id": "tut-controlflow#p016",
-          "chars": 2416,
-          "first_section": "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.7. Documentation Strings",
-          "sections": [
-            "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.7. Documentation Strings",
-            "4. More Control Flow Tools > 4.9. More on Defining Functions > 4.9.8. Function Annotations"
-          ]
-        },
-        {
-          "page": 17,
-          "page_id": "tut-controlflow#p017",
-          "chars": 2239,
-          "first_section": "4. More Control Flow Tools > 4.10. Intermezzo: Coding Style",
-          "sections": [
-            "4. More Control Flow Tools > 4.10. Intermezzo: Coding Style"
-          ]
-        }
+      "source_id": "colorme-ebook-3",
+      "title": "EBOOK COLORME 3",
+      "language": "vi",
+      "source_path_or_url": "data/raw/EBOOK COLORME 3.pdf",
+      "origin": "https://thietbigas.com.vn/upload/product/EBOOK%20COLORME%203.pdf",
+      "origin_note": "Bản sao do bên thứ ba lưu trữ (thietbigas.com.vn), KHÔNG phải trang của colorME; file tải về có SHA-256 trùng raw_sha256 (kiểm tra 2026-11-16, 14 641 014 byte). Việc được phép phân phối lại vẫn chưa được xác minh.",
+      "official_sites": [
+        "https://colorme.vn",
+        "http://facebook.com/colorME.hanoi",
+        "mailto:colorME.idea@gmail.com"
       ],
-      "page_count": 17,
-      "chars": 38428
+      "license_or_permission": "Bản quyền thuộc colorME/tác giả. Giấy phép phân phối lại CHƯA được xác minh nên repo không chứa PDF, ảnh render, văn bản toàn sách hay mô tả hình đầy đủ (xem DATA_NOT_INCLUDED.md). Chỉ dùng cho mục đích học tập.",
+      "version": "PDF 1.5, tạo bằng Microsoft Word 2016, creationDate D:20160314075157+01'00'",
+      "accessed_at": "2026-11-15",
+      "raw_sha256": "7a739dd454715148d155783a9ea2e664a415b643ed83d06e9145cfdd9061de65",
+      "raw_bytes": 14641014,
+      "physical_pages": 183,
+      "page_size_pt": [
+        595.3,
+        841.9
+      ]
+    }
+  ],
+  "page_rule": "1 đơn vị = 1 trang PDF vật lý (page = chỉ số PDF 1-based; số in ở chân trang = page-1). Trang được tính là nội dung: không phải bìa (p1) / mục lục (p4) và có >=50 ký tự text hoặc >=1 ảnh nội dung (ảnh không thuộc template lặp >=10 trang).",
+  "normalization": "PyMuPDF get_text(sort=True); Unicode NFC; CRLF->LF; NBSP/tab->space; gộp khoảng trắng trong dòng; gộp >=3 dòng trống; bỏ dòng số trang ở chân trang.",
+  "visual_processing": "Render mỗi trang PNG 120 dpi (data/page_images/, không commit); model vision gpt-4.1-mini mô tả ảnh/bảng/biểu đồ -> data/visual/captions.jsonl",
+  "total_pages": 183,
+  "counted_content_pages": 181,
+  "not_counted_pages": [
+    1,
+    4
+  ],
+  "pages_with_little_text_lt50": [
+    1,
+    41,
+    42,
+    73,
+    74,
+    80,
+    81,
+    83,
+    85,
+    90,
+    92,
+    94,
+    121,
+    122,
+    178,
+    179
+  ],
+  "total_text_chars": 64926,
+  "chapters": {
+    "front": {
+      "title": "Mở đầu (bìa, lời giới thiệu, mục lục)",
+      "pages": [
+        1,
+        4
+      ],
+      "count": 4
+    },
+    "ch1": {
+      "title": "Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số",
+      "pages": [
+        5,
+        36
+      ],
+      "count": 32
+    },
+    "ch2": {
+      "title": "Chương 2 – Các bố cục thường gặp và ứng dụng",
+      "pages": [
+        37,
+        53
+      ],
+      "count": 17
+    },
+    "ch3": {
+      "title": "Chương 3 – Sử dụng màu sắc",
+      "pages": [
+        54,
+        87
+      ],
+      "count": 34
+    },
+    "ch4": {
+      "title": "Chương 4 – Những điều cần biết về Typography",
+      "pages": [
+        88,
+        122
+      ],
+      "count": 35
+    },
+    "ch5": {
+      "title": "Chương 5 – Một số hiệu ứng cơ bản",
+      "pages": [
+        123,
+        131
+      ],
+      "count": 9
+    },
+    "ch6": {
+      "title": "Chương 6 – Nhận diện thương hiệu",
+      "pages": [
+        132,
+        152
+      ],
+      "count": 21
+    },
+    "ch7": {
+      "title": "Chương 7 – Ứng dụng thiết kế CV",
+      "pages": [
+        153,
+        162
+      ],
+      "count": 10
+    },
+    "ch8": {
+      "title": "Chương 8 – Các xu hướng thiết kế",
+      "pages": [
+        163,
+        172
+      ],
+      "count": 10
+    },
+    "appendix": {
+      "title": "Phụ lục và lời kết",
+      "pages": [
+        173,
+        183
+      ],
+      "count": 11
+    }
+  },
+  "template_image_xrefs": [
+    6,
+    16
+  ],
+  "errors": [],
+  "pages": [
+    {
+      "page": 1,
+      "printed_page": 0,
+      "page_id": "colorme-ebook-3#p001",
+      "chapter": "front",
+      "page_title": "",
+      "chars": 0,
+      "content_images": 1,
+      "counted": false
     },
     {
-      "source_id": "tut-datastructures",
-      "title": "5. Data Structures",
-      "source_path_or_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
-      "archive_member": "python-3.13-docs-text/tutorial/datastructures.txt",
-      "local_copy": "data/corpus/tutorial__datastructures.txt",
-      "doc_type": "tutorial",
-      "version": "Python 3.13 documentation (text archive)",
-      "license_or_permission": "PSF License Agreement for Python 3.13 (docs © 2001-2024 PSF); code examples under Zero-Clause BSD — see license.txt in archive",
-      "accessed_at": "2026-11-13",
-      "raw_sha256": "1bca1d272703cdf3792af178e45e84a6bcdec19e6aeae7e157f42c6f6213d452",
-      "raw_bytes": 24310,
-      "pages": [
-        {
-          "page": 1,
-          "page_id": "tut-datastructures#p001",
-          "chars": 1713,
-          "first_section": "5. Data Structures",
-          "sections": [
-            "5. Data Structures",
-            "5. Data Structures > 5.1. More on Lists"
-          ]
-        },
-        {
-          "page": 2,
-          "page_id": "tut-datastructures#p002",
-          "chars": 1658,
-          "first_section": "5. Data Structures > 5.1. More on Lists (cont.)",
-          "sections": [
-            "5. Data Structures > 5.1. More on Lists (cont.)"
-          ]
-        },
-        {
-          "page": 3,
-          "page_id": "tut-datastructures#p003",
-          "chars": 1618,
-          "first_section": "5. Data Structures > 5.1. More on Lists > 5.1.1. Using Lists as Stacks",
-          "sections": [
-            "5. Data Structures > 5.1. More on Lists > 5.1.1. Using Lists as Stacks",
-            "5. Data Structures > 5.1. More on Lists > 5.1.2. Using Lists as Queues"
-          ]
-        },
-        {
-          "page": 4,
-          "page_id": "tut-datastructures#p004",
-          "chars": 3088,
-          "first_section": "5. Data Structures > 5.1. More on Lists > 5.1.3. List Comprehensions",
-          "sections": [
-            "5. Data Structures > 5.1. More on Lists > 5.1.3. List Comprehensions"
-          ]
-        },
-        {
-          "page": 5,
-          "page_id": "tut-datastructures#p005",
-          "chars": 1570,
-          "first_section": "5. Data Structures > 5.1. More on Lists > 5.1.4. Nested List Comprehensions",
-          "sections": [
-            "5. Data Structures > 5.1. More on Lists > 5.1.4. Nested List Comprehensions"
-          ]
-        },
-        {
-          "page": 6,
-          "page_id": "tut-datastructures#p006",
-          "chars": 3690,
-          "first_section": "5. Data Structures > 5.2. The \"del\" statement",
-          "sections": [
-            "5. Data Structures > 5.2. The \"del\" statement",
-            "5. Data Structures > 5.3. Tuples and Sequences"
-          ]
-        },
-        {
-          "page": 7,
-          "page_id": "tut-datastructures#p007",
-          "chars": 1785,
-          "first_section": "5. Data Structures > 5.4. Sets",
-          "sections": [
-            "5. Data Structures > 5.4. Sets"
-          ]
-        },
-        {
-          "page": 8,
-          "page_id": "tut-datastructures#p008",
-          "chars": 3082,
-          "first_section": "5. Data Structures > 5.5. Dictionaries",
-          "sections": [
-            "5. Data Structures > 5.5. Dictionaries"
-          ]
-        },
-        {
-          "page": 9,
-          "page_id": "tut-datastructures#p009",
-          "chars": 2439,
-          "first_section": "5. Data Structures > 5.6. Looping Techniques",
-          "sections": [
-            "5. Data Structures > 5.6. Looping Techniques"
-          ]
-        },
-        {
-          "page": 10,
-          "page_id": "tut-datastructures#p010",
-          "chars": 1936,
-          "first_section": "5. Data Structures > 5.7. More on Conditions",
-          "sections": [
-            "5. Data Structures > 5.7. More on Conditions"
-          ]
-        },
-        {
-          "page": 11,
-          "page_id": "tut-datastructures#p011",
-          "chars": 1698,
-          "first_section": "5. Data Structures > 5.8. Comparing Sequences and Other Types",
-          "sections": [
-            "5. Data Structures > 5.8. Comparing Sequences and Other Types"
-          ]
-        }
-      ],
-      "page_count": 11,
-      "chars": 24277
+      "page": 2,
+      "printed_page": 1,
+      "page_id": "colorme-ebook-3#p002",
+      "chapter": "front",
+      "page_title": "Cuốn sách này",
+      "chars": 836,
+      "content_images": 0,
+      "counted": true
     },
     {
-      "source_id": "tut-errors",
-      "title": "8. Errors and Exceptions",
-      "source_path_or_url": "https://docs.python.org/3.13/tutorial/errors.html",
-      "archive_member": "python-3.13-docs-text/tutorial/errors.txt",
-      "local_copy": "data/corpus/tutorial__errors.txt",
-      "doc_type": "tutorial",
-      "version": "Python 3.13 documentation (text archive)",
-      "license_or_permission": "PSF License Agreement for Python 3.13 (docs © 2001-2024 PSF); code examples under Zero-Clause BSD — see license.txt in archive",
-      "accessed_at": "2026-11-13",
-      "raw_sha256": "69659d8607c8c950fc5919fa5b1af9158951f7edd881f6092ee7f12d20545054",
-      "raw_bytes": 23247,
-      "pages": [
-        {
-          "page": 1,
-          "page_id": "tut-errors#p001",
-          "chars": 2898,
-          "first_section": "8. Errors and Exceptions",
-          "sections": [
-            "8. Errors and Exceptions",
-            "8. Errors and Exceptions > 8.1. Syntax Errors",
-            "8. Errors and Exceptions > 8.2. Exceptions"
-          ]
-        },
-        {
-          "page": 2,
-          "page_id": "tut-errors#p002",
-          "chars": 1767,
-          "first_section": "8. Errors and Exceptions > 8.3. Handling Exceptions",
-          "sections": [
-            "8. Errors and Exceptions > 8.3. Handling Exceptions"
-          ]
-        },
-        {
-          "page": 3,
-          "page_id": "tut-errors#p003",
-          "chars": 1839,
-          "first_section": "8. Errors and Exceptions > 8.3. Handling Exceptions (cont.)",
-          "sections": [
-            "8. Errors and Exceptions > 8.3. Handling Exceptions (cont.)"
-          ]
-        },
-        {
-          "page": 4,
-          "page_id": "tut-errors#p004",
-          "chars": 2389,
-          "first_section": "8. Errors and Exceptions > 8.3. Handling Exceptions (cont.)",
-          "sections": [
-            "8. Errors and Exceptions > 8.3. Handling Exceptions (cont.)"
-          ]
-        },
-        {
-          "page": 5,
-          "page_id": "tut-errors#p005",
-          "chars": 3277,
-          "first_section": "8. Errors and Exceptions > 8.4. Raising Exceptions",
-          "sections": [
-            "8. Errors and Exceptions > 8.4. Raising Exceptions",
-            "8. Errors and Exceptions > 8.5. Exception Chaining"
-          ]
-        },
-        {
-          "page": 6,
-          "page_id": "tut-errors#p006",
-          "chars": 3761,
-          "first_section": "8. Errors and Exceptions > 8.6. User-defined Exceptions",
-          "sections": [
-            "8. Errors and Exceptions > 8.6. User-defined Exceptions",
-            "8. Errors and Exceptions > 8.7. Defining Clean-up Actions"
-          ]
-        },
-        {
-          "page": 7,
-          "page_id": "tut-errors#p007",
-          "chars": 2907,
-          "first_section": "8. Errors and Exceptions > 8.8. Predefined Clean-up Actions",
-          "sections": [
-            "8. Errors and Exceptions > 8.8. Predefined Clean-up Actions",
-            "8. Errors and Exceptions > 8.9. Raising and Handling Multiple Unrelated Exceptions"
-          ]
-        },
-        {
-          "page": 8,
-          "page_id": "tut-errors#p008",
-          "chars": 1634,
-          "first_section": "8. Errors and Exceptions > 8.9. Raising and Handling Multiple Unrelated Exceptions (cont.)",
-          "sections": [
-            "8. Errors and Exceptions > 8.9. Raising and Handling Multiple Unrelated Exceptions (cont.)"
-          ]
-        },
-        {
-          "page": 9,
-          "page_id": "tut-errors#p009",
-          "chars": 2748,
-          "first_section": "8. Errors and Exceptions > 8.10. Enriching Exceptions with Notes",
-          "sections": [
-            "8. Errors and Exceptions > 8.10. Enriching Exceptions with Notes"
-          ]
-        }
-      ],
-      "page_count": 9,
-      "chars": 23220
+      "page": 3,
+      "printed_page": 2,
+      "page_id": "colorme-ebook-3#p003",
+      "chapter": "front",
+      "page_title": "colorME",
+      "chars": 780,
+      "content_images": 0,
+      "counted": true
     },
     {
-      "source_id": "tut-modules",
-      "title": "6. Modules",
-      "source_path_or_url": "https://docs.python.org/3.13/tutorial/modules.html",
-      "archive_member": "python-3.13-docs-text/tutorial/modules.txt",
-      "local_copy": "data/corpus/tutorial__modules.txt",
-      "doc_type": "tutorial",
-      "version": "Python 3.13 documentation (text archive)",
-      "license_or_permission": "PSF License Agreement for Python 3.13 (docs © 2001-2024 PSF); code examples under Zero-Clause BSD — see license.txt in archive",
-      "accessed_at": "2026-11-13",
-      "raw_sha256": "e7fa8fa6b8818795a67da82496490ba9ba3cfdb8082d9ffabc98d58ab36dfbbf",
-      "raw_bytes": 24074,
-      "pages": [
-        {
-          "page": 1,
-          "page_id": "tut-modules#p001",
-          "chars": 2437,
-          "first_section": "6. Modules",
-          "sections": [
-            "6. Modules"
-          ]
-        },
-        {
-          "page": 2,
-          "page_id": "tut-modules#p002",
-          "chars": 2897,
-          "first_section": "6. Modules > 6.1. More on Modules",
-          "sections": [
-            "6. Modules > 6.1. More on Modules"
-          ]
-        },
-        {
-          "page": 3,
-          "page_id": "tut-modules#p003",
-          "chars": 2310,
-          "first_section": "6. Modules > 6.1. More on Modules > 6.1.1. Executing modules as scripts",
-          "sections": [
-            "6. Modules > 6.1. More on Modules > 6.1.1. Executing modules as scripts",
-            "6. Modules > 6.1. More on Modules > 6.1.2. The Module Search Path"
-          ]
-        },
-        {
-          "page": 4,
-          "page_id": "tut-modules#p004",
-          "chars": 2140,
-          "first_section": "6. Modules > 6.1. More on Modules > 6.1.3. \"Compiled\" Python files",
-          "sections": [
-            "6. Modules > 6.1. More on Modules > 6.1.3. \"Compiled\" Python files"
-          ]
-        },
-        {
-          "page": 5,
-          "page_id": "tut-modules#p005",
-          "chars": 3190,
-          "first_section": "6. Modules > 6.2. Standard Modules",
-          "sections": [
-            "6. Modules > 6.2. Standard Modules",
-            "6. Modules > 6.3. The \"dir()\" Function"
-          ]
-        },
-        {
-          "page": 6,
-          "page_id": "tut-modules#p006",
-          "chars": 2544,
-          "first_section": "6. Modules > 6.3. The \"dir()\" Function (cont.)",
-          "sections": [
-            "6. Modules > 6.3. The \"dir()\" Function (cont.)"
-          ]
-        },
-        {
-          "page": 7,
-          "page_id": "tut-modules#p007",
-          "chars": 2042,
-          "first_section": "6. Modules > 6.4. Packages",
-          "sections": [
-            "6. Modules > 6.4. Packages"
-          ]
-        },
-        {
-          "page": 8,
-          "page_id": "tut-modules#p008",
-          "chars": 2060,
-          "first_section": "6. Modules > 6.4. Packages (cont.)",
-          "sections": [
-            "6. Modules > 6.4. Packages (cont.)"
-          ]
-        },
-        {
-          "page": 9,
-          "page_id": "tut-modules#p009",
-          "chars": 1591,
-          "first_section": "6. Modules > 6.4. Packages > 6.4.1. Importing * From a Package",
-          "sections": [
-            "6. Modules > 6.4. Packages > 6.4.1. Importing * From a Package"
-          ]
-        },
-        {
-          "page": 10,
-          "page_id": "tut-modules#p010",
-          "chars": 2835,
-          "first_section": "6. Modules > 6.4. Packages > 6.4.1. Importing * From a Package (cont.)",
-          "sections": [
-            "6. Modules > 6.4. Packages > 6.4.1. Importing * From a Package (cont.)",
-            "6. Modules > 6.4. Packages > 6.4.2. Intra-package References"
-          ]
-        }
-      ],
-      "page_count": 10,
-      "chars": 24046
+      "page": 4,
+      "printed_page": 3,
+      "page_id": "colorme-ebook-3#p004",
+      "chapter": "front",
+      "page_title": "MỤC LỤC",
+      "chars": 244,
+      "content_images": 0,
+      "counted": false
     },
     {
-      "source_id": "tut-inputoutput",
-      "title": "7. Input and Output",
-      "source_path_or_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
-      "archive_member": "python-3.13-docs-text/tutorial/inputoutput.txt",
-      "local_copy": "data/corpus/tutorial__inputoutput.txt",
-      "doc_type": "tutorial",
-      "version": "Python 3.13 documentation (text archive)",
-      "license_or_permission": "PSF License Agreement for Python 3.13 (docs © 2001-2024 PSF); code examples under Zero-Clause BSD — see license.txt in archive",
-      "accessed_at": "2026-11-13",
-      "raw_sha256": "45410e7833299a18f57af375a831e9912b8a0bbf8cc73916b071cda5a0fe19e6",
-      "raw_bytes": 19596,
-      "pages": [
-        {
-          "page": 1,
-          "page_id": "tut-inputoutput#p001",
-          "chars": 1961,
-          "first_section": "7. Input and Output",
-          "sections": [
-            "7. Input and Output",
-            "7. Input and Output > 7.1. Fancier Output Formatting"
-          ]
-        },
-        {
-          "page": 2,
-          "page_id": "tut-inputoutput#p002",
-          "chars": 1888,
-          "first_section": "7. Input and Output > 7.1. Fancier Output Formatting (cont.)",
-          "sections": [
-            "7. Input and Output > 7.1. Fancier Output Formatting (cont.)"
-          ]
-        },
-        {
-          "page": 3,
-          "page_id": "tut-inputoutput#p003",
-          "chars": 1841,
-          "first_section": "7. Input and Output > 7.1. Fancier Output Formatting > 7.1.1. Formatted String Literals",
-          "sections": [
-            "7. Input and Output > 7.1. Fancier Output Formatting > 7.1.1. Formatted String Literals"
-          ]
-        },
-        {
-          "page": 4,
-          "page_id": "tut-inputoutput#p004",
-          "chars": 2776,
-          "first_section": "7. Input and Output > 7.1. Fancier Output Formatting > 7.1.2. The String format() Method",
-          "sections": [
-            "7. Input and Output > 7.1. Fancier Output Formatting > 7.1.2. The String format() Method"
-          ]
-        },
-        {
-          "page": 5,
-          "page_id": "tut-inputoutput#p005",
-          "chars": 1968,
-          "first_section": "7. Input and Output > 7.1. Fancier Output Formatting > 7.1.3. Manual String Formatting",
-          "sections": [
-            "7. Input and Output > 7.1. Fancier Output Formatting > 7.1.3. Manual String Formatting",
-            "7. Input and Output > 7.1. Fancier Output Formatting > 7.1.4. Old string formatting"
-          ]
-        },
-        {
-          "page": 6,
-          "page_id": "tut-inputoutput#p006",
-          "chars": 2959,
-          "first_section": "7. Input and Output > 7.2. Reading and Writing Files",
-          "sections": [
-            "7. Input and Output > 7.2. Reading and Writing Files"
-          ]
-        },
-        {
-          "page": 7,
-          "page_id": "tut-inputoutput#p007",
-          "chars": 1610,
-          "first_section": "7. Input and Output > 7.2. Reading and Writing Files > 7.2.1. Methods of File Objects",
-          "sections": [
-            "7. Input and Output > 7.2. Reading and Writing Files > 7.2.1. Methods of File Objects"
-          ]
-        },
-        {
-          "page": 8,
-          "page_id": "tut-inputoutput#p008",
-          "chars": 1922,
-          "first_section": "7. Input and Output > 7.2. Reading and Writing Files > 7.2.1. Methods of File Objects (cont.)",
-          "sections": [
-            "7. Input and Output > 7.2. Reading and Writing Files > 7.2.1. Methods of File Objects (cont.)"
-          ]
-        },
-        {
-          "page": 9,
-          "page_id": "tut-inputoutput#p009",
-          "chars": 2646,
-          "first_section": "7. Input and Output > 7.2. Reading and Writing Files > 7.2.2. Saving structured data with \"json\"",
-          "sections": [
-            "7. Input and Output > 7.2. Reading and Writing Files > 7.2.2. Saving structured data with \"json\""
-          ]
-        }
-      ],
-      "page_count": 9,
-      "chars": 19571
+      "page": 5,
+      "printed_page": 4,
+      "page_id": "colorme-ebook-3#p005",
+      "chapter": "ch1",
+      "page_title": "CHƯƠNG 1",
+      "chars": 596,
+      "content_images": 0,
+      "counted": true
     },
     {
-      "source_id": "tut-venv",
-      "title": "12. Virtual Environments and Packages",
-      "source_path_or_url": "https://docs.python.org/3.13/tutorial/venv.html",
-      "archive_member": "python-3.13-docs-text/tutorial/venv.txt",
-      "local_copy": "data/corpus/tutorial__venv.txt",
-      "doc_type": "tutorial",
-      "version": "Python 3.13 documentation (text archive)",
-      "license_or_permission": "PSF License Agreement for Python 3.13 (docs © 2001-2024 PSF); code examples under Zero-Clause BSD — see license.txt in archive",
-      "accessed_at": "2026-11-13",
-      "raw_sha256": "bbfe8fe6247c7e8c587d549bec1a0096cc6a2128e69d1948a6f2cffc9e014003",
-      "raw_bytes": 7425,
-      "pages": [
-        {
-          "page": 1,
-          "page_id": "tut-venv#p001",
-          "chars": 3701,
-          "first_section": "12. Virtual Environments and Packages",
-          "sections": [
-            "12. Virtual Environments and Packages",
-            "12. Virtual Environments and Packages > 12.1. Introduction",
-            "12. Virtual Environments and Packages > 12.2. Creating Virtual Environments"
-          ]
-        },
-        {
-          "page": 2,
-          "page_id": "tut-venv#p002",
-          "chars": 1691,
-          "first_section": "12. Virtual Environments and Packages > 12.3. Managing Packages with pip",
-          "sections": [
-            "12. Virtual Environments and Packages > 12.3. Managing Packages with pip"
-          ]
-        },
-        {
-          "page": 3,
-          "page_id": "tut-venv#p003",
-          "chars": 2025,
-          "first_section": "12. Virtual Environments and Packages > 12.3. Managing Packages with pip (cont.)",
-          "sections": [
-            "12. Virtual Environments and Packages > 12.3. Managing Packages with pip (cont.)"
-          ]
-        }
-      ],
-      "page_count": 3,
-      "chars": 7417
+      "page": 6,
+      "printed_page": 5,
+      "page_id": "colorme-ebook-3#p006",
+      "chapter": "ch1",
+      "page_title": "Các bài toán thường gặp",
+      "chars": 976,
+      "content_images": 5,
+      "counted": true
     },
     {
-      "source_id": "lib-json",
-      "title": "\"json\" --- JSON encoder and decoder",
-      "source_path_or_url": "https://docs.python.org/3.13/library/json.html",
-      "archive_member": "python-3.13-docs-text/library/json.txt",
-      "local_copy": "data/corpus/library__json.txt",
-      "doc_type": "library",
-      "version": "Python 3.13 documentation (text archive)",
-      "license_or_permission": "PSF License Agreement for Python 3.13 (docs © 2001-2024 PSF); code examples under Zero-Clause BSD — see license.txt in archive",
-      "accessed_at": "2026-11-13",
-      "raw_sha256": "12e3840498afbbe55ee5ec7cfb7dc33a90ceb1550473bdbf251dd447f42f9669",
-      "raw_bytes": 28647,
-      "pages": [
-        {
-          "page": 1,
-          "page_id": "lib-json#p001",
-          "chars": 1530,
-          "first_section": "\"json\" --- JSON encoder and decoder",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder"
-          ]
-        },
-        {
-          "page": 2,
-          "page_id": "lib-json#p002",
-          "chars": 2630,
-          "first_section": "\"json\" --- JSON encoder and decoder (cont.)",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder (cont.)"
-          ]
-        },
-        {
-          "page": 3,
-          "page_id": "lib-json#p003",
-          "chars": 1683,
-          "first_section": "\"json\" --- JSON encoder and decoder > Basic Usage",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder > Basic Usage"
-          ]
-        },
-        {
-          "page": 4,
-          "page_id": "lib-json#p004",
-          "chars": 1596,
-          "first_section": "\"json\" --- JSON encoder and decoder > Basic Usage (cont.)",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder > Basic Usage (cont.)"
-          ]
-        },
-        {
-          "page": 5,
-          "page_id": "lib-json#p005",
-          "chars": 1600,
-          "first_section": "\"json\" --- JSON encoder and decoder > Basic Usage (cont.)",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder > Basic Usage (cont.)"
-          ]
-        },
-        {
-          "page": 6,
-          "page_id": "lib-json#p006",
-          "chars": 1646,
-          "first_section": "\"json\" --- JSON encoder and decoder > Basic Usage (cont.)",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder > Basic Usage (cont.)"
-          ]
-        },
-        {
-          "page": 7,
-          "page_id": "lib-json#p007",
-          "chars": 1658,
-          "first_section": "\"json\" --- JSON encoder and decoder > Basic Usage (cont.)",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder > Basic Usage (cont.)"
-          ]
-        },
-        {
-          "page": 8,
-          "page_id": "lib-json#p008",
-          "chars": 1533,
-          "first_section": "\"json\" --- JSON encoder and decoder > Encoders and Decoders",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder > Encoders and Decoders"
-          ]
-        },
-        {
-          "page": 9,
-          "page_id": "lib-json#p009",
-          "chars": 1540,
-          "first_section": "\"json\" --- JSON encoder and decoder > Encoders and Decoders (cont.)",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder > Encoders and Decoders (cont.)"
-          ]
-        },
-        {
-          "page": 10,
-          "page_id": "lib-json#p010",
-          "chars": 1979,
-          "first_section": "\"json\" --- JSON encoder and decoder > Encoders and Decoders (cont.)",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder > Encoders and Decoders (cont.)"
-          ]
-        },
-        {
-          "page": 11,
-          "page_id": "lib-json#p011",
-          "chars": 1696,
-          "first_section": "\"json\" --- JSON encoder and decoder > Encoders and Decoders (cont.)",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder > Encoders and Decoders (cont.)"
-          ]
-        },
-        {
-          "page": 12,
-          "page_id": "lib-json#p012",
-          "chars": 2222,
-          "first_section": "\"json\" --- JSON encoder and decoder > Encoders and Decoders (cont.)",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder > Encoders and Decoders (cont.)"
-          ]
-        },
-        {
-          "page": 13,
-          "page_id": "lib-json#p013",
-          "chars": 2553,
-          "first_section": "\"json\" --- JSON encoder and decoder > Exceptions",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder > Exceptions",
-            "\"json\" --- JSON encoder and decoder > Standard Compliance and Interoperability",
-            "\"json\" --- JSON encoder and decoder > Standard Compliance and Interoperability > Character Encodings"
-          ]
-        },
-        {
-          "page": 14,
-          "page_id": "lib-json#p014",
-          "chars": 1816,
-          "first_section": "\"json\" --- JSON encoder and decoder > Standard Compliance and Interoperability > Infinite and NaN Number Values",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder > Standard Compliance and Interoperability > Infinite and NaN Number Values",
-            "\"json\" --- JSON encoder and decoder > Standard Compliance and Interoperability > Repeated Names Within an Object",
-            "\"json\" --- JSON encoder and decoder > Standard Compliance and Interoperability > Top-level Non-Object, Non-Array Values"
-          ]
-        },
-        {
-          "page": 15,
-          "page_id": "lib-json#p015",
-          "chars": 2925,
-          "first_section": "\"json\" --- JSON encoder and decoder > Standard Compliance and Interoperability > Implementation Limitations",
-          "sections": [
-            "\"json\" --- JSON encoder and decoder > Standard Compliance and Interoperability > Implementation Limitations",
-            "\"json\" --- JSON encoder and decoder > Command Line Interface",
-            "\"json\" --- JSON encoder and decoder > Command Line Interface > Command line options"
-          ]
-        }
-      ],
-      "page_count": 15,
-      "chars": 28607
+      "page": 7,
+      "printed_page": 6,
+      "page_id": "colorme-ebook-3#p007",
+      "chapter": "ch1",
+      "page_title": "Những gì bạn có và chưa có",
+      "chars": 1124,
+      "content_images": 20,
+      "counted": true
     },
     {
-      "source_id": "lib-csv",
-      "title": "\"csv\" --- CSV File Reading and Writing",
-      "source_path_or_url": "https://docs.python.org/3.13/library/csv.html",
-      "archive_member": "python-3.13-docs-text/library/csv.txt",
-      "local_copy": "data/corpus/library__csv.txt",
-      "doc_type": "library",
-      "version": "Python 3.13 documentation (text archive)",
-      "license_or_permission": "PSF License Agreement for Python 3.13 (docs © 2001-2024 PSF); code examples under Zero-Clause BSD — see license.txt in archive",
-      "accessed_at": "2026-11-13",
-      "raw_sha256": "963321eeff5f05e369fd0e69d6eccc14171bf85db3148e59cdb00d6e667df9fa",
-      "raw_bytes": 23247,
-      "pages": [
-        {
-          "page": 1,
-          "page_id": "lib-csv#p001",
-          "chars": 1633,
-          "first_section": "\"csv\" --- CSV File Reading and Writing",
-          "sections": [
-            "\"csv\" --- CSV File Reading and Writing"
-          ]
-        },
-        {
-          "page": 2,
-          "page_id": "lib-csv#p002",
-          "chars": 1550,
-          "first_section": "\"csv\" --- CSV File Reading and Writing > Module Contents",
-          "sections": [
-            "\"csv\" --- CSV File Reading and Writing > Module Contents"
-          ]
-        },
-        {
-          "page": 3,
-          "page_id": "lib-csv#p003",
-          "chars": 1732,
-          "first_section": "\"csv\" --- CSV File Reading and Writing > Module Contents (cont.)",
-          "sections": [
-            "\"csv\" --- CSV File Reading and Writing > Module Contents (cont.)"
-          ]
-        },
-        {
-          "page": 4,
-          "page_id": "lib-csv#p004",
-          "chars": 1887,
-          "first_section": "\"csv\" --- CSV File Reading and Writing > Module Contents (cont.)",
-          "sections": [
-            "\"csv\" --- CSV File Reading and Writing > Module Contents (cont.)"
-          ]
-        },
-        {
-          "page": 5,
-          "page_id": "lib-csv#p005",
-          "chars": 2028,
-          "first_section": "\"csv\" --- CSV File Reading and Writing > Module Contents (cont.)",
-          "sections": [
-            "\"csv\" --- CSV File Reading and Writing > Module Contents (cont.)"
-          ]
-        },
-        {
-          "page": 6,
-          "page_id": "lib-csv#p006",
-          "chars": 1503,
-          "first_section": "\"csv\" --- CSV File Reading and Writing > Module Contents (cont.)",
-          "sections": [
-            "\"csv\" --- CSV File Reading and Writing > Module Contents (cont.)"
-          ]
-        },
-        {
-          "page": 7,
-          "page_id": "lib-csv#p007",
-          "chars": 1591,
-          "first_section": "\"csv\" --- CSV File Reading and Writing > Module Contents (cont.)",
-          "sections": [
-            "\"csv\" --- CSV File Reading and Writing > Module Contents (cont.)"
-          ]
-        },
-        {
-          "page": 8,
-          "page_id": "lib-csv#p008",
-          "chars": 1506,
-          "first_section": "\"csv\" --- CSV File Reading and Writing > Module Contents (cont.)",
-          "sections": [
-            "\"csv\" --- CSV File Reading and Writing > Module Contents (cont.)"
-          ]
-        },
-        {
-          "page": 9,
-          "page_id": "lib-csv#p009",
-          "chars": 1733,
-          "first_section": "\"csv\" --- CSV File Reading and Writing > Module Contents (cont.)",
-          "sections": [
-            "\"csv\" --- CSV File Reading and Writing > Module Contents (cont.)"
-          ]
-        },
-        {
-          "page": 10,
-          "page_id": "lib-csv#p010",
-          "chars": 1552,
-          "first_section": "\"csv\" --- CSV File Reading and Writing > Dialects and Formatting Parameters",
-          "sections": [
-            "\"csv\" --- CSV File Reading and Writing > Dialects and Formatting Parameters"
-          ]
-        },
-        {
-          "page": 11,
-          "page_id": "lib-csv#p011",
-          "chars": 1663,
-          "first_section": "\"csv\" --- CSV File Reading and Writing > Dialects and Formatting Parameters (cont.)",
-          "sections": [
-            "\"csv\" --- CSV File Reading and Writing > Dialects and Formatting Parameters (cont.)"
-          ]
-        },
-        {
-          "page": 12,
-          "page_id": "lib-csv#p012",
-          "chars": 2617,
-          "first_section": "\"csv\" --- CSV File Reading and Writing > Reader Objects",
-          "sections": [
-            "\"csv\" --- CSV File Reading and Writing > Reader Objects",
-            "\"csv\" --- CSV File Reading and Writing > Writer Objects"
-          ]
-        },
-        {
-          "page": 13,
-          "page_id": "lib-csv#p013",
-          "chars": 2222,
-          "first_section": "\"csv\" --- CSV File Reading and Writing > Examples",
-          "sections": [
-            "\"csv\" --- CSV File Reading and Writing > Examples"
-          ]
-        }
-      ],
-      "page_count": 13,
-      "chars": 23217
+      "page": 8,
+      "printed_page": 7,
+      "page_id": "colorme-ebook-3#p008",
+      "chapter": "ch1",
+      "page_title": "Các phần mềm thiết kế thường gặp",
+      "chars": 1250,
+      "content_images": 4,
+      "counted": true
     },
     {
-      "source_id": "lib-functools",
-      "title": "\"functools\" --- Higher-order functions and operations on callable objects",
-      "source_path_or_url": "https://docs.python.org/3.13/library/functools.html",
-      "archive_member": "python-3.13-docs-text/library/functools.txt",
-      "local_copy": "data/corpus/library__functools.txt",
-      "doc_type": "library",
-      "version": "Python 3.13 documentation (text archive)",
-      "license_or_permission": "PSF License Agreement for Python 3.13 (docs © 2001-2024 PSF); code examples under Zero-Clause BSD — see license.txt in archive",
-      "accessed_at": "2026-11-13",
-      "raw_sha256": "6f2f536919341e23fdea0402074577c6b70cd429695fcb0caaa7a7235694e85e",
-      "raw_bytes": 28303,
-      "pages": [
-        {
-          "page": 1,
-          "page_id": "lib-functools#p001",
-          "chars": 1613,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects"
-          ]
-        },
-        {
-          "page": 2,
-          "page_id": "lib-functools#p002",
-          "chars": 1757,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)"
-          ]
-        },
-        {
-          "page": 3,
-          "page_id": "lib-functools#p003",
-          "chars": 1716,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)"
-          ]
-        },
-        {
-          "page": 4,
-          "page_id": "lib-functools#p004",
-          "chars": 1546,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)"
-          ]
-        },
-        {
-          "page": 5,
-          "page_id": "lib-functools#p005",
-          "chars": 1563,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)"
-          ]
-        },
-        {
-          "page": 6,
-          "page_id": "lib-functools#p006",
-          "chars": 1654,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)"
-          ]
-        },
-        {
-          "page": 7,
-          "page_id": "lib-functools#p007",
-          "chars": 2033,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)"
-          ]
-        },
-        {
-          "page": 8,
-          "page_id": "lib-functools#p008",
-          "chars": 1588,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)"
-          ]
-        },
-        {
-          "page": 9,
-          "page_id": "lib-functools#p009",
-          "chars": 1509,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)"
-          ]
-        },
-        {
-          "page": 10,
-          "page_id": "lib-functools#p010",
-          "chars": 1586,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)"
-          ]
-        },
-        {
-          "page": 11,
-          "page_id": "lib-functools#p011",
-          "chars": 1802,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)"
-          ]
-        },
-        {
-          "page": 12,
-          "page_id": "lib-functools#p012",
-          "chars": 1596,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)"
-          ]
-        },
-        {
-          "page": 13,
-          "page_id": "lib-functools#p013",
-          "chars": 1527,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)"
-          ]
-        },
-        {
-          "page": 14,
-          "page_id": "lib-functools#p014",
-          "chars": 1539,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)"
-          ]
-        },
-        {
-          "page": 15,
-          "page_id": "lib-functools#p015",
-          "chars": 1763,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)"
-          ]
-        },
-        {
-          "page": 16,
-          "page_id": "lib-functools#p016",
-          "chars": 3479,
-          "first_section": "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-          "sections": [
-            "\"functools\" --- Higher-order functions and operations on callable objects (cont.)",
-            "\"functools\" --- Higher-order functions and operations on callable objects > \"partial\" Objects"
-          ]
-        }
-      ],
-      "page_count": 16,
-      "chars": 28271
+      "page": 9,
+      "printed_page": 8,
+      "page_id": "colorme-ebook-3#p009",
+      "chapter": "ch1",
+      "page_title": "Vì sao nên học Photoshop",
+      "chars": 1142,
+      "content_images": 10,
+      "counted": true
     },
     {
-      "source_id": "lib-venv",
-      "title": "\"venv\" --- Creation of virtual environments",
-      "source_path_or_url": "https://docs.python.org/3.13/library/venv.html",
-      "archive_member": "python-3.13-docs-text/library/venv.txt",
-      "local_copy": "data/corpus/library__venv.txt",
-      "doc_type": "library",
-      "version": "Python 3.13 documentation (text archive)",
-      "license_or_permission": "PSF License Agreement for Python 3.13 (docs © 2001-2024 PSF); code examples under Zero-Clause BSD — see license.txt in archive",
-      "accessed_at": "2026-11-13",
-      "raw_sha256": "c97b03aad7672e48d7311fae66600259b6c6e22c3e290c5a3ec4a8ea3f133b7e",
-      "raw_bytes": 29856,
-      "pages": [
-        {
-          "page": 1,
-          "page_id": "lib-venv#p001",
-          "chars": 1974,
-          "first_section": "\"venv\" --- Creation of virtual environments",
-          "sections": [
-            "\"venv\" --- Creation of virtual environments"
-          ]
-        },
-        {
-          "page": 2,
-          "page_id": "lib-venv#p002",
-          "chars": 1522,
-          "first_section": "\"venv\" --- Creation of virtual environments > Creating virtual environments",
-          "sections": [
-            "\"venv\" --- Creation of virtual environments > Creating virtual environments"
-          ]
-        },
-        {
-          "page": 3,
-          "page_id": "lib-venv#p003",
-          "chars": 2825,
-          "first_section": "\"venv\" --- Creation of virtual environments > Creating virtual environments (cont.)",
-          "sections": [
-            "\"venv\" --- Creation of virtual environments > Creating virtual environments (cont.)"
-          ]
-        },
-        {
-          "page": 4,
-          "page_id": "lib-venv#p004",
-          "chars": 2205,
-          "first_section": "\"venv\" --- Creation of virtual environments > How venvs work",
-          "sections": [
-            "\"venv\" --- Creation of virtual environments > How venvs work"
-          ]
-        },
-        {
-          "page": 5,
-          "page_id": "lib-venv#p005",
-          "chars": 2431,
-          "first_section": "\"venv\" --- Creation of virtual environments > How venvs work (cont.)",
-          "sections": [
-            "\"venv\" --- Creation of virtual environments > How venvs work (cont.)"
-          ]
-        },
-        {
-          "page": 6,
-          "page_id": "lib-venv#p006",
-          "chars": 1582,
-          "first_section": "\"venv\" --- Creation of virtual environments > API",
-          "sections": [
-            "\"venv\" --- Creation of virtual environments > API"
-          ]
-        },
-        {
-          "page": 7,
-          "page_id": "lib-venv#p007",
-          "chars": 1592,
-          "first_section": "\"venv\" --- Creation of virtual environments > API (cont.)",
-          "sections": [
-            "\"venv\" --- Creation of virtual environments > API (cont.)"
-          ]
-        },
-        {
-          "page": 8,
-          "page_id": "lib-venv#p008",
-          "chars": 1546,
-          "first_section": "\"venv\" --- Creation of virtual environments > API (cont.)",
-          "sections": [
-            "\"venv\" --- Creation of virtual environments > API (cont.)"
-          ]
-        },
-        {
-          "page": 9,
-          "page_id": "lib-venv#p009",
-          "chars": 1639,
-          "first_section": "\"venv\" --- Creation of virtual environments > API (cont.)",
-          "sections": [
-            "\"venv\" --- Creation of virtual environments > API (cont.)"
-          ]
-        },
-        {
-          "page": 10,
-          "page_id": "lib-venv#p010",
-          "chars": 2826,
-          "first_section": "\"venv\" --- Creation of virtual environments > API (cont.)",
-          "sections": [
-            "\"venv\" --- Creation of virtual environments > API (cont.)"
-          ]
-        },
-        {
-          "page": 11,
-          "page_id": "lib-venv#p011",
-          "chars": 1625,
-          "first_section": "\"venv\" --- Creation of virtual environments > An example of extending \"EnvBuilder\"",
-          "sections": [
-            "\"venv\" --- Creation of virtual environments > An example of extending \"EnvBuilder\""
-          ]
-        },
-        {
-          "page": 12,
-          "page_id": "lib-venv#p012",
-          "chars": 1761,
-          "first_section": "\"venv\" --- Creation of virtual environments > An example of extending \"EnvBuilder\" (cont.)",
-          "sections": [
-            "\"venv\" --- Creation of virtual environments > An example of extending \"EnvBuilder\" (cont.)"
-          ]
-        },
-        {
-          "page": 13,
-          "page_id": "lib-venv#p013",
-          "chars": 2008,
-          "first_section": "\"venv\" --- Creation of virtual environments > An example of extending \"EnvBuilder\" (cont.)",
-          "sections": [
-            "\"venv\" --- Creation of virtual environments > An example of extending \"EnvBuilder\" (cont.)"
-          ]
-        },
-        {
-          "page": 14,
-          "page_id": "lib-venv#p014",
-          "chars": 4288,
-          "first_section": "\"venv\" --- Creation of virtual environments > An example of extending \"EnvBuilder\" (cont.)",
-          "sections": [
-            "\"venv\" --- Creation of virtual environments > An example of extending \"EnvBuilder\" (cont.)"
-          ]
-        }
-      ],
-      "page_count": 14,
-      "chars": 29824
+      "page": 10,
+      "printed_page": 9,
+      "page_id": "colorme-ebook-3#p010",
+      "chapter": "ch1",
+      "page_title": "Khái niệm về điểm ảnh (pixel)",
+      "chars": 737,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 11,
+      "printed_page": 10,
+      "page_id": "colorme-ebook-3#p011",
+      "chapter": "ch1",
+      "page_title": "Kích thước ảnh (dimensions)",
+      "chars": 446,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 12,
+      "printed_page": 11,
+      "page_id": "colorme-ebook-3#p012",
+      "chapter": "ch1",
+      "page_title": "Độ phân giải ảnh (resolution)",
+      "chars": 709,
+      "content_images": 27,
+      "counted": true
+    },
+    {
+      "page": 13,
+      "printed_page": 12,
+      "page_id": "colorme-ebook-3#p013",
+      "chapter": "ch1",
+      "page_title": "Độ phân giải ảnh trong in ấn",
+      "chars": 311,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 14,
+      "printed_page": 13,
+      "page_id": "colorme-ebook-3#p014",
+      "chapter": "ch1",
+      "page_title": "Độ phân giải ảnh trong hiển thị",
+      "chars": 417,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 15,
+      "printed_page": 14,
+      "page_id": "colorme-ebook-3#p015",
+      "chapter": "ch1",
+      "page_title": "Hệ màu CMYK",
+      "chars": 898,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 16,
+      "printed_page": 15,
+      "page_id": "colorme-ebook-3#p016",
+      "chapter": "ch1",
+      "page_title": "Hệ màu RGB",
+      "chars": 347,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 17,
+      "printed_page": 16,
+      "page_id": "colorme-ebook-3#p017",
+      "chapter": "ch1",
+      "page_title": "Hệ màu RGB",
+      "chars": 400,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 18,
+      "printed_page": 17,
+      "page_id": "colorme-ebook-3#p018",
+      "chapter": "ch1",
+      "page_title": "Không gian làm việc của Photoshop",
+      "chars": 183,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 19,
+      "printed_page": 18,
+      "page_id": "colorme-ebook-3#p019",
+      "chapter": "ch1",
+      "page_title": "Khởi tạo file mới",
+      "chars": 372,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 20,
+      "printed_page": 19,
+      "page_id": "colorme-ebook-3#p020",
+      "chapter": "ch1",
+      "page_title": "Khái niệm về lớp (layer)",
+      "chars": 798,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 21,
+      "printed_page": 20,
+      "page_id": "colorme-ebook-3#p021",
+      "chapter": "ch1",
+      "page_title": "Các thao tác cơ bản với lớp",
+      "chars": 607,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 22,
+      "printed_page": 21,
+      "page_id": "colorme-ebook-3#p022",
+      "chapter": "ch1",
+      "page_title": "Công cụ di chuyển (move tool)",
+      "chars": 405,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 23,
+      "printed_page": 22,
+      "page_id": "colorme-ebook-3#p023",
+      "chapter": "ch1",
+      "page_title": "Biến dạng lớp (transform tool)",
+      "chars": 349,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 24,
+      "printed_page": 23,
+      "page_id": "colorme-ebook-3#p024",
+      "chapter": "ch1",
+      "page_title": "Biến dạng lớp (transform tool)",
+      "chars": 350,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 25,
+      "printed_page": 24,
+      "page_id": "colorme-ebook-3#p025",
+      "chapter": "ch1",
+      "page_title": "Biến dạng lớp (transform tool)",
+      "chars": 348,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 26,
+      "printed_page": 25,
+      "page_id": "colorme-ebook-3#p026",
+      "chapter": "ch1",
+      "page_title": "Biến dạng lớp (transform tool)",
+      "chars": 351,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 27,
+      "printed_page": 26,
+      "page_id": "colorme-ebook-3#p027",
+      "chapter": "ch1",
+      "page_title": "Biến dạng lớp (transform tool)",
+      "chars": 355,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 28,
+      "printed_page": 27,
+      "page_id": "colorme-ebook-3#p028",
+      "chapter": "ch1",
+      "page_title": "Biến dạng lớp (transform tool)",
+      "chars": 348,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 29,
+      "printed_page": 28,
+      "page_id": "colorme-ebook-3#p029",
+      "chapter": "ch1",
+      "page_title": "Công cụ chọn vùng (selection tool)",
+      "chars": 298,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 30,
+      "printed_page": 29,
+      "page_id": "colorme-ebook-3#p030",
+      "chapter": "ch1",
+      "page_title": "Công cụ chọn vùng (selection tool)",
+      "chars": 302,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 31,
+      "printed_page": 30,
+      "page_id": "colorme-ebook-3#p031",
+      "chapter": "ch1",
+      "page_title": "Công cụ chọn vùng (selection tool)",
+      "chars": 299,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 32,
+      "printed_page": 31,
+      "page_id": "colorme-ebook-3#p032",
+      "chapter": "ch1",
+      "page_title": "Công cụ chọn vùng (selection tool)",
+      "chars": 301,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 33,
+      "printed_page": 32,
+      "page_id": "colorme-ebook-3#p033",
+      "chapter": "ch1",
+      "page_title": "Công cụ chọn vùng (selection tool)",
+      "chars": 316,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 34,
+      "printed_page": 33,
+      "page_id": "colorme-ebook-3#p034",
+      "chapter": "ch1",
+      "page_title": "Công cụ chọn vùng (selection tool)",
+      "chars": 311,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 35,
+      "printed_page": 34,
+      "page_id": "colorme-ebook-3#p035",
+      "chapter": "ch1",
+      "page_title": "Công cụ chọn vùng (selection tool)",
+      "chars": 299,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 36,
+      "printed_page": 35,
+      "page_id": "colorme-ebook-3#p036",
+      "chapter": "ch1",
+      "page_title": "Tổng kết chương 1",
+      "chars": 307,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 37,
+      "printed_page": 36,
+      "page_id": "colorme-ebook-3#p037",
+      "chapter": "ch2",
+      "page_title": "CHƯƠNG 2",
+      "chars": 375,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 38,
+      "printed_page": 37,
+      "page_id": "colorme-ebook-3#p038",
+      "chapter": "ch2",
+      "page_title": "Phân cấp thông tin",
+      "chars": 191,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 39,
+      "printed_page": 38,
+      "page_id": "colorme-ebook-3#p039",
+      "chapter": "ch2",
+      "page_title": "Phân cấp thông tin",
+      "chars": 255,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 40,
+      "printed_page": 39,
+      "page_id": "colorme-ebook-3#p040",
+      "chapter": "ch2",
+      "page_title": "Phân cấp thông tin",
+      "chars": 415,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 41,
+      "printed_page": 40,
+      "page_id": "colorme-ebook-3#p041",
+      "chapter": "ch2",
+      "page_title": "Ví dụ",
+      "chars": 5,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 42,
+      "printed_page": 41,
+      "page_id": "colorme-ebook-3#p042",
+      "chapter": "ch2",
+      "page_title": "Ví dụ",
+      "chars": 5,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 43,
+      "printed_page": 42,
+      "page_id": "colorme-ebook-3#p043",
+      "chapter": "ch2",
+      "page_title": "Lưới trong thiết kế",
+      "chars": 474,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 44,
+      "printed_page": 43,
+      "page_id": "colorme-ebook-3#p044",
+      "chapter": "ch2",
+      "page_title": "Lưới trong thiết kế",
+      "chars": 302,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 45,
+      "printed_page": 44,
+      "page_id": "colorme-ebook-3#p045",
+      "chapter": "ch2",
+      "page_title": "Lưới trong thiết kế",
+      "chars": 467,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 46,
+      "printed_page": 45,
+      "page_id": "colorme-ebook-3#p046",
+      "chapter": "ch2",
+      "page_title": "Lưới trong thiết kế",
+      "chars": 669,
+      "content_images": 4,
+      "counted": true
+    },
+    {
+      "page": 47,
+      "printed_page": 46,
+      "page_id": "colorme-ebook-3#p047",
+      "chapter": "ch2",
+      "page_title": "Phần cứng và phần mềm",
+      "chars": 704,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 48,
+      "printed_page": 47,
+      "page_id": "colorme-ebook-3#p048",
+      "chapter": "ch2",
+      "page_title": "Luật 1/3",
+      "chars": 402,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 49,
+      "printed_page": 48,
+      "page_id": "colorme-ebook-3#p049",
+      "chapter": "ch2",
+      "page_title": "Luật 1/3",
+      "chars": 608,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 50,
+      "printed_page": 49,
+      "page_id": "colorme-ebook-3#p050",
+      "chapter": "ch2",
+      "page_title": "Luật 1/3",
+      "chars": 378,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 51,
+      "printed_page": 50,
+      "page_id": "colorme-ebook-3#p051",
+      "chapter": "ch2",
+      "page_title": "Luật đối xứng",
+      "chars": 554,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 52,
+      "printed_page": 51,
+      "page_id": "colorme-ebook-3#p052",
+      "chapter": "ch2",
+      "page_title": "Luật đối xứng",
+      "chars": 477,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 53,
+      "printed_page": 52,
+      "page_id": "colorme-ebook-3#p053",
+      "chapter": "ch2",
+      "page_title": "Tổng kết chương 2",
+      "chars": 552,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 54,
+      "printed_page": 53,
+      "page_id": "colorme-ebook-3#p054",
+      "chapter": "ch3",
+      "page_title": "CHƯƠNG 3",
+      "chars": 460,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 55,
+      "printed_page": 54,
+      "page_id": "colorme-ebook-3#p055",
+      "chapter": "ch3",
+      "page_title": "Vòng thuần sắc",
+      "chars": 440,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 56,
+      "printed_page": 55,
+      "page_id": "colorme-ebook-3#p056",
+      "chapter": "ch3",
+      "page_title": "Vòng thuần sắc",
+      "chars": 341,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 57,
+      "printed_page": 56,
+      "page_id": "colorme-ebook-3#p057",
+      "chapter": "ch3",
+      "page_title": "Màu bậc 1",
+      "chars": 406,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 58,
+      "printed_page": 57,
+      "page_id": "colorme-ebook-3#p058",
+      "chapter": "ch3",
+      "page_title": "Màu bậc 2",
+      "chars": 232,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 59,
+      "printed_page": 58,
+      "page_id": "colorme-ebook-3#p059",
+      "chapter": "ch3",
+      "page_title": "Màu bậc 3",
+      "chars": 228,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 60,
+      "printed_page": 59,
+      "page_id": "colorme-ebook-3#p060",
+      "chapter": "ch3",
+      "page_title": "Hệ màu HSB",
+      "chars": 411,
+      "content_images": 3,
+      "counted": true
+    },
+    {
+      "page": 61,
+      "printed_page": 60,
+      "page_id": "colorme-ebook-3#p061",
+      "chapter": "ch3",
+      "page_title": "Hệ màu HSB",
+      "chars": 265,
+      "content_images": 6,
+      "counted": true
+    },
+    {
+      "page": 62,
+      "printed_page": 61,
+      "page_id": "colorme-ebook-3#p062",
+      "chapter": "ch3",
+      "page_title": "Dùng 1 màu",
+      "chars": 639,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 63,
+      "printed_page": 62,
+      "page_id": "colorme-ebook-3#p063",
+      "chapter": "ch3",
+      "page_title": "Dùng 1 màu",
+      "chars": 437,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 64,
+      "printed_page": 63,
+      "page_id": "colorme-ebook-3#p064",
+      "chapter": "ch3",
+      "page_title": "Dùng 1 màu",
+      "chars": 579,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 65,
+      "printed_page": 64,
+      "page_id": "colorme-ebook-3#p065",
+      "chapter": "ch3",
+      "page_title": "Dùng 1 màu",
+      "chars": 438,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 66,
+      "printed_page": 65,
+      "page_id": "colorme-ebook-3#p066",
+      "chapter": "ch3",
+      "page_title": "Dùng 1 màu",
+      "chars": 389,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 67,
+      "printed_page": 66,
+      "page_id": "colorme-ebook-3#p067",
+      "chapter": "ch3",
+      "page_title": "Dùng 1 màu",
+      "chars": 510,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 68,
+      "printed_page": 67,
+      "page_id": "colorme-ebook-3#p068",
+      "chapter": "ch3",
+      "page_title": "Dùng 2 màu – Màu tương đồng",
+      "chars": 374,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 69,
+      "printed_page": 68,
+      "page_id": "colorme-ebook-3#p069",
+      "chapter": "ch3",
+      "page_title": "Dùng 2 màu – Màu tương đồng",
+      "chars": 281,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 70,
+      "printed_page": 69,
+      "page_id": "colorme-ebook-3#p070",
+      "chapter": "ch3",
+      "page_title": "Dùng 2 màu – Màu bổ túc",
+      "chars": 329,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 71,
+      "printed_page": 70,
+      "page_id": "colorme-ebook-3#p071",
+      "chapter": "ch3",
+      "page_title": "Dùng 2 màu – Màu bổ túc",
+      "chars": 369,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 72,
+      "printed_page": 71,
+      "page_id": "colorme-ebook-3#p072",
+      "chapter": "ch3",
+      "page_title": "Dùng 2 màu – Màu bổ túc",
+      "chars": 281,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 73,
+      "printed_page": 72,
+      "page_id": "colorme-ebook-3#p073",
+      "chapter": "ch3",
+      "page_title": "",
+      "chars": 0,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 74,
+      "printed_page": 73,
+      "page_id": "colorme-ebook-3#p074",
+      "chapter": "ch3",
+      "page_title": "",
+      "chars": 0,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 75,
+      "printed_page": 74,
+      "page_id": "colorme-ebook-3#p075",
+      "chapter": "ch3",
+      "page_title": "Dùng 2 màu – Màu bổ túc",
+      "chars": 188,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 76,
+      "printed_page": 75,
+      "page_id": "colorme-ebook-3#p076",
+      "chapter": "ch3",
+      "page_title": "Dùng 2 màu – Màu bổ túc",
+      "chars": 236,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 77,
+      "printed_page": 76,
+      "page_id": "colorme-ebook-3#p077",
+      "chapter": "ch3",
+      "page_title": "Ý nghĩa của màu sắc",
+      "chars": 524,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 78,
+      "printed_page": 77,
+      "page_id": "colorme-ebook-3#p078",
+      "chapter": "ch3",
+      "page_title": "Ý nghĩa của màu sắc",
+      "chars": 295,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 79,
+      "printed_page": 78,
+      "page_id": "colorme-ebook-3#p079",
+      "chapter": "ch3",
+      "page_title": "Các nhóm màu thường gặp",
+      "chars": 182,
+      "content_images": 3,
+      "counted": true
+    },
+    {
+      "page": 80,
+      "printed_page": 79,
+      "page_id": "colorme-ebook-3#p080",
+      "chapter": "ch3",
+      "page_title": "",
+      "chars": 0,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 81,
+      "printed_page": 80,
+      "page_id": "colorme-ebook-3#p081",
+      "chapter": "ch3",
+      "page_title": "",
+      "chars": 0,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 82,
+      "printed_page": 81,
+      "page_id": "colorme-ebook-3#p082",
+      "chapter": "ch3",
+      "page_title": "Các nhóm màu thường gặp",
+      "chars": 246,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 83,
+      "printed_page": 82,
+      "page_id": "colorme-ebook-3#p083",
+      "chapter": "ch3",
+      "page_title": "",
+      "chars": 0,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 84,
+      "printed_page": 83,
+      "page_id": "colorme-ebook-3#p084",
+      "chapter": "ch3",
+      "page_title": "Các nhóm màu thường gặp",
+      "chars": 405,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 85,
+      "printed_page": 84,
+      "page_id": "colorme-ebook-3#p085",
+      "chapter": "ch3",
+      "page_title": "",
+      "chars": 0,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 86,
+      "printed_page": 85,
+      "page_id": "colorme-ebook-3#p086",
+      "chapter": "ch3",
+      "page_title": "Công cụ chọn màu",
+      "chars": 215,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 87,
+      "printed_page": 86,
+      "page_id": "colorme-ebook-3#p087",
+      "chapter": "ch3",
+      "page_title": "Tổng kết chương 3",
+      "chars": 532,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 88,
+      "printed_page": 87,
+      "page_id": "colorme-ebook-3#p088",
+      "chapter": "ch4",
+      "page_title": "CHƯƠNG 4",
+      "chars": 364,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 89,
+      "printed_page": 88,
+      "page_id": "colorme-ebook-3#p089",
+      "chapter": "ch4",
+      "page_title": "Các nhóm font cơ bản",
+      "chars": 617,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 90,
+      "printed_page": 89,
+      "page_id": "colorme-ebook-3#p090",
+      "chapter": "ch4",
+      "page_title": "",
+      "chars": 0,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 91,
+      "printed_page": 90,
+      "page_id": "colorme-ebook-3#p091",
+      "chapter": "ch4",
+      "page_title": "Các nhóm font cơ bản",
+      "chars": 522,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 92,
+      "printed_page": 91,
+      "page_id": "colorme-ebook-3#p092",
+      "chapter": "ch4",
+      "page_title": "",
+      "chars": 0,
+      "content_images": 6,
+      "counted": true
+    },
+    {
+      "page": 93,
+      "printed_page": 92,
+      "page_id": "colorme-ebook-3#p093",
+      "chapter": "ch4",
+      "page_title": "Các nhóm font cơ bản",
+      "chars": 556,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 94,
+      "printed_page": 93,
+      "page_id": "colorme-ebook-3#p094",
+      "chapter": "ch4",
+      "page_title": "",
+      "chars": 0,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 95,
+      "printed_page": 94,
+      "page_id": "colorme-ebook-3#p095",
+      "chapter": "ch4",
+      "page_title": "Cách kết hợp font – 1 typeface",
+      "chars": 340,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 96,
+      "printed_page": 95,
+      "page_id": "colorme-ebook-3#p096",
+      "chapter": "ch4",
+      "page_title": "Cách kết hợp font – 1 typeface",
+      "chars": 223,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 97,
+      "printed_page": 96,
+      "page_id": "colorme-ebook-3#p097",
+      "chapter": "ch4",
+      "page_title": "Cách kết hợp font – 1 typeface",
+      "chars": 181,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 98,
+      "printed_page": 97,
+      "page_id": "colorme-ebook-3#p098",
+      "chapter": "ch4",
+      "page_title": "Cách kết hợp font – 1 font",
+      "chars": 176,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 99,
+      "printed_page": 98,
+      "page_id": "colorme-ebook-3#p099",
+      "chapter": "ch4",
+      "page_title": "Cách kết hợp font – 2 font",
+      "chars": 232,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 100,
+      "printed_page": 99,
+      "page_id": "colorme-ebook-3#p100",
+      "chapter": "ch4",
+      "page_title": "Cách kết hợp font – 2 font",
+      "chars": 93,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 101,
+      "printed_page": 100,
+      "page_id": "colorme-ebook-3#p101",
+      "chapter": "ch4",
+      "page_title": "Cách kết hợp font – 2 font",
+      "chars": 376,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 102,
+      "printed_page": 101,
+      "page_id": "colorme-ebook-3#p102",
+      "chapter": "ch4",
+      "page_title": "Các kĩ thuật dùng chữ",
+      "chars": 404,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 103,
+      "printed_page": 102,
+      "page_id": "colorme-ebook-3#p103",
+      "chapter": "ch4",
+      "page_title": "Các kĩ thuật dùng chữ",
+      "chars": 288,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 104,
+      "printed_page": 103,
+      "page_id": "colorme-ebook-3#p104",
+      "chapter": "ch4",
+      "page_title": "Các kĩ thuật dùng chữ",
+      "chars": 194,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 105,
+      "printed_page": 104,
+      "page_id": "colorme-ebook-3#p105",
+      "chapter": "ch4",
+      "page_title": "Các kĩ thuật dùng chữ",
+      "chars": 262,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 106,
+      "printed_page": 105,
+      "page_id": "colorme-ebook-3#p106",
+      "chapter": "ch4",
+      "page_title": "Các kĩ thuật dùng chữ",
+      "chars": 412,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 107,
+      "printed_page": 106,
+      "page_id": "colorme-ebook-3#p107",
+      "chapter": "ch4",
+      "page_title": "Các kĩ thuật dùng chữ",
+      "chars": 353,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 108,
+      "printed_page": 107,
+      "page_id": "colorme-ebook-3#p108",
+      "chapter": "ch4",
+      "page_title": "Các kĩ thuật dùng chữ",
+      "chars": 297,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 109,
+      "printed_page": 108,
+      "page_id": "colorme-ebook-3#p109",
+      "chapter": "ch4",
+      "page_title": "Các kĩ thuật dùng chữ",
+      "chars": 465,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 110,
+      "printed_page": 109,
+      "page_id": "colorme-ebook-3#p110",
+      "chapter": "ch4",
+      "page_title": "Các kĩ thuật dùng chữ",
+      "chars": 300,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 111,
+      "printed_page": 110,
+      "page_id": "colorme-ebook-3#p111",
+      "chapter": "ch4",
+      "page_title": "Các kĩ thuật dùng chữ",
+      "chars": 107,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 112,
+      "printed_page": 111,
+      "page_id": "colorme-ebook-3#p112",
+      "chapter": "ch4",
+      "page_title": "Các kĩ thuật dùng chữ",
+      "chars": 267,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 113,
+      "printed_page": 112,
+      "page_id": "colorme-ebook-3#p113",
+      "chapter": "ch4",
+      "page_title": "Các kĩ thuật dùng chữ",
+      "chars": 173,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 114,
+      "printed_page": 113,
+      "page_id": "colorme-ebook-3#p114",
+      "chapter": "ch4",
+      "page_title": "Các kĩ thuật dùng chữ",
+      "chars": 221,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 115,
+      "printed_page": 114,
+      "page_id": "colorme-ebook-3#p115",
+      "chapter": "ch4",
+      "page_title": "Một số chú ý",
+      "chars": 249,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 116,
+      "printed_page": 115,
+      "page_id": "colorme-ebook-3#p116",
+      "chapter": "ch4",
+      "page_title": "Một số chú ý",
+      "chars": 162,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 117,
+      "printed_page": 116,
+      "page_id": "colorme-ebook-3#p117",
+      "chapter": "ch4",
+      "page_title": "Một số chú ý",
+      "chars": 172,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 118,
+      "printed_page": 117,
+      "page_id": "colorme-ebook-3#p118",
+      "chapter": "ch4",
+      "page_title": "Một số chú ý",
+      "chars": 219,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 119,
+      "printed_page": 118,
+      "page_id": "colorme-ebook-3#p119",
+      "chapter": "ch4",
+      "page_title": "Một số chú ý",
+      "chars": 172,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 120,
+      "printed_page": 119,
+      "page_id": "colorme-ebook-3#p120",
+      "chapter": "ch4",
+      "page_title": "Tổng kết chương 4",
+      "chars": 387,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 121,
+      "printed_page": 120,
+      "page_id": "colorme-ebook-3#p121",
+      "chapter": "ch4",
+      "page_title": "",
+      "chars": 0,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 122,
+      "printed_page": 121,
+      "page_id": "colorme-ebook-3#p122",
+      "chapter": "ch4",
+      "page_title": "",
+      "chars": 0,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 123,
+      "printed_page": 122,
+      "page_id": "colorme-ebook-3#p123",
+      "chapter": "ch5",
+      "page_title": "CHƯƠNG 5",
+      "chars": 448,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 124,
+      "printed_page": 123,
+      "page_id": "colorme-ebook-3#p124",
+      "chapter": "ch5",
+      "page_title": "Blur – Filter Gallery",
+      "chars": 247,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 125,
+      "printed_page": 124,
+      "page_id": "colorme-ebook-3#p125",
+      "chapter": "ch5",
+      "page_title": "Blur – Skin Retouch",
+      "chars": 225,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 126,
+      "printed_page": 125,
+      "page_id": "colorme-ebook-3#p126",
+      "chapter": "ch5",
+      "page_title": "Hue, Brightness & Contrast",
+      "chars": 125,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 127,
+      "printed_page": 126,
+      "page_id": "colorme-ebook-3#p127",
+      "chapter": "ch5",
+      "page_title": "Hue, Brightness & Contrast",
+      "chars": 440,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 128,
+      "printed_page": 127,
+      "page_id": "colorme-ebook-3#p128",
+      "chapter": "ch5",
+      "page_title": "Triangulation",
+      "chars": 410,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 129,
+      "printed_page": 128,
+      "page_id": "colorme-ebook-3#p129",
+      "chapter": "ch5",
+      "page_title": "Color Overlay",
+      "chars": 318,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 130,
+      "printed_page": 129,
+      "page_id": "colorme-ebook-3#p130",
+      "chapter": "ch5",
+      "page_title": "Color Overlay",
+      "chars": 315,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 131,
+      "printed_page": 130,
+      "page_id": "colorme-ebook-3#p131",
+      "chapter": "ch5",
+      "page_title": "Tổng kết chương 5",
+      "chars": 481,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 132,
+      "printed_page": 131,
+      "page_id": "colorme-ebook-3#p132",
+      "chapter": "ch6",
+      "page_title": "CHƯƠNG 6",
+      "chars": 296,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 133,
+      "printed_page": 132,
+      "page_id": "colorme-ebook-3#p133",
+      "chapter": "ch6",
+      "page_title": "Logo – Phân loại",
+      "chars": 449,
+      "content_images": 3,
+      "counted": true
+    },
+    {
+      "page": 134,
+      "printed_page": 133,
+      "page_id": "colorme-ebook-3#p134",
+      "chapter": "ch6",
+      "page_title": "Logo – Phân loại",
+      "chars": 221,
+      "content_images": 3,
+      "counted": true
+    },
+    {
+      "page": 135,
+      "printed_page": 134,
+      "page_id": "colorme-ebook-3#p135",
+      "chapter": "ch6",
+      "page_title": "Logo – Phân loại",
+      "chars": 360,
+      "content_images": 3,
+      "counted": true
+    },
+    {
+      "page": 136,
+      "printed_page": 135,
+      "page_id": "colorme-ebook-3#p136",
+      "chapter": "ch6",
+      "page_title": "Logo – Phân loại",
+      "chars": 742,
+      "content_images": 9,
+      "counted": true
+    },
+    {
+      "page": 137,
+      "printed_page": 136,
+      "page_id": "colorme-ebook-3#p137",
+      "chapter": "ch6",
+      "page_title": "Logo – Chú ý",
+      "chars": 356,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 138,
+      "printed_page": 137,
+      "page_id": "colorme-ebook-3#p138",
+      "chapter": "ch6",
+      "page_title": "Logo – Chú ý",
+      "chars": 322,
+      "content_images": 3,
+      "counted": true
+    },
+    {
+      "page": 139,
+      "printed_page": 138,
+      "page_id": "colorme-ebook-3#p139",
+      "chapter": "ch6",
+      "page_title": "Logo – Chú ý",
+      "chars": 243,
+      "content_images": 3,
+      "counted": true
+    },
+    {
+      "page": 140,
+      "printed_page": 139,
+      "page_id": "colorme-ebook-3#p140",
+      "chapter": "ch6",
+      "page_title": "Logo – Chú ý",
+      "chars": 396,
+      "content_images": 3,
+      "counted": true
+    },
+    {
+      "page": 141,
+      "printed_page": 140,
+      "page_id": "colorme-ebook-3#p141",
+      "chapter": "ch6",
+      "page_title": "Transparent Overlay Logos",
+      "chars": 152,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 142,
+      "printed_page": 141,
+      "page_id": "colorme-ebook-3#p142",
+      "chapter": "ch6",
+      "page_title": "Transparent Overlay Logos",
+      "chars": 152,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 143,
+      "printed_page": 142,
+      "page_id": "colorme-ebook-3#p143",
+      "chapter": "ch6",
+      "page_title": "Pattern And Shape Logo",
+      "chars": 124,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 144,
+      "printed_page": 143,
+      "page_id": "colorme-ebook-3#p144",
+      "chapter": "ch6",
+      "page_title": "Geometric Shape Logos",
+      "chars": 91,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 145,
+      "printed_page": 144,
+      "page_id": "colorme-ebook-3#p145",
+      "chapter": "ch6",
+      "page_title": "Low Poly Logos",
+      "chars": 176,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 146,
+      "printed_page": 145,
+      "page_id": "colorme-ebook-3#p146",
+      "chapter": "ch6",
+      "page_title": "Negative Space Logos",
+      "chars": 398,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 147,
+      "printed_page": 146,
+      "page_id": "colorme-ebook-3#p147",
+      "chapter": "ch6",
+      "page_title": "Negative Space Logos",
+      "chars": 145,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 148,
+      "printed_page": 147,
+      "page_id": "colorme-ebook-3#p148",
+      "chapter": "ch6",
+      "page_title": "How to create a logo",
+      "chars": 388,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 149,
+      "printed_page": 148,
+      "page_id": "colorme-ebook-3#p149",
+      "chapter": "ch6",
+      "page_title": "Brand Identity",
+      "chars": 240,
+      "content_images": 9,
+      "counted": true
+    },
+    {
+      "page": 150,
+      "printed_page": 149,
+      "page_id": "colorme-ebook-3#p150",
+      "chapter": "ch6",
+      "page_title": "Brand Identity",
+      "chars": 227,
+      "content_images": 8,
+      "counted": true
+    },
+    {
+      "page": 151,
+      "printed_page": 150,
+      "page_id": "colorme-ebook-3#p151",
+      "chapter": "ch6",
+      "page_title": "Brand Identity",
+      "chars": 226,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 152,
+      "printed_page": 151,
+      "page_id": "colorme-ebook-3#p152",
+      "chapter": "ch6",
+      "page_title": "Tổng kết chương 6",
+      "chars": 428,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 153,
+      "printed_page": 152,
+      "page_id": "colorme-ebook-3#p153",
+      "chapter": "ch7",
+      "page_title": "CHƯƠNG 7",
+      "chars": 429,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 154,
+      "printed_page": 153,
+      "page_id": "colorme-ebook-3#p154",
+      "chapter": "ch7",
+      "page_title": "CV – Grid&List",
+      "chars": 418,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 155,
+      "printed_page": 154,
+      "page_id": "colorme-ebook-3#p155",
+      "chapter": "ch7",
+      "page_title": "CV – Grid&List",
+      "chars": 189,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 156,
+      "printed_page": 155,
+      "page_id": "colorme-ebook-3#p156",
+      "chapter": "ch7",
+      "page_title": "CV – Theme Color",
+      "chars": 364,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 157,
+      "printed_page": 156,
+      "page_id": "colorme-ebook-3#p157",
+      "chapter": "ch7",
+      "page_title": "CV – Header",
+      "chars": 319,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 158,
+      "printed_page": 157,
+      "page_id": "colorme-ebook-3#p158",
+      "chapter": "ch7",
+      "page_title": "CV - Avatar",
+      "chars": 367,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 159,
+      "printed_page": 158,
+      "page_id": "colorme-ebook-3#p159",
+      "chapter": "ch7",
+      "page_title": "CV – Titles",
+      "chars": 290,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 160,
+      "printed_page": 159,
+      "page_id": "colorme-ebook-3#p160",
+      "chapter": "ch7",
+      "page_title": "CV – Charts",
+      "chars": 367,
+      "content_images": 4,
+      "counted": true
+    },
+    {
+      "page": 161,
+      "printed_page": 160,
+      "page_id": "colorme-ebook-3#p161",
+      "chapter": "ch7",
+      "page_title": "CV – Timeline",
+      "chars": 249,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 162,
+      "printed_page": 161,
+      "page_id": "colorme-ebook-3#p162",
+      "chapter": "ch7",
+      "page_title": "CV – Icons",
+      "chars": 146,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 163,
+      "printed_page": 162,
+      "page_id": "colorme-ebook-3#p163",
+      "chapter": "ch8",
+      "page_title": "CHƯƠNG 8",
+      "chars": 602,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 164,
+      "printed_page": 163,
+      "page_id": "colorme-ebook-3#p164",
+      "chapter": "ch8",
+      "page_title": "Flat Design",
+      "chars": 423,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 165,
+      "printed_page": 164,
+      "page_id": "colorme-ebook-3#p165",
+      "chapter": "ch8",
+      "page_title": "Flat Design",
+      "chars": 557,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 166,
+      "printed_page": 165,
+      "page_id": "colorme-ebook-3#p166",
+      "chapter": "ch8",
+      "page_title": "Flat Design",
+      "chars": 167,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 167,
+      "printed_page": 166,
+      "page_id": "colorme-ebook-3#p167",
+      "chapter": "ch8",
+      "page_title": "Flat Design",
+      "chars": 180,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 168,
+      "printed_page": 167,
+      "page_id": "colorme-ebook-3#p168",
+      "chapter": "ch8",
+      "page_title": "Flat Design",
+      "chars": 354,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 169,
+      "printed_page": 168,
+      "page_id": "colorme-ebook-3#p169",
+      "chapter": "ch8",
+      "page_title": "Flat Design",
+      "chars": 277,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 170,
+      "printed_page": 169,
+      "page_id": "colorme-ebook-3#p170",
+      "chapter": "ch8",
+      "page_title": "Flat Design",
+      "chars": 358,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 171,
+      "printed_page": 170,
+      "page_id": "colorme-ebook-3#p171",
+      "chapter": "ch8",
+      "page_title": "Blur & Flat Design",
+      "chars": 315,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 172,
+      "printed_page": 171,
+      "page_id": "colorme-ebook-3#p172",
+      "chapter": "ch8",
+      "page_title": "Tổng kết chương 8",
+      "chars": 294,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 173,
+      "printed_page": 172,
+      "page_id": "colorme-ebook-3#p173",
+      "chapter": "appendix",
+      "page_title": "PHỤ LỤC 1",
+      "chars": 158,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 174,
+      "printed_page": 173,
+      "page_id": "colorme-ebook-3#p174",
+      "chapter": "appendix",
+      "page_title": "Danh sách phím tắt",
+      "chars": 1050,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 175,
+      "printed_page": 174,
+      "page_id": "colorme-ebook-3#p175",
+      "chapter": "appendix",
+      "page_title": "Danh sách phím tắt",
+      "chars": 1031,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 176,
+      "printed_page": 175,
+      "page_id": "colorme-ebook-3#p176",
+      "chapter": "appendix",
+      "page_title": "Danh sách phím tắt",
+      "chars": 592,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 177,
+      "printed_page": 176,
+      "page_id": "colorme-ebook-3#p177",
+      "chapter": "appendix",
+      "page_title": "PHỤ LỤC 2",
+      "chars": 422,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 178,
+      "printed_page": 177,
+      "page_id": "colorme-ebook-3#p178",
+      "chapter": "appendix",
+      "page_title": "",
+      "chars": 0,
+      "content_images": 1,
+      "counted": true
+    },
+    {
+      "page": 179,
+      "printed_page": 178,
+      "page_id": "colorme-ebook-3#p179",
+      "chapter": "appendix",
+      "page_title": "",
+      "chars": 0,
+      "content_images": 2,
+      "counted": true
+    },
+    {
+      "page": 180,
+      "printed_page": 179,
+      "page_id": "colorme-ebook-3#p180",
+      "chapter": "appendix",
+      "page_title": "PHỤ LỤC 3",
+      "chars": 611,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 181,
+      "printed_page": 180,
+      "page_id": "colorme-ebook-3#p181",
+      "chapter": "appendix",
+      "page_title": "PHỤ LỤC 4",
+      "chars": 459,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 182,
+      "printed_page": 181,
+      "page_id": "colorme-ebook-3#p182",
+      "chapter": "appendix",
+      "page_title": "PHỤ LỤC 5",
+      "chars": 443,
+      "content_images": 0,
+      "counted": true
+    },
+    {
+      "page": 183,
+      "printed_page": 182,
+      "page_id": "colorme-ebook-3#p183",
+      "chapter": "appendix",
+      "page_title": "LỜI KẾT",
+      "chars": 393,
+      "content_images": 0,
+      "counted": true
     }
   ]
 }

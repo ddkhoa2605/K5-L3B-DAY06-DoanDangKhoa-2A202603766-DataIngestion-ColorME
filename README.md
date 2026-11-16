@@ -48,27 +48,35 @@ Dùng cùng dữ liệu, model và câu hỏi cho cả ba cấu hình. Tách **1
 
 ---
 
-## Bài làm: Python 3.13 Docs + ChromaDB
+## Bài làm: EBOOK COLORME 3 (PDF chữ + hình) + ChromaDB
 
-Corpus: 10 file tài liệu Python 3.13 (6 Tutorial + 4 Library), 117 đơn vị trang ≥1.500 ký tự. Embedding local `sentence-transformers/all-MiniLM-L6-v2` (384 chiều), vector store ChromaDB 1.5.9 persistent (cosine, HNSW). Ba chiến lược: A fixed 500/50, B theo heading/đoạn ≤1.000, C = B + lọc `doc_type`.
+Corpus: `EBOOK COLORME 3.pdf` (sách thiết kế đồ họa tiếng Việt, 183 trang, 181 trang nội dung, có ảnh/bảng/biểu đồ). Text lấy bằng PyMuPDF; nội dung hình lấy bằng vision model `gpt-4.1-mini` (mô tả từng ảnh/bảng/biểu đồ, cache trong `data/visual/captions.jsonl`). Embedding `text-embedding-3-small` (1536 chiều), ChromaDB 1.5.9 persistent (cosine, HNSW). Ba chiến lược: **A** chỉ text, **B** text + mô tả hình, **C** = B + lọc `chapter`. Bản Python-docs cũ nằm ở repo `K5-L3-Day06-DataIngestionEngineering`.
 
 ```bash
+# 1. Tải PDF vào data/raw/ (PDF không nằm trong git vì bản quyền colorME):
+#    curl -L -o "data/raw/EBOOK COLORME 3.pdf" "https://thietbigas.com.vn/upload/product/EBOOK%20COLORME%203.pdf"   # bản sao của bên thứ ba, SHA-256 trong data/manifest.json
+#    data/raw/EBOOK COLORME 3.pdf   (SHA-256 trong data/manifest.json)
+# 2. Tạo starter/.env từ starter/.env.example, điền OPENAI_API_KEY
 cd starter
-python -m venv .venv            # Windows: .venv\Scripts\Activate.ps1 ; Unix: source .venv/bin/activate
 python -m pip install -r requirements.txt
-python -m src.run all           # prepare -> validate -> ingest -> evaluate
+python -m src.run all                 # prepare -> caption (vision, cache) -> validate -> ingest -> evaluate
+python -m src.run caption_luna        # (dùng cho Day 7) mô tả hình bằng GPT-5.6 Luna, cache
+python -m src.run ingest_b4           # (dùng cho Day 7) collection colorme3_B4
 python scripts/make_audit_sheets.py   # sheet đọc để chấm thủ công
 python scripts/audit_summary.py       # kiểm tra metadata + tổng hợp nhãn
 python scripts/test_reingest.py       # kiểm tra nạp lại / tài liệu đổi (Chroma tạm)
 ```
 
-Lần chạy đầu cần mạng để tải archive tài liệu (4,2 MB) và model (~90 MB). Không cần API key, chi phí 0.
+`caption` dùng cache cục bộ `data/visual/captions.jsonl` (không nằm trong git): lần đầu gọi API (≈ $0.31), các lần sau không tốn thêm. Chi phí cho A/B/C ≈ $0.32; thêm ≈ $0.18 cho `caption_luna`. **Dữ liệu sách không có trong git:** xem [`DATA_NOT_INCLUDED.md`](DATA_NOT_INCLUDED.md) (danh sách file, SHA-256, cách tái tạo).
 
 | Đường dẫn | Nội dung |
 |---|---|
-| `starter/src/` | ingestion, chunking, embeddings, store (Chroma), evaluation, run |
-| `data/manifest.json`, `data/pages.jsonl`, `data/corpus/` | manifest nguồn/quyền/đơn vị trang, text đã chuẩn hóa, file gốc |
-| `benchmark/questions.json` | 28 câu (22 dev / 6 test), gold page + evidence |
+| `starter/src/` | ingestion (PDF), vision, chunking, embeddings (OpenAI), store (Chroma), evaluation, run |
+| `data/manifest.json` | manifest nguồn/quyền/quy tắc trang/chương, SHA-256 của PDF |
+| `data/pages.jsonl`, `data/visual/*.jsonl` | **không nằm trong git** (văn bản toàn sách, mô tả hình); tạo lại bằng pipeline, xem `DATA_NOT_INCLUDED.md` |
+| `benchmark/questions.json` | 24 câu (17 dev / 7 test), 6 câu filter, 4 câu evidence hình |
 | `artifacts/experiment_log.csv` | cấu hình và giả thuyết A/B/C |
-| `results/` | trace top-3, chỉ số, thống kê ingest, nhãn audit |
+| `results/` | trace top-3, chỉ số, thống kê ingest/vision, nhãn audit, log |
 | `report/individual/2A202603766_DoanDangKhoa.md` | báo cáo cá nhân |
+
+Kết quả chính (Evidence Hit@3): A dev 15/17 · test 5/7 (0/4 câu hình); B và C dev 16/17 · test 6/7 (4/4 câu hình). Chọn C. Chi tiết và hạn chế (lỗi vision ở p160) trong báo cáo.

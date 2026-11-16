@@ -1,21 +1,22 @@
 {
-  "description": "Benchmark for Python 3.13 docs subset. Written and split dev/test BEFORE any retrieval run. gold[].pages is filled by `python -m src.run validate`, which locates each evidence quote in the normalized page units (no retrieval involved).",
-  "split_rule": "Test questions were chosen from sections that no dev question targets (tut-errors 8.7 clean-up, tut-modules 6.1.2 search path, lib-csv reader(), lib-functools lru_cache, lib-json dumps keys note, tut-venv activation). Same documents appear in both splits -> leakage risk at document level, noted in report.",
-  "filter_rule": "filter = doc_type the user states up front (e.g. 'I am reading the tutorial' / 'in the library reference'); provided before retrieval, never derived from the gold source. Strategy C applies it only when present.",
-  "selection_criterion": "Decided before test: choose by dev Evidence Hit@3, tie-break dev Hit@1, then fewer chunks / less embed time.",
+  "description": "Benchmark Day 6 cho EBOOK COLORME 3 (PDF 183 trang). Viết và chia dev/test TRƯỚC mọi lần chạy retrieval. Trang = chỉ số trang PDF (1-based); số in ở chân trang = trang - 1. Evidence text được chép nguyên văn từ lớp text của PDF; `python -m src.run validate` tự tìm trang chứa quote. Evidence visual: trang do người chấm chọn sau khi xem ảnh render của trang; evidence_quote là cụm từ khóa mà mô tả đúng của hình phải chứa (dùng để code xác định chunk có mang thông tin đó hay không).",
+  "split_rule": "Dev và test hỏi các trang/khái niệm khác nhau; test gồm 2 câu visual, 2 câu filter. Cùng một tài liệu nên có rủi ro rò rỉ ở mức chủ đề (ghi trong báo cáo).",
+  "filter_rule": "filter = chương mà người dùng nói trước khi hỏi (vd 'trong chương về logo/nhận diện thương hiệu'). Giá trị chapter lấy từ metadata trang (ch1..ch8, appendix), không suy ra từ gold. Cấu hình C chỉ áp dụng khi câu có filter.",
+  "selection_criterion": "Chốt trước khi chạy test: chọn theo dev Evidence Hit@3, hòa thì dev Hit@1, rồi ít chunk/chi phí hơn.",
   "questions": [
     {
       "id": "d01",
       "split": "dev",
       "type": "direct",
-      "question": "When does the else clause of a for loop run?",
-      "expected_answer": "After the loop finishes its final iteration, i.e. only if no break occurred.",
+      "question": "Pixel là gì?",
+      "expected_answer": "Pixel là phần tử nhỏ nhất của mỗi bức hình; mỗi pixel là một ô vuông chỉ chứa đúng 1 màu.",
       "gold": [
         {
-          "source_id": "tut-controlflow",
-          "evidence_quote": "In a \"for\" loop, the \"else\" clause is executed after the loop finishes its final iteration, that is, if no break occurred.",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "Pixel là phần tử nhỏ nhất của mỗi bức hình. Mỗi pixel là một ô vuông chỉ chứa đúng 1 màu duy nhất.",
           "pages": [
-            3
+            10
           ]
         }
       ]
@@ -23,15 +24,16 @@
     {
       "id": "d02",
       "split": "dev",
-      "type": "condition",
-      "question": "Why does a function with a list as default argument keep accumulating values between calls?",
-      "expected_answer": "Default values are evaluated only once (at definition), so a mutable default like a list is shared across calls.",
+      "type": "paraphrase",
+      "question": "Tại sao CMYK lại bị gọi là hệ màu trừ?",
+      "expected_answer": "Vì nó không tạo ra được màu trắng, chỉ có thể trừ dần màu trắng về màu đen.",
       "gold": [
         {
-          "source_id": "tut-controlflow",
-          "evidence_quote": "The default value is evaluated only once. This makes a difference when the default is a mutable object such as a list, dictionary, or instances of most classes.",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "Hệ màu này được gọi là hệ màu trừ vì nó không thể tạo ra được màu trắng, mà chỉ có thể trừ dần màu trắng về màu đen.",
           "pages": [
-            9
+            15
           ]
         }
       ]
@@ -40,12 +42,13 @@
       "id": "d03",
       "split": "dev",
       "type": "direct",
-      "question": "How do I mark function parameters as positional-only?",
-      "expected_answer": "Place them before a / (forward slash) in the parameter list.",
+      "question": "Độ phân giải ảnh được định nghĩa như thế nào?",
+      "expected_answer": "Là số lượng pixel trên một đơn vị độ dài (không phải diện tích).",
       "gold": [
         {
-          "source_id": "tut-controlflow",
-          "evidence_quote": "Positional-only parameters are placed before a \"/\" (forward-slash).",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "Độ phân giải ảnh là số lượng pixel trên một đơn vị độ dài.",
           "pages": [
             12
           ]
@@ -55,15 +58,16 @@
     {
       "id": "d04",
       "split": "dev",
-      "type": "paraphrase",
-      "question": "What should I use instead of a plain list to get an efficient first-in first-out queue?",
-      "expected_answer": "collections.deque, designed for fast appends and pops from both ends.",
+      "type": "condition",
+      "question": "Muốn màn hình hiển thị màu tím thì pixel phải tắt đèn led màu nào?",
+      "expected_answer": "Tắt đèn led xanh lá.",
       "gold": [
         {
-          "source_id": "tut-datastructures",
-          "evidence_quote": "To implement a queue, use \"collections.deque\" which was designed to have fast appends and pops from both ends.",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "Để hiển thị màu tím, đèn led xanh lá sẽ bị tắt đi.",
           "pages": [
-            3
+            17
           ]
         }
       ]
@@ -71,15 +75,21 @@
     {
       "id": "d05",
       "split": "dev",
-      "type": "exception",
-      "question": "Why doesn't {} give me an empty set?",
-      "expected_answer": "{} creates an empty dictionary; use set() for an empty set.",
+      "type": "direct",
+      "question": "Phím tắt của Transform tool là gì và nó dùng để làm gì?",
+      "expected_answer": "Ctrl+T; dùng cho các phép biến đổi hình cơ bản như phóng to, thu nhỏ, quay, lật gương.",
       "gold": [
         {
-          "source_id": "tut-datastructures",
-          "evidence_quote": "to create an empty set you have to use \"set()\", not \"{}\"; the latter creates an empty dictionary",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "Transform tool, có phím tắt là Ctrl+T, là công cụ cho phép bạn làm một số phép biến đổi hình cơ bản",
           "pages": [
-            7
+            23,
+            24,
+            25,
+            26,
+            27,
+            28
           ]
         }
       ]
@@ -87,15 +97,16 @@
     {
       "id": "d06",
       "split": "dev",
-      "type": "condition",
-      "question": "Can a tuple be used as a dictionary key?",
-      "expected_answer": "Yes, if it contains only strings, numbers or tuples; not if it contains any mutable object.",
+      "type": "paraphrase",
+      "question": "Khi nào một bức hình được coi là có bố cục một phần ba?",
+      "expected_answer": "Khi chia hình thành 3 hàng 3 cột thì có một điểm quan trọng rơi vào 1 trong 4 điểm giao của các đường chia.",
       "gold": [
         {
-          "source_id": "tut-datastructures",
-          "evidence_quote": "Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key.",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "sẽ có một điểm quan trọng rơi vào 1 trong 4 điểm giao của các đường phân chia",
           "pages": [
-            8
+            49
           ]
         }
       ]
@@ -103,15 +114,16 @@
     {
       "id": "d07",
       "split": "dev",
-      "type": "paraphrase",
-      "question": "How can I suppress automatic exception chaining when I re-raise a different exception?",
-      "expected_answer": "Use `raise NewError from None`.",
+      "type": "direct",
+      "question": "Ba màu bậc 1 là những màu nào và vì sao gọi là màu cơ bản?",
+      "expected_answer": "Đỏ, xanh dương, vàng; vì không thể pha ra chúng khi hòa trộn từ các màu khác.",
       "gold": [
         {
-          "source_id": "tut-errors",
-          "evidence_quote": "It also allows disabling automatic exception chaining using the \"from None\" idiom:",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "3 màu Đỏ-Xanh Dương-Vàng được gọi là màu cơ bản hay màu bậc 1 là những màu sắc không thể pha ra được khi hòa trộn từ các màu khác.",
           "pages": [
-            5
+            57
           ]
         }
       ]
@@ -120,14 +132,15 @@
       "id": "d08",
       "split": "dev",
       "type": "direct",
-      "question": "How do I attach extra information to an exception after it was caught?",
-      "expected_answer": "Call the exception's add_note(note) method; notes are shown in the traceback.",
+      "question": "HSB là viết tắt của những thành phần nào?",
+      "expected_answer": "Hue (màu gốc), Saturation (độ bão hòa, độ đục), Brightness (độ sáng).",
       "gold": [
         {
-          "source_id": "tut-errors",
-          "evidence_quote": "exceptions have a method \"add_note(note)\" that accepts a string and adds it to the exception's notes list.",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "Hệ màu HSB, viết tắt của Hue (Màu gốc) – Saturation (Độ bão hòa, độ đục) – Brightness (Độ sáng).",
           "pages": [
-            9
+            60
           ]
         }
       ]
@@ -135,15 +148,16 @@
     {
       "id": "d09",
       "split": "dev",
-      "type": "direct",
-      "question": "How can I handle only some exception types contained in an ExceptionGroup?",
-      "expected_answer": "Use except* clauses, which extract matching exceptions from the group.",
+      "type": "exception",
+      "question": "Có thể chọn màu đen hoặc xám làm màu chủ đạo cho tác phẩm không?",
+      "expected_answer": "Không; đen, trắng, xám không được coi là màu chủ đạo, chúng chỉ đi kèm màu chủ đạo.",
       "gold": [
         {
-          "source_id": "tut-errors",
-          "evidence_quote": "By using \"except*\" instead of \"except\", we can selectively handle only the exceptions in the group that match a certain type.",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "tuyệt đối không có màu chủ đạo là màu đen, trắng, hay xám.",
           "pages": [
-            7
+            66
           ]
         }
       ]
@@ -151,15 +165,16 @@
     {
       "id": "d10",
       "split": "dev",
-      "type": "direct",
-      "question": "Where does Python cache the compiled versions of modules?",
-      "expected_answer": "In the __pycache__ directory as module.<version>.pyc.",
+      "type": "paraphrase",
+      "question": "Trong ba cặp màu bổ túc quan trọng, cặp nào an toàn và dễ phối nhất?",
+      "expected_answer": "Cặp xanh và cam.",
       "gold": [
         {
-          "source_id": "tut-modules",
-          "evidence_quote": "Python caches the compiled version of each module in the \"__pycache__\" directory under the name \"module.*version*.pyc\"",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "Cặp màu thứ 2, là cặp xanh và cam. Cặp màu này được đánh giá là cặp dễ kết hợp nhất trong 3 cặp",
           "pages": [
-            4
+            72
           ]
         }
       ]
@@ -168,14 +183,15 @@
       "id": "d11",
       "split": "dev",
       "type": "condition",
-      "question": "What decides which submodules get imported by `from package import *`?",
-      "expected_answer": "The __all__ list defined in the package's __init__.py.",
+      "question": "Màu neon có hạn chế gì khi sử dụng?",
+      "expected_answer": "Chỉ dùng được trên nền tối để phát ra ánh sáng như đèn led.",
       "gold": [
         {
-          "source_id": "tut-modules",
-          "evidence_quote": "if a package's \"__init__.py\" code defines a list named \"__all__\", it is taken to be the list of module names that should be imported when \"from package import *\" is encountered.",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "chúng chỉ có thể dùng được trên nền tối",
           "pages": [
-            9
+            82
           ]
         }
       ]
@@ -183,15 +199,16 @@
     {
       "id": "d12",
       "split": "dev",
-      "type": "paraphrase",
-      "question": "How can one Python file work both as a runnable script and as an importable module?",
-      "expected_answer": "Put the script code under `if __name__ == \"__main__\":` so it only runs when executed as the main file.",
+      "type": "direct",
+      "question": "Font Serif hoạt động tốt nhất ở đâu?",
+      "expected_answer": "Ở những nơi có mật độ chữ dày như sách hoặc báo.",
       "gold": [
         {
-          "source_id": "tut-modules",
-          "evidence_quote": "you can make the file usable as a script as well as an importable module, because the code that parses the command line only runs if the module is executed as the \"main\" file",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "Chúng hoạt động rất tốt tại những nơi có mật độ chữ dày như sách hoặc báo.",
           "pages": [
-            3
+            89
           ]
         }
       ]
@@ -199,15 +216,19 @@
     {
       "id": "d13",
       "split": "dev",
-      "type": "direct",
-      "question": "Why is it recommended to open files with the with keyword?",
-      "expected_answer": "The file is properly closed after the block, even if an exception is raised.",
+      "type": "metadata_filter",
+      "filter": {
+        "chapter": "ch6"
+      },
+      "question": "(Đang đọc chương nhận diện thương hiệu) Trên thế giới có mấy loại logo, gồm những loại nào?",
+      "expected_answer": "3 loại: logo tượng hình, logo chữ và logo kết hợp.",
       "gold": [
         {
-          "source_id": "tut-inputoutput",
-          "evidence_quote": "The advantage is that the file is properly closed after its suite finishes, even if an exception is raised at some point.",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "Trên thế giới này chỉ có 3 loại logo, logo tượng hình, logo chữ và logo kết hợp.",
           "pages": [
-            6
+            133
           ]
         }
       ]
@@ -217,16 +238,17 @@
       "split": "dev",
       "type": "metadata_filter",
       "filter": {
-        "doc_type": "tutorial"
+        "chapter": "ch8"
       },
-      "question": "I'm following the tutorial: how do I save a Python list to a text file as JSON?",
-      "expected_answer": "Use json.dump(x, f) with f a text file opened for writing.",
+      "question": "(Đang đọc chương xu hướng thiết kế) Màu đặc trưng của thiết kế phẳng là gì?",
+      "expected_answer": "Màu pastel.",
       "gold": [
         {
-          "source_id": "tut-inputoutput",
-          "evidence_quote": "Another variant of the \"dumps()\" function, called \"dump()\", simply serializes the object to a *text file*.",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "Màu đặc trưng là màu pastel",
           "pages": [
-            9
+            166
           ]
         }
       ]
@@ -236,16 +258,17 @@
       "split": "dev",
       "type": "metadata_filter",
       "filter": {
-        "doc_type": "tutorial"
+        "chapter": "ch7"
       },
-      "question": "In the tutorial, what command creates a new virtual environment?",
-      "expected_answer": "Run the venv module as a script with a directory: python -m venv tutorial-env.",
+      "question": "(Đang đọc chương thiết kế CV) Nên dùng tông màu nào cho CV để nhà tuyển dụng tin tưởng hơn?",
+      "expected_answer": "Chỉ 1 màu, ưu tiên tông lạnh như lục-lam-chàm.",
       "gold": [
         {
-          "source_id": "tut-venv",
-          "evidence_quote": "To create a virtual environment, decide upon a directory where you want to place it, and run the \"venv\" module as a script with the directory path:",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "hãy dùng các tông màu lạnh như lục-lam-chàm để tăng độ tin tưởng từ nhà tuyển dụng",
           "pages": [
-            1
+            156
           ]
         }
       ]
@@ -253,154 +276,54 @@
     {
       "id": "d16",
       "split": "dev",
-      "type": "metadata_filter",
-      "filter": {
-        "doc_type": "library"
-      },
-      "question": "Library reference: which venv option gives the environment access to the system site-packages?",
-      "expected_answer": "--system-site-packages",
+      "type": "visual_table",
+      "question": "Theo hình minh họa độ phân giải trong hiển thị, iPhone 6 5.5 inch có độ phân giải và mật độ điểm ảnh bao nhiêu?",
+      "expected_answer": "1920x1080, 401 ppi.",
       "gold": [
         {
-          "source_id": "lib-venv",
-          "evidence_quote": "Give the virtual environment access to the system site-packages directory.",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "visual",
           "pages": [
-            3
-          ]
+            14
+          ],
+          "evidence_quote": "401ppi",
+          "region": "hình 3 iPhone giữa trang (printed page 13)",
+          "phrase_in_vision_description": true
         }
       ]
     },
     {
       "id": "d17",
       "split": "dev",
-      "type": "direct",
-      "question": "How can I validate and pretty-print JSON from the command line?",
-      "expected_answer": "Use `python -m json.tool`.",
+      "type": "visual_chart",
+      "question": "Trong biểu đồ bong bóng 'Các bài toán thường gặp', bong bóng lớn nhất có màu gì?",
+      "expected_answer": "Xanh lá (đậm) – tương ứng 'Thiết kế ấn phẩm truyền thông'.",
       "gold": [
         {
-          "source_id": "lib-json",
-          "evidence_quote": "The \"json.tool\" module provides a simple command line interface to validate and pretty-print JSON objects.",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "visual",
           "pages": [
-            15
-          ]
-        },
-        {
-          "source_id": "lib-json",
-          "evidence_quote": "Using \"json.tool\" from the shell to validate and pretty-print:",
-          "pages": [
-            2
-          ]
-        }
-      ]
-    },
-    {
-      "id": "d18",
-      "split": "dev",
-      "type": "condition",
-      "question": "What happens when json serializes float('nan') with allow_nan set to False?",
-      "expected_answer": "It raises ValueError (strict JSON compliance).",
-      "gold": [
-        {
-          "source_id": "lib-json",
-          "evidence_quote": "will result in a \"ValueError\", in strict compliance with the JSON specification.",
-          "pages": [
-            4
-          ]
-        },
-        {
-          "source_id": "lib-json",
-          "evidence_quote": "Otherwise, it will be a \"ValueError\" to encode such floats.",
-          "pages": [
-            11
-          ]
-        }
-      ]
-    },
-    {
-      "id": "d19",
-      "split": "dev",
-      "type": "paraphrase",
-      "question": "How do I compute a property value once and keep it cached for the lifetime of the instance?",
-      "expected_answer": "Decorate the method with @functools.cached_property.",
-      "gold": [
-        {
-          "source_id": "lib-functools",
-          "evidence_quote": "Transform a method of a class into a property whose value is computed once and then cached as a normal attribute for the life of the instance.",
-          "pages": [
-            2
-          ]
-        }
-      ]
-    },
-    {
-      "id": "d20",
-      "split": "dev",
-      "type": "direct",
-      "question": "On which argument does @singledispatch dispatch?",
-      "expected_answer": "On the type of the first argument.",
-      "gold": [
-        {
-          "source_id": "lib-functools",
-          "evidence_quote": "note that the dispatch happens on the type of the first argument",
-          "pages": [
-            11
-          ]
-        },
-        {
-          "source_id": "lib-functools",
-          "evidence_quote": "the generic function dispatches on the type of the first argument",
-          "pages": [
-            13
-          ]
-        }
-      ]
-    },
-    {
-      "id": "d21",
-      "split": "dev",
-      "type": "condition",
-      "question": "If I don't pass fieldnames to csv.DictReader, where do the dictionary keys come from?",
-      "expected_answer": "From the first row of the file, which is then omitted from the results.",
-      "gold": [
-        {
-          "source_id": "lib-csv",
-          "evidence_quote": "If *fieldnames* is omitted, the values in the first row of file *f* will be used as the fieldnames and will be omitted from the results.",
-          "pages": [
-            4
-          ]
-        }
-      ]
-    },
-    {
-      "id": "d22",
-      "split": "dev",
-      "type": "metadata_filter",
-      "filter": {
-        "doc_type": "library"
-      },
-      "question": "According to the library reference, should a virtual environment be committed to Git?",
-      "expected_answer": "No, it is not checked into source control systems such as Git.",
-      "gold": [
-        {
-          "source_id": "lib-venv",
-          "evidence_quote": "Not checked into source control systems such as Git.",
-          "pages": [
-            1
-          ]
+            6
+          ],
+          "evidence_quote": "lớn nhất",
+          "region": "5 hình tròn nửa trên trang (printed page 5)",
+          "phrase_in_vision_description": true
         }
       ]
     },
     {
       "id": "t01",
       "split": "test",
-      "type": "condition",
-      "question": "If both the try block and the finally block contain a return statement, which value is returned?",
-      "expected_answer": "The value from the finally clause's return statement.",
+      "type": "direct",
+      "question": "Phần mềm Lightroom thiên về việc gì?",
+      "expected_answer": "Retouch và blend (chỉnh màu ảnh), được giới photographer ưa chuộng.",
       "gold": [
         {
-          "source_id": "tut-errors",
-          "evidence_quote": "If a \"finally\" clause includes a \"return\" statement, the returned value will be the one from the \"finally\" clause's \"return\" statement, not the value from the \"try\" clause's \"return\" statement.",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "thiên nặng về retouch và blend",
           "pages": [
-            6
+            8
           ]
         }
       ]
@@ -408,15 +331,19 @@
     {
       "id": "t02",
       "split": "test",
-      "type": "direct",
-      "question": "Which locations is sys.path initialized from?",
-      "expected_answer": "The script's directory (or current directory), PYTHONPATH, and the installation-dependent default (site-packages).",
+      "type": "metadata_filter",
+      "filter": {
+        "chapter": "ch4"
+      },
+      "question": "(Đang đọc chương typography) Kĩ thuật nghịch đảo màu được thực hiện thế nào?",
+      "expected_answer": "Chỗ có chữ màu trắng thì cho nền màu gốc, chỗ có nền màu trắng thì cho chữ màu gốc.",
       "gold": [
         {
-          "source_id": "tut-modules",
-          "evidence_quote": "\"sys.path\" is initialized from these locations: * The directory containing the input script (or the current directory when no file is specified). * \"PYTHONPATH\" (a list of directory names, with the same syntax as the shell variable \"PATH\"). * The installation-dependent default",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "Chỗ có chữ màu trắng, chúng ta cho nền màu gốc, chỗ có nền màu trắng, ta cho chữ có màu gốc.",
           "pages": [
-            3
+            109
           ]
         }
       ]
@@ -424,15 +351,16 @@
     {
       "id": "t03",
       "split": "test",
-      "type": "condition",
-      "question": "How should a file be opened before passing it to csv.reader?",
-      "expected_answer": "With newline=''.",
+      "type": "paraphrase",
+      "question": "Kiểu logo không gian âm có nguồn gốc từ thương hiệu nào?",
+      "expected_answer": "Hãng chuyển phát nhanh FedEx.",
       "gold": [
         {
-          "source_id": "lib-csv",
-          "evidence_quote": "If *csvfile* is a file object, it should be opened with \"newline=''\".",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "Bắt nguồn từ hãng chuyển phát nhanh fedex",
           "pages": [
-            2
+            146
           ]
         }
       ]
@@ -440,15 +368,16 @@
     {
       "id": "t04",
       "split": "test",
-      "type": "condition",
-      "question": "What happens to lru_cache when maxsize is None?",
-      "expected_answer": "The LRU feature is disabled and the cache can grow without bound.",
+      "type": "direct",
+      "question": "Layer style là gì?",
+      "expected_answer": "Tập hợp các hiệu ứng được dùng chung cho một layer.",
       "gold": [
         {
-          "source_id": "lib-functools",
-          "evidence_quote": "If *maxsize* is set to \"None\", the LRU feature is disabled and the cache can grow without bound.",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "Tập hợp các hiệu ứng được dùng chung cho một layer, được gọi là layer style.",
           "pages": [
-            5
+            130
           ]
         }
       ]
@@ -456,50 +385,74 @@
     {
       "id": "t05",
       "split": "test",
-      "type": "metadata_filter",
-      "filter": {
-        "doc_type": "library"
-      },
-      "question": "In the library reference: why may a dictionary not equal the original after converting it to JSON and back?",
-      "expected_answer": "JSON keys are always str, so non-string keys are converted to strings.",
+      "type": "visual_table",
+      "question": "Trong bảng màu và cảm nhận (8 ô màu tiếng Anh), màu orange gắn với những từ khóa nào?",
+      "expected_answer": "HEALTH, ATTRACTION, STAND OUT, THIRST, WEALTH, YOUTHFUL, HAPPINESS.",
       "gold": [
         {
-          "source_id": "lib-json",
-          "evidence_quote": "Keys in key/value pairs of JSON are always of the type \"str\". When a dictionary is converted into JSON, all the keys of the dictionary are converted to strings.",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "visual",
           "pages": [
-            5
-          ]
+            77
+          ],
+          "evidence_quote": "HEALTH",
+          "region": "ô 'orange', hàng dưới, cột 2 (printed page 76)",
+          "phrase_in_vision_description": true
         }
       ]
     },
     {
       "id": "t06",
       "split": "test",
-      "type": "metadata_filter",
+      "type": "visual_table",
       "filter": {
-        "doc_type": "tutorial"
+        "chapter": "ch6"
       },
-      "question": "Following the tutorial, how do I activate a virtual environment on Windows?",
-      "expected_answer": "Run tutorial-env\\Scripts\\activate.",
+      "question": "(Đang đọc chương nhận diện thương hiệu) Trong bảng màu cho logo, nhóm tính từ 'Uy quyền, đỉnh đạc, an toàn, đáng tin cậy' được đặt trên thanh màu gì?",
+      "expected_answer": "Xanh dương.",
       "gold": [
         {
-          "source_id": "tut-venv",
-          "evidence_quote": "On Windows, run: tutorial-env\\Scripts\\activate",
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "visual",
           "pages": [
-            1
+            136
+          ],
+          "evidence_quote": "xanh dương",
+          "region": "thanh thứ 2 trong 9 thanh màu (printed page 135)",
+          "phrase_in_vision_description": true
+        }
+      ]
+    },
+    {
+      "id": "t07",
+      "split": "test",
+      "type": "metadata_filter",
+      "filter": {
+        "chapter": "appendix"
+      },
+      "question": "(Đang xem phụ lục phím tắt) Phím tắt nào dùng để nhân đôi Layer?",
+      "expected_answer": "CTRL + J.",
+      "gold": [
+        {
+          "source_id": "colorme-ebook-3",
+          "evidence_type": "text",
+          "evidence_quote": "CTRL + J: Nhân đôi Layer",
+          "pages": [
+            174
           ]
         }
       ]
     }
   ],
-  "validated_at": "2026-11-14T04:09:06+00:00",
+  "first_validated_at": "2026-11-15T16:53:57+00:00",
+  "validated_at": "2026-11-15T16:53:57+00:00",
+  "benchmark_sha256": "0724decd4115c861a12f507285b6dd171f3464b266a1eb0ba97e15c99c3135d1",
+  "validation_warnings": [],
   "counts": {
-    "dev": 22,
-    "test": 6,
+    "dev": 17,
+    "test": 7,
     "with_filter": 6,
-    "test_with_filter": 2
-  },
-  "first_validated_at": "unknown: original timestamp overwritten by re-run of `src.run all`; the first validate ran before the first ingest/evaluate (first ingest log 2026-11-13T16:48Z)",
-  "preregistration_note": "Questions, splits, gold evidence, filters and selection criterion were written before any retrieval run and were not edited afterwards. From now on benchmark_sha256 is stored by validate and re-checked by evaluate (copied into results/summary.json).",
-  "benchmark_sha256": "98615fa2a513117bd479e5d6a377b9d5b358d111feb81a12a24ee382aaaf7d4c"
+    "test_with_filter": 3,
+    "visual_evidence": 4
+  }
 }

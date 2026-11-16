@@ -1,0 +1,11 @@
+{
+  "described_now": 141,
+  "cached": 10,
+  "errors": [],
+  "pages_in_cache": 151,
+  "total_cost_usd": 0.9939,
+  "time_s": 448.5,
+  "model": "gpt-4.1",
+  "prompt_version": "v3",
+  "pages_targeted": 151
+}

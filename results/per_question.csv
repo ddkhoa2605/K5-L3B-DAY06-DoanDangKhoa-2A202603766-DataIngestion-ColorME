@@ -1,85 +1,73 @@
-strategy,id,split,type,filter,hit1,hit3,gold_page_in_top3,top1_chunk,top1_score,top_pages
-A,d01,dev,direct,,0,1,1,A:tut-controlflow:p003:c005,0.7351,tut-controlflow#p3 | tut-controlflow#p3 | tut-controlflow#p3
-A,d02,dev,condition,,1,1,1,A:tut-controlflow:p009:c003,0.6683,tut-controlflow#p9 | tut-controlflow#p9 | tut-controlflow#p15
-A,d03,dev,direct,,0,0,1,A:tut-controlflow:p012:c002,0.7011,tut-controlflow#p12 | tut-controlflow#p14 | tut-controlflow#p13
-A,d04,dev,paraphrase,,0,1,1,A:tut-datastructures:p003:c001,0.6065,tut-datastructures#p3 | tut-datastructures#p3 | tut-datastructures#p3
-A,d05,dev,exception,,1,1,1,A:tut-datastructures:p007:c000,0.5265,tut-datastructures#p7 | tut-datastructures#p6 | lib-functools#p10
-A,d06,dev,condition,,0,0,1,A:tut-datastructures:p008:c001,0.7424,tut-datastructures#p8 | tut-datastructures#p8 | tut-datastructures#p6
-A,d07,dev,paraphrase,,0,0,1,A:tut-errors:p005:c007,0.6029,tut-errors#p5 | tut-errors#p5 | tut-errors#p5
-A,d08,dev,direct,,1,1,1,A:tut-errors:p009:c000,0.5362,tut-errors#p9 | tut-errors#p4 | tut-errors#p5
-A,d09,dev,direct,,1,1,1,A:tut-errors:p007:c005,0.7264,tut-errors#p7 | tut-errors#p8 | tut-errors#p7
-A,d10,dev,direct,,1,1,1,A:tut-modules:p004:c000,0.8256,tut-modules#p4 | tut-modules#p4 | tut-modules#p4
-A,d11,dev,condition,,0,0,1,A:tut-modules:p010:c003,0.7125,tut-modules#p10 | tut-modules#p9 | tut-modules#p2
-A,d12,dev,paraphrase,,0,0,1,A:tut-modules:p008:c001,0.5427,tut-modules#p8 | tut-modules#p3 | tut-modules#p3
-A,d13,dev,direct,,0,0,1,A:tut-inputoutput:p006:c000,0.5438,tut-inputoutput#p6 | tut-errors#p7 | tut-inputoutput#p6
-A,d14,dev,metadata_filter,"{""doc_type"": ""tutorial""}",0,0,1,A:tut-inputoutput:p009:c004,0.5992,tut-inputoutput#p9 | tut-inputoutput#p9 | tut-inputoutput#p9
-A,d15,dev,metadata_filter,"{""doc_type"": ""tutorial""}",0,0,1,A:lib-venv:p003:c006,0.6274,lib-venv#p3 | lib-venv#p8 | tut-venv#p1
-A,d16,dev,metadata_filter,"{""doc_type"": ""library""}",0,0,1,A:lib-venv:p001:c000,0.6945,lib-venv#p1 | lib-venv#p3 | lib-venv#p9
-A,d17,dev,direct,,1,1,1,A:lib-json:p015:c002,0.7266,lib-json#p15 | lib-json#p2 | lib-json#p15
-A,d18,dev,condition,,1,1,1,A:lib-json:p004:c000,0.7752,lib-json#p4 | lib-json#p14 | lib-json#p14
-A,d19,dev,paraphrase,,1,1,1,A:lib-functools:p002:c000,0.654,lib-functools#p2 | lib-functools#p2 | lib-functools#p2
-A,d20,dev,direct,,0,0,1,A:lib-functools:p014:c002,0.557,lib-functools#p14 | lib-functools#p13 | lib-functools#p15
-A,d21,dev,condition,,0,0,0,A:lib-csv:p006:c000,0.6903,lib-csv#p6 | lib-csv#p12 | lib-csv#p1
-A,d22,dev,metadata_filter,"{""doc_type"": ""library""}",1,1,1,A:lib-venv:p001:c003,0.5862,lib-venv#p1 | lib-venv#p10 | lib-venv#p1
-A,t01,test,condition,,0,0,1,A:tut-errors:p006:c004,0.6737,tut-errors#p6 | tut-errors#p6 | tut-errors#p6
-A,t02,test,direct,,0,0,1,A:tut-modules:p003:c003,0.627,tut-modules#p3 | lib-venv#p10 | tut-modules#p5
-A,t03,test,condition,,1,1,1,A:lib-csv:p002:c000,0.6455,lib-csv#p2 | lib-csv#p13 | lib-csv#p13
-A,t04,test,condition,,0,0,1,A:lib-functools:p006:c002,0.677,lib-functools#p6 | lib-functools#p5 | lib-functools#p4
-A,t05,test,metadata_filter,"{""doc_type"": ""library""}",0,1,1,A:lib-json:p001:c001,0.4906,lib-json#p1 | lib-json#p5 | lib-json#p10
-A,t06,test,metadata_filter,"{""doc_type"": ""tutorial""}",0,0,0,A:lib-venv:p004:c001,0.5902,lib-venv#p4 | lib-venv#p5 | lib-venv#p8
-B,d01,dev,direct,,1,1,1,B:tut-controlflow:p003:c001,0.7251,tut-controlflow#p3 | tut-controlflow#p3 | tut-controlflow#p3
-B,d02,dev,condition,,1,1,1,B:tut-controlflow:p009:c002,0.7033,tut-controlflow#p9 | tut-controlflow#p15 | lib-functools#p4
-B,d03,dev,direct,,1,1,1,B:tut-controlflow:p012:c002,0.6807,tut-controlflow#p12 | tut-controlflow#p14 | tut-controlflow#p12
-B,d04,dev,paraphrase,,1,1,1,B:tut-datastructures:p003:c001,0.6451,tut-datastructures#p3 | tut-datastructures#p3 | tut-datastructures#p1
-B,d05,dev,exception,,1,1,1,B:tut-datastructures:p007:c000,0.525,tut-datastructures#p7 | tut-datastructures#p8 | tut-datastructures#p7
-B,d06,dev,condition,,1,1,1,B:tut-datastructures:p008:c000,0.6747,tut-datastructures#p8 | tut-datastructures#p6 | tut-datastructures#p6
-B,d07,dev,paraphrase,,0,0,1,B:tut-errors:p007:c004,0.5625,tut-errors#p7 | tut-errors#p5 | tut-errors#p7
-B,d08,dev,direct,,0,1,1,B:tut-errors:p009:c001,0.6017,tut-errors#p9 | tut-errors#p9 | tut-errors#p7
-B,d09,dev,direct,,1,1,1,B:tut-errors:p007:c004,0.7503,tut-errors#p7 | tut-errors#p8 | tut-errors#p9
-B,d10,dev,direct,,1,1,1,B:tut-modules:p004:c000,0.8254,tut-modules#p4 | tut-modules#p4 | tut-modules#p4
-B,d11,dev,condition,,0,0,1,B:tut-modules:p009:c000,0.7165,tut-modules#p9 | tut-modules#p9 | tut-modules#p10
-B,d12,dev,paraphrase,,0,1,1,B:tut-modules:p002:c003,0.5518,tut-modules#p2 | tut-modules#p3 | tut-modules#p8
-B,d13,dev,direct,,0,1,1,B:tut-inputoutput:p006:c000,0.5563,tut-inputoutput#p6 | tut-inputoutput#p6 | tut-errors#p7
-B,d14,dev,metadata_filter,"{""doc_type"": ""tutorial""}",1,1,1,B:tut-inputoutput:p009:c002,0.6772,tut-inputoutput#p9 | tut-inputoutput#p9 | tut-inputoutput#p9
-B,d15,dev,metadata_filter,"{""doc_type"": ""tutorial""}",1,1,1,B:tut-venv:p001:c002,0.6478,tut-venv#p1 | lib-venv#p2 | lib-venv#p3
-B,d16,dev,metadata_filter,"{""doc_type"": ""library""}",0,0,0,B:lib-venv:p001:c000,0.6893,lib-venv#p1 | lib-venv#p10 | lib-venv#p2
-B,d17,dev,direct,,1,1,1,B:lib-json:p015:c001,0.6947,lib-json#p15 | lib-json#p2 | lib-json#p4
-B,d18,dev,condition,,0,1,1,B:lib-json:p014:c000,0.7218,lib-json#p14 | lib-json#p4 | lib-json#p11
-B,d19,dev,paraphrase,,1,1,1,B:lib-functools:p002:c000,0.5636,lib-functools#p2 | lib-functools#p2 | lib-functools#p2
-B,d20,dev,direct,,0,1,1,B:lib-functools:p014:c001,0.497,lib-functools#p14 | lib-functools#p11 | lib-functools#p13
-B,d21,dev,condition,,1,1,1,B:lib-csv:p004:c002,0.7213,lib-csv#p4 | lib-csv#p5 | lib-csv#p5
-B,d22,dev,metadata_filter,"{""doc_type"": ""library""}",0,1,1,B:lib-venv:p010:c001,0.5164,lib-venv#p10 | lib-venv#p1 | lib-venv#p2
-B,t01,test,condition,,1,1,1,B:tut-errors:p006:c002,0.5563,tut-errors#p6 | tut-errors#p6 | tut-controlflow#p3
-B,t02,test,direct,,0,1,1,B:tut-modules:p005:c001,0.6185,tut-modules#p5 | tut-modules#p3 | tut-modules#p3
-B,t03,test,condition,,1,1,1,B:lib-csv:p002:c000,0.5886,lib-csv#p2 | lib-csv#p13 | lib-csv#p8
-B,t04,test,condition,,1,1,1,B:lib-functools:p005:c000,0.6161,lib-functools#p5 | lib-functools#p6 | lib-functools#p6
-B,t05,test,metadata_filter,"{""doc_type"": ""library""}",0,1,1,B:tut-datastructures:p008:c001,0.5286,tut-datastructures#p8 | lib-json#p5 | lib-json#p1
-B,t06,test,metadata_filter,"{""doc_type"": ""tutorial""}",0,1,1,B:lib-venv:p005:c000,0.5826,lib-venv#p5 | lib-venv#p8 | tut-venv#p1
-C,d01,dev,direct,,1,1,1,C:tut-controlflow:p003:c001,0.7251,tut-controlflow#p3 | tut-controlflow#p3 | tut-controlflow#p3
-C,d02,dev,condition,,1,1,1,C:tut-controlflow:p009:c002,0.7033,tut-controlflow#p9 | tut-controlflow#p15 | lib-functools#p4
-C,d03,dev,direct,,1,1,1,C:tut-controlflow:p012:c002,0.6807,tut-controlflow#p12 | tut-controlflow#p14 | tut-controlflow#p12
-C,d04,dev,paraphrase,,1,1,1,C:tut-datastructures:p003:c001,0.6451,tut-datastructures#p3 | tut-datastructures#p3 | tut-datastructures#p1
-C,d05,dev,exception,,1,1,1,C:tut-datastructures:p007:c000,0.525,tut-datastructures#p7 | tut-datastructures#p8 | tut-datastructures#p7
-C,d06,dev,condition,,1,1,1,C:tut-datastructures:p008:c000,0.6747,tut-datastructures#p8 | tut-datastructures#p6 | tut-datastructures#p6
-C,d07,dev,paraphrase,,0,0,1,C:tut-errors:p007:c004,0.5625,tut-errors#p7 | tut-errors#p5 | tut-errors#p7
-C,d08,dev,direct,,0,1,1,C:tut-errors:p009:c001,0.6017,tut-errors#p9 | tut-errors#p9 | tut-errors#p7
-C,d09,dev,direct,,1,1,1,C:tut-errors:p007:c004,0.7503,tut-errors#p7 | tut-errors#p8 | tut-errors#p9
-C,d10,dev,direct,,1,1,1,C:tut-modules:p004:c000,0.8254,tut-modules#p4 | tut-modules#p4 | tut-modules#p4
-C,d11,dev,condition,,0,0,1,C:tut-modules:p009:c000,0.7165,tut-modules#p9 | tut-modules#p9 | tut-modules#p10
-C,d12,dev,paraphrase,,0,1,1,C:tut-modules:p002:c003,0.5518,tut-modules#p2 | tut-modules#p3 | tut-modules#p8
-C,d13,dev,direct,,0,1,1,C:tut-inputoutput:p006:c000,0.5563,tut-inputoutput#p6 | tut-inputoutput#p6 | tut-errors#p7
-C,d14,dev,metadata_filter,"{""doc_type"": ""tutorial""}",1,1,1,C:tut-inputoutput:p009:c002,0.6772,tut-inputoutput#p9 | tut-inputoutput#p9 | tut-inputoutput#p9
-C,d15,dev,metadata_filter,"{""doc_type"": ""tutorial""}",1,1,1,C:tut-venv:p001:c002,0.6478,tut-venv#p1 | tut-venv#p1 | tut-venv#p1
-C,d16,dev,metadata_filter,"{""doc_type"": ""library""}",0,0,0,C:lib-venv:p001:c000,0.6893,lib-venv#p1 | lib-venv#p10 | lib-venv#p2
-C,d17,dev,direct,,1,1,1,C:lib-json:p015:c001,0.6947,lib-json#p15 | lib-json#p2 | lib-json#p4
-C,d18,dev,condition,,0,1,1,C:lib-json:p014:c000,0.7218,lib-json#p14 | lib-json#p4 | lib-json#p11
-C,d19,dev,paraphrase,,1,1,1,C:lib-functools:p002:c000,0.5636,lib-functools#p2 | lib-functools#p2 | lib-functools#p2
-C,d20,dev,direct,,0,1,1,C:lib-functools:p014:c001,0.497,lib-functools#p14 | lib-functools#p11 | lib-functools#p13
-C,d21,dev,condition,,1,1,1,C:lib-csv:p004:c002,0.7213,lib-csv#p4 | lib-csv#p5 | lib-csv#p5
-C,d22,dev,metadata_filter,"{""doc_type"": ""library""}",0,1,1,C:lib-venv:p010:c001,0.5164,lib-venv#p10 | lib-venv#p1 | lib-venv#p2
-C,t01,test,condition,,1,1,1,C:tut-errors:p006:c002,0.5563,tut-errors#p6 | tut-errors#p6 | tut-controlflow#p3
-C,t02,test,direct,,0,1,1,C:tut-modules:p005:c001,0.6185,tut-modules#p5 | tut-modules#p3 | tut-modules#p3
-C,t03,test,condition,,1,1,1,C:lib-csv:p002:c000,0.5886,lib-csv#p2 | lib-csv#p13 | lib-csv#p8
-C,t04,test,condition,,1,1,1,C:lib-functools:p005:c000,0.6161,lib-functools#p5 | lib-functools#p6 | lib-functools#p6
-C,t05,test,metadata_filter,"{""doc_type"": ""library""}",1,1,1,C:lib-json:p005:c000,0.4801,lib-json#p5 | lib-json#p1 | lib-json#p11
-C,t06,test,metadata_filter,"{""doc_type"": ""tutorial""}",1,1,1,C:tut-venv:p001:c003,0.5172,tut-venv#p1 | tut-venv#p1 | tut-venv#p1
+strategy,id,split,type,evidence_type,filter,hit1,hit3,gold_page_in_top3,top1_chunk,top1_score,top_pages
+A,d01,dev,direct,text,,1,1,1,A:colorme3:p010:t00,0.4724,p10:text | p14:text | p12:text
+A,d02,dev,paraphrase,text,,1,1,1,A:colorme3:p015:t00,0.6976,p15:text | p15:text | p16:text
+A,d03,dev,direct,text,,1,1,1,A:colorme3:p012:t00,0.6683,p12:text | p12:text | p13:text
+A,d04,dev,condition,text,,1,1,1,A:colorme3:p017:t00,0.6491,p17:text | p16:text | p64:text
+A,d05,dev,direct,text,,1,1,1,A:colorme3:p026:t00,0.6807,p26:text | p28:text | p24:text
+A,d06,dev,paraphrase,text,,1,1,1,A:colorme3:p049:t00,0.6464,p49:text | p50:text | p48:text
+A,d07,dev,direct,text,,1,1,1,A:colorme3:p057:t00,0.6765,p57:text | p58:text | p59:text
+A,d08,dev,direct,text,,1,1,1,A:colorme3:p060:t00,0.5428,p60:text | p61:text | p15:text
+A,d09,dev,exception,text,,1,1,1,A:colorme3:p066:t00,0.6707,p66:text | p65:text | p62:text
+A,d10,dev,paraphrase,text,,1,1,1,A:colorme3:p072:t00,0.6644,p72:text | p75:text | p70:text
+A,d11,dev,condition,text,,1,1,1,A:colorme3:p082:t00,0.6236,p82:text | p75:text | p64:text
+A,d12,dev,direct,text,,1,1,1,A:colorme3:p089:t00,0.5965,p89:text | p100:text | p91:text
+A,d13,dev,metadata_filter,text,"{""chapter"": ""ch6""}",1,1,1,A:colorme3:p133:t00,0.7642,p133:text | p134:text | p132:text
+A,d14,dev,metadata_filter,text,"{""chapter"": ""ch8""}",1,1,1,A:colorme3:p166:t00,0.6867,p166:text | p164:text | p163:text
+A,d15,dev,metadata_filter,text,"{""chapter"": ""ch7""}",1,1,1,A:colorme3:p156:t00,0.7873,p156:text | p153:text | p75:text
+A,d16,dev,visual_table,visual,,0,0,1,A:colorme3:p014:t00,0.6673,p14:text | p12:text | p12:text
+A,d17,dev,visual_chart,visual,,0,0,0,A:colorme3:p058:t00,0.4773,p58:text | p55:text | p82:text
+A,t01,test,direct,text,,1,1,1,A:colorme3:p008:t01,0.6199,p8:text | p126:text | p9:text
+A,t02,test,metadata_filter,text,"{""chapter"": ""ch4""}",0,1,1,A:colorme3:p112:t00,0.6505,p112:text | p109:text | p107:text
+A,t03,test,paraphrase,text,,0,1,1,A:colorme3:p147:t00,0.6202,p147:text | p146:text | p144:text
+A,t04,test,direct,text,,1,1,1,A:colorme3:p130:t00,0.5861,p130:text | p20:text | p21:text
+A,t05,test,visual_table,visual,,0,0,1,A:colorme3:p067:t00,0.5377,p67:text | p82:text | p77:text
+A,t06,test,visual_table,visual,"{""chapter"": ""ch6""}",0,0,1,A:colorme3:p136:t00,0.7126,p136:text | p136:text | p139:text
+A,t07,test,metadata_filter,text,"{""chapter"": ""appendix""}",1,1,1,A:colorme3:p174:t00,0.6951,p174:text | p174:text | p21:text
+B,d01,dev,direct,text,,0,0,1,B:colorme3:p011:v00,0.4912,p11:visual | p11:visual | p10:visual
+B,d02,dev,paraphrase,text,,1,1,1,B:colorme3:p015:t00,0.6976,p15:text | p15:text | p15:visual
+B,d03,dev,direct,text,,1,1,1,B:colorme3:p012:t00,0.6683,p12:text | p12:text | p12:visual
+B,d04,dev,condition,text,,1,1,1,B:colorme3:p017:t00,0.6491,p17:text | p16:text | p16:visual
+B,d05,dev,direct,text,,1,1,1,B:colorme3:p026:t00,0.6808,p26:text | p28:text | p24:text
+B,d06,dev,paraphrase,text,,1,1,1,B:colorme3:p049:t00,0.6463,p49:text | p48:visual | p48:visual
+B,d07,dev,direct,text,,1,1,1,B:colorme3:p057:t00,0.6765,p57:text | p57:visual | p58:visual
+B,d08,dev,direct,text,,0,1,1,B:colorme3:p060:v00,0.5522,p60:visual | p60:text | p61:text
+B,d09,dev,exception,text,,1,1,1,B:colorme3:p066:t00,0.6707,p66:text | p65:text | p65:visual
+B,d10,dev,paraphrase,text,,1,1,1,B:colorme3:p072:t00,0.6645,p72:text | p75:text | p70:text
+B,d11,dev,condition,text,,1,1,1,B:colorme3:p082:t00,0.6231,p82:text | p82:visual | p75:text
+B,d12,dev,direct,text,,1,1,1,B:colorme3:p089:t00,0.5964,p89:text | p100:text | p91:text
+B,d13,dev,metadata_filter,text,"{""chapter"": ""ch6""}",1,1,1,B:colorme3:p133:t00,0.7644,p133:text | p133:visual | p134:text
+B,d14,dev,metadata_filter,text,"{""chapter"": ""ch8""}",0,1,1,B:colorme3:p166:v00,0.6918,p166:visual | p166:text | p163:visual
+B,d15,dev,metadata_filter,text,"{""chapter"": ""ch7""}",1,1,1,B:colorme3:p156:t00,0.7873,p156:text | p156:visual | p153:visual
+B,d16,dev,visual_table,visual,,1,1,1,B:colorme3:p014:v00,0.7391,p14:visual | p14:text | p12:text
+B,d17,dev,visual_chart,visual,,1,1,1,B:colorme3:p006:v00,0.5335,p6:visual | p59:visual | p63:visual
+B,t01,test,direct,text,,1,1,1,B:colorme3:p008:t01,0.6199,p8:text | p8:visual | p126:text
+B,t02,test,metadata_filter,text,"{""chapter"": ""ch4""}",0,1,1,B:colorme3:p112:v01,0.6562,p112:visual | p112:text | p109:text
+B,t03,test,paraphrase,text,,0,0,0,B:colorme3:p147:t00,0.6202,p147:text | p147:visual | p147:visual
+B,t04,test,direct,text,,1,1,1,B:colorme3:p130:t00,0.5861,p130:text | p20:text | p21:text
+B,t05,test,visual_table,visual,,1,1,1,B:colorme3:p077:v00,0.669,p77:visual | p78:visual | p70:visual
+B,t06,test,visual_table,visual,"{""chapter"": ""ch6""}",0,1,1,B:colorme3:p136:t00,0.7126,p136:text | p136:visual | p140:visual
+B,t07,test,metadata_filter,text,"{""chapter"": ""appendix""}",1,1,1,B:colorme3:p174:t00,0.6951,p174:text | p174:text | p174:visual
+C,d01,dev,direct,text,,0,0,1,C:colorme3:p011:v00,0.4912,p11:visual | p11:visual | p10:visual
+C,d02,dev,paraphrase,text,,1,1,1,C:colorme3:p015:t00,0.6976,p15:text | p15:text | p15:visual
+C,d03,dev,direct,text,,1,1,1,C:colorme3:p012:t00,0.6683,p12:text | p12:text | p12:visual
+C,d04,dev,condition,text,,1,1,1,C:colorme3:p017:t00,0.6491,p17:text | p16:text | p16:visual
+C,d05,dev,direct,text,,1,1,1,C:colorme3:p026:t00,0.6808,p26:text | p28:text | p24:text
+C,d06,dev,paraphrase,text,,1,1,1,C:colorme3:p049:t00,0.6463,p49:text | p48:visual | p48:visual
+C,d07,dev,direct,text,,1,1,1,C:colorme3:p057:t00,0.6765,p57:text | p57:visual | p58:visual
+C,d08,dev,direct,text,,0,1,1,C:colorme3:p060:v00,0.5522,p60:visual | p60:text | p61:text
+C,d09,dev,exception,text,,1,1,1,C:colorme3:p066:t00,0.6707,p66:text | p65:text | p65:visual
+C,d10,dev,paraphrase,text,,1,1,1,C:colorme3:p072:t00,0.6645,p72:text | p75:text | p70:text
+C,d11,dev,condition,text,,1,1,1,C:colorme3:p082:t00,0.6231,p82:text | p82:visual | p75:text
+C,d12,dev,direct,text,,1,1,1,C:colorme3:p089:t00,0.5964,p89:text | p100:text | p91:text
+C,d13,dev,metadata_filter,text,"{""chapter"": ""ch6""}",1,1,1,C:colorme3:p133:t00,0.7644,p133:text | p133:visual | p134:text
+C,d14,dev,metadata_filter,text,"{""chapter"": ""ch8""}",0,1,1,C:colorme3:p166:v00,0.6918,p166:visual | p166:text | p163:visual
+C,d15,dev,metadata_filter,text,"{""chapter"": ""ch7""}",1,1,1,C:colorme3:p156:t00,0.7873,p156:text | p156:visual | p153:visual
+C,d16,dev,visual_table,visual,,1,1,1,C:colorme3:p014:v00,0.7391,p14:visual | p14:text | p12:text
+C,d17,dev,visual_chart,visual,,1,1,1,C:colorme3:p006:v00,0.5335,p6:visual | p59:visual | p63:visual
+C,t01,test,direct,text,,1,1,1,C:colorme3:p008:t01,0.6199,p8:text | p8:visual | p126:text
+C,t02,test,metadata_filter,text,"{""chapter"": ""ch4""}",0,1,1,C:colorme3:p112:v01,0.6562,p112:visual | p112:text | p109:text
+C,t03,test,paraphrase,text,,0,0,0,C:colorme3:p147:t00,0.6202,p147:text | p147:visual | p147:visual
+C,t04,test,direct,text,,1,1,1,C:colorme3:p130:t00,0.5861,p130:text | p20:text | p21:text
+C,t05,test,visual_table,visual,,1,1,1,C:colorme3:p077:v00,0.669,p77:visual | p78:visual | p70:visual
+C,t06,test,visual_table,visual,"{""chapter"": ""ch6""}",0,1,1,C:colorme3:p136:t00,0.7126,p136:text | p136:visual | p140:visual
+C,t07,test,metadata_filter,text,"{""chapter"": ""appendix""}",1,1,1,C:colorme3:p174:t00,0.6951,p174:text | p174:text | p174:visual

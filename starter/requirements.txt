@@ -1,10 +1,6 @@
-# Day 06 solution: Python 3.13 docs -> ChromaDB (local) with Sentence Transformers.
-# Versions used for the recorded run (Python 3.13.5, Windows 11, CPU only):
+# Day 06 solution: colorME ebook PDF -> ChromaDB with OpenAI embeddings + vision.
+# Versions used for the recorded run (Python 3.13.5, Windows 11):
 chromadb==1.5.9
-sentence-transformers==5.2.0
-torch==2.11.0
-transformers==4.57.3
-# Original pgvector starter deps (not used by this solution, kept for reference):
-# psycopg[binary]==3.3.8
-# pypdf>=5,<7
-# python-dotenv>=1,<2
+openai==2.14.0
+pymupdf==1.28.2
+python-dotenv==1.1.0

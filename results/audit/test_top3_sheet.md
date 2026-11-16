@@ -1,1458 +1,1391 @@
-# Test top-3 sheet (auto-generated, labels in metadata_audit.csv / grounding_labels.csv)
+# Test top-3 sheet (auto-generated; labels in metadata_audit.csv / grounding_labels.csv)
 
 
-## A t01 filter_applied=None
+## A t01 (text) filter_applied=None
 
-Q: If both the try block and the finally block contain a return statement, which value is returned?
-Gold: [('tut-errors', [6])]
+Q: Phần mềm Lightroom thiên về việc gì?
+Expected: Retouch và blend (chỉnh màu ảnh), được giới photographer ưa chuộng.
+Gold: [([8], 'thiên nặng về retouch và blend')]
 
 
-### rank 1 A:tut-errors:p006:c004 score=0.6737 hit=False
-source=python-3.13-docs-text/tutorial/errors.txt page=6 page_id=tut-errors#p006 doc_type=tutorial section=8. Errors and Exceptions > 8.7. Defining Clean-up Actions
-
+### rank 1 A:colorme3:p008:t01 score=0.6199 hit=True
+source=EBOOK COLORME 3.pdf page=8 printed=7 chapter=ch1 type=text
 ```text
-else"
-  clause. Again, the exception is re-raised after the "finally" clause
-  has been executed.
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Các phần mềm thiết kế thường gặp | trang 7 (PDF p8)]
+Adobe Indesign
+Những ấn phẩm chuyên dùng trong trường hợp in ấn, những ấn
+phẩm có nhiều trang như những cuốn sách, những brochure, leaveleft
+thường được tạo ra bởi Indesign. Phần mềm này khá mờ nhạt với rất
+nhiều người. Tuy nhiên, nếu dành thời gian học thử, bạn sẽ thấy rất
+hứng thú với nó.
 
-* If the "finally" clause executes a "break", "continue" or "return"
-  statement, exceptions are not re-raised.
-
-* If the "try" statement reaches a "break", "continue" or "return"
-  statement, the "finally" clause will execute just prior to the
-  "break", "continue" or "return" statement's execution.
-
-* If a "finally" clause includes a "return" statement, the returned
-  value will be the one from t
+Adobe Lightroom
+Là phần mềm được giới Photographer cực kì ưa chuộng, Lighrtoom
+thiên nặng về retouch và blend. Một kĩ năng mà bạn cần có nếu muốn
+tự tạo ra những bức hình có màu sắc “ảo diệu”. Với những preset cung
+cấp sẵn cực kì nhiều trên mạng. Bạn sẽ có thể tự học rất nhanh phần
+mềm này.
 ```
 
 
-### rank 2 A:tut-errors:p006:c005 score=0.5448 hit=False
-source=python-3.13-docs-text/tutorial/errors.txt page=6 page_id=tut-errors#p006 doc_type=tutorial section=8. Errors and Exceptions > 8.7. Defining Clean-up Actions
-
+### rank 2 A:colorme3:p126:t00 score=0.5658 hit=False
+source=EBOOK COLORME 3.pdf page=126 printed=125 chapter=ch5 type=text
 ```text
-ement, the returned
-  value will be the one from the "finally" clause's "return"
-  statement, not the value from the "try" clause's "return" statement.
+[Chương 5 – Một số hiệu ứng cơ bản | Hue, Brightness & Contrast | trang 125 (PDF p126)]
+Hue, Brightness & Contrast
 
-For example:
-
-   >>> def bool_return():
-   ...     try:
-   ...         return True
-   ...     finally:
-   ...         return False
-   ...
-   >>> bool_return()
-   False
-
-A more complicated example:
-
-   >>> def divide(x, y):
-   ...     try:
-   ...         result = x / y
-   ...     except ZeroDivisionError:
-   ...         print("division by zero!")
+Retouch
+Hơn thế nữa, bạn có thể làm làn da cô người mẫu trở nên sáng lóa chỉ sau 1 bước thực hiện
 ```
 
 
-### rank 3 A:tut-errors:p006:c002 score=0.5441 hit=False
-source=python-3.13-docs-text/tutorial/errors.txt page=6 page_id=tut-errors#p006 doc_type=tutorial section=8. Errors and Exceptions > 8.7. Defining Clean-up Actions
-
+### rank 3 A:colorme3:p009:t01 score=0.5319 hit=False
+source=EBOOK COLORME 3.pdf page=9 printed=8 chapter=ch1 type=text
 ```text
-executed under all circumstances.
-For example:
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Vì sao nên học Photoshop | trang 8 (PDF p9)]
+Thay đổi màu ảnh
+Tha hồ blend màu ảnh theo ở thích với các công cụ cực mạnh trong Photoshop
 
-   >>> try:
-   ...     raise KeyboardInterrupt
-   ... finally:
-   ...     print('Goodbye, world!')
-   ...
-   Goodbye, world!
-   Traceback (most recent call last):
-     File "<stdin>", line 2, in <module>
-       raise KeyboardInterrupt
-   KeyboardInterrupt
+Thiết kế áo thun
+Không còn cằn nhằn với các desinger ở xưởng in nữa khi bạn đã có phù thủy trong tay
 
-If a "finally" clause is present, the "finally" clause will execute as
-the last task before the "try" statement completes. The "finally"
-clause runs whether or not the "try" statement produces an
+Chỉnh sửa lỗi ảnh
+Mắt đỏ? Thiếu sáng? Nhòe ảnh? Hãy xem Photoshop có thể giúp bạn làm gì nhé
+
+Chỉnh style ảnh
+Háng tá các hiệu ứng đang chờ bạn áp dụng vào những bức hình
+
+Hiện thực ý tưởng
+Và quan trọng hơn hết, biến ý tưởng của bạn thành hiện thực.
 ```
 
 
-## A t02 filter_applied=None
+## A t02 (text) filter_applied=None
 
-Q: Which locations is sys.path initialized from?
-Gold: [('tut-modules', [3])]
+Q: (Đang đọc chương typography) Kĩ thuật nghịch đảo màu được thực hiện thế nào?
+Expected: Chỗ có chữ màu trắng thì cho nền màu gốc, chỗ có nền màu trắng thì cho chữ màu gốc.
+Gold: [([109], 'Chỗ có chữ màu trắng, chúng ta cho nền màu gốc, chỗ có nền màu trắng, ta cho chữ có màu gốc.')]
 
 
-### rank 1 A:tut-modules:p003:c003 score=0.627 hit=False
-source=python-3.13-docs-text/tutorial/modules.txt page=3 page_id=tut-modules#p003 doc_type=tutorial section=6. Modules > 6.1. More on Modules > 6.1.2. The Module Search Path
-
+### rank 1 A:colorme3:p112:t00 score=0.6505 hit=False
+source=EBOOK COLORME 3.pdf page=112 printed=111 chapter=ch4 type=text
 ```text
-ied).
+[Chương 4 – Những điều cần biết về Typography | Các kĩ thuật dùng chữ | trang 111 (PDF p112)]
+Các kĩ thuật dùng chữ
 
-* "PYTHONPATH" (a list of directory names, with the same syntax as the
-  shell variable "PATH").
+Một bài toán thú vị
+Vậy liệu có cách nào để xây dựng được tác phẩm này không?
 
-* The installation-dependent default (by convention including a "site-
-  packages" directory, handled by the "site" module).
+Gợi ý nhỏ cho bạn, mọi thứ vẫn chỉ quay quanh clipping mask nhé. Hãy liên hệ với colorME để biết câu trả lời
+cho bài toán này.
 
-More details are at The initialization of the sys.path module search
-path.
-
-Note:
-
-  On file systems which support symlinks, the directory containing the
-  input script is calculated after the symlink is followed. In other
-  words the directory containing the symlink i
+http://www.Facebook.com/colorME.hanoi
 ```
 
 
-### rank 2 A:lib-venv:p010:c001 score=0.546 hit=False
-source=python-3.13-docs-text/library/venv.txt page=10 page_id=lib-venv#p010 doc_type=library section="venv" --- Creation of virtual environments > API (cont.)
-
+### rank 2 A:colorme3:p109:t00 score=0.6462 hit=True
+source=EBOOK COLORME 3.pdf page=109 printed=108 chapter=ch4 type=text
 ```text
- to assist in installing custom
-      scripts into the virtual environment.
+[Chương 4 – Những điều cần biết về Typography | Các kĩ thuật dùng chữ | trang 108 (PDF p109)]
+Các kĩ thuật dùng chữ
 
-      *path* is the path to a directory that should contain
-      subdirectories "common", "posix", "nt"; each containing scripts
-      destined for the "bin" directory in the environment.  The
-      contents of "common" and the directory corresponding to
-      "os.name" are copied after some text replacement of
-      placeholders:
+Kĩ thuật nghịch đảo màu
+ONE OF A KIND – Ca khúc tuyệt vời của chàng thủ lĩnh tài ba G Dragon đã tạo hiệu ứng lan tỏa mạnh mẽ đến
+giới thời trang.
 
-      * "__VENV_DIR__" is replaced with the absolute path of the
-        environment dir
+Đã có hàng triệu chiếc áo như trên được bán ra trên toàn thế giới.
+
+Các con chữ trong ONE OF A KIND trên đây được ứng dụng kĩ thuật nghịch đảo màu để xây dựng nên. Chỗ
+có chữ màu trắng, chúng ta cho nền màu gốc, chỗ có nền màu trắng, ta cho chữ có màu gốc. Không quá khó
+để thực hiện đúng không?
 ```
 
 
-### rank 3 A:tut-modules:p005:c002 score=0.5457 hit=False
-source=python-3.13-docs-text/tutorial/modules.txt page=5 page_id=tut-modules#p005 doc_type=tutorial section=6. Modules > 6.2. Standard Modules
-
+### rank 3 A:colorme3:p107:t00 score=0.6412 hit=False
+source=EBOOK COLORME 3.pdf page=107 printed=106 chapter=ch4 type=text
 ```text
+[Chương 4 – Những điều cần biết về Typography | Các kĩ thuật dùng chữ | trang 106 (PDF p107)]
+Các kĩ thuật dùng chữ
 
-   C> print('Yuck!')
-   Yuck!
-   C>
+Chiêm ngưỡng và phân tích tác phẩm
+Tác phẩm tuyệt diệu phía trên đường hình thành từ sự tương phản rõ rệt giữa bức nền màu phía sau và
+những con chữ đen đậm phía trước.
 
-These two variables are only defined if the interpreter is in
-interactive mode.
+Xem clip sau để biết cách xây dựn gbackground “ảo diệu” kia bạn nhé
 
-The variable "sys.path" is a list of strings that determines the
-interpreter's search path for modules. It is initialized to a default
-path taken from the environment variable "PYTHONPATH", or from a
-built-in default if "PYTHONPATH" is not set.  You can modify it using
-standard list operations:
-
-   >>> import sys
-   >>> sys.path.append('/ufs/guido/lib/python')
-
-6.3. The "dir()" 
+https://www.youtube.com/watch?v=Cf_8arTmgT4&index=6&list=PL9_gOzpFilwo7sSrdyZHQHTvtk6oiyy8z
 ```
 
 
-## A t03 filter_applied=None
+## A t03 (text) filter_applied=None
 
-Q: How should a file be opened before passing it to csv.reader?
-Gold: [('lib-csv', [2])]
+Q: Kiểu logo không gian âm có nguồn gốc từ thương hiệu nào?
+Expected: Hãng chuyển phát nhanh FedEx.
+Gold: [([146], 'Bắt nguồn từ hãng chuyển phát nhanh fedex')]
 
 
-### rank 1 A:lib-csv:p002:c000 score=0.6455 hit=True
-source=python-3.13-docs-text/library/csv.txt page=2 page_id=lib-csv#p002 doc_type=library section="csv" --- CSV File Reading and Writing > Module Contents
-
+### rank 1 A:colorme3:p147:t00 score=0.6202 hit=False
+source=EBOOK COLORME 3.pdf page=147 printed=146 chapter=ch6 type=text
 ```text
-Module Contents
-===============
+[Chương 6 – Nhận diện thương hiệu | Negative Space Logos | trang 146 (PDF p147)]
+Negative Space Logos
 
-The "csv" module defines the following functions:
+Logo không gian âm
+Con ngựa bị cắm sừng và bóng đèn.
 
-csv.reader(csvfile, /, dialect='excel', **fmtparams)
+Hay đơn giản là chuỗi số 1 2 3 4.
 
-   Return a reader object that will process lines from the given
-   *csvfile*.  A csvfile must be an iterable of strings, each in the
-   reader's defined csv format. A csvfile is most commonly a file-like
-   object or list. If *csvfile* is a file object, it should be opened
-   with "newline=''". [1]  An optional *dialect* parameter can be
-   given which is use
+Đều có thể ứng dụng không gian âm.
 ```
 
 
-### rank 2 A:lib-csv:p013:c003 score=0.5627 hit=False
-source=python-3.13-docs-text/library/csv.txt page=13 page_id=lib-csv#p013 doc_type=library section="csv" --- CSV File Reading and Writing > Examples
-
+### rank 2 A:colorme3:p146:t00 score=0.5782 hit=True
+source=EBOOK COLORME 3.pdf page=146 printed=145 chapter=ch6 type=text
 ```text
-A slightly more advanced use of the reader --- catching and reporting
-errors:
+[Chương 6 – Nhận diện thương hiệu | Negative Space Logos | trang 145 (PDF p146)]
+Negative Space Logos
 
-   import csv, sys
-   filename = 'some.csv'
-   with open(filename, newline='') as f:
-       reader = csv.reader(f)
-       try:
-           for row in reader:
-               print(row)
-       except csv.Error as e:
-           sys.exit(f'file {filename}, line {reader.line_num}: {e}')
+Logo không gian âm
+Bắt nguồn từ hãng chuyển phát nhanh fedex, loại logo này đang rất được ưa chuộng trên toàn thế giới.
 
-And while the module doesn't directly support parsing strings, it can
-easily be done:
+Bản chất của logo này là khả năng lồng ghép khéo léo hình ảnh của một vật thể thứ 2 vào bên trong những
+không gian thừa của vật thể có sẵn
 
-   import csv
-   for row in csv.reader(['one,two,th
+Trong trường hợp trên, bạn có thể thấy rõ thành phố nằm bên trong chìa khóa
+
+Hay dẫu mũi tên nằm giữa 2 chữ E và X.
 ```
 
 
-### rank 3 A:lib-csv:p013:c000 score=0.5616 hit=False
-source=python-3.13-docs-text/library/csv.txt page=13 page_id=lib-csv#p013 doc_type=library section="csv" --- CSV File Reading and Writing > Examples
-
+### rank 3 A:colorme3:p144:t00 score=0.562 hit=False
+source=EBOOK COLORME 3.pdf page=144 printed=143 chapter=ch6 type=text
 ```text
-Examples
-========
+[Chương 6 – Nhận diện thương hiệu | Geometric Shape Logos | trang 143 (PDF p144)]
+Geometric Shape Logos
 
-The simplest example of reading a CSV file:
-
-   import csv
-   with open('some.csv', newline='') as f:
-       reader = csv.reader(f)
-       for row in reader:
-           print(row)
-
-Reading a file with an alternate format:
-
-   import csv
-   with open('passwd', newline='') as f:
-       reader = csv.reader(f, delimiter=':', quoting=csv.QUOTE_NONE)
-       for row in reader:
-           print(row)
-
-The corresponding simplest possible writing example is:
-
-   import csv
-   with open('
+Logo hình khối
+Là những logo chỉ được tạo thành từ những đường thẳng
 ```
 
 
-## A t04 filter_applied=None
+## A t04 (text) filter_applied=None
 
-Q: What happens to lru_cache when maxsize is None?
-Gold: [('lib-functools', [5])]
+Q: Layer style là gì?
+Expected: Tập hợp các hiệu ứng được dùng chung cho một layer.
+Gold: [([130], 'Tập hợp các hiệu ứng được dùng chung cho một layer, được gọi là layer style.')]
 
 
-### rank 1 A:lib-functools:p006:c002 score=0.677 hit=False
-source=python-3.13-docs-text/library/functools.txt page=6 page_id=lib-functools#p006 doc_type=library section="functools" --- Higher-order functions and operations on callable objects (cont.)
-
+### rank 1 A:colorme3:p130:t00 score=0.5861 hit=True
+source=EBOOK COLORME 3.pdf page=130 printed=129 chapter=ch5 type=text
 ```text
-   In general, the LRU cache should only be used when you want to
-   reuse previously computed values.  Accordingly, it doesn't make
-   sense to cache functions with side-effects, functions that need to
-   create distinct mutable objects on each call (such as generators
-   and async functions), or impure functions such as time() or
-   random().
+[Chương 5 – Một số hiệu ứng cơ bản | Color Overlay | trang 129 (PDF p130)]
+Color Overlay
 
-   Example of an LRU cache for static web content:
+Kết hợp các hiệu ứng
+Tập hợp các hiệu ứng được dùng chung cho một layer, được gọi là layer style.
 
-      @lru_cache(maxsize=32)
-      def get_pep(num):
-          'Retrieve text of a Python Enhancemen
+Cặp bài trùng stroke – drop shadow trả về cho chúng ta kết quả như trên. Cùng tìm hiểu thêm tại đây bạn
+nhé:
+
+https://www.youtube.com/watch?v=d8cJ3WuhoEE&index=2&list=PL9_gOzpFilwol3lyOj3jH4iDBMzVIPrea
 ```
 
 
-### rank 2 A:lib-functools:p005:c003 score=0.6041 hit=False
-source=python-3.13-docs-text/library/functools.txt page=5 page_id=lib-functools#p005 doc_type=library section="functools" --- Higher-order functions and operations on callable objects (cont.)
-
+### rank 2 A:colorme3:p020:t01 score=0.5695 hit=False
+source=EBOOK COLORME 3.pdf page=20 printed=19 chapter=ch1 type=text
 ```text
-tiveness of the cache and tune the
-   *maxsize* parameter, the wrapped function is instrumented with a
-   "cache_info()" function that returns a *named tuple* showing
-   *hits*, *misses*, *maxsize* and *currsize*.
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Khái niệm về lớp (layer) | trang 19 (PDF p20)]
+Như ví dụ trên bạn có thể thấy, chúng ta có 3 layer chồng lên nhau. Layer đầu tiên chỉ gồm những mảng màu
+vàng và chữ trắng. Layer thứ 2 chỉ có hình các bạn đội hộp nắm tay nhau. Và layer cuối cùng là một
+background gổm rất nhiều chuối.
+
+Bạn đã nắm được khái niệm về layer rồi đúng không? Giờ hãy nắm một số thao tác với layer nhé.
 ```
 
 
-### rank 3 A:lib-functools:p004:c001 score=0.6003 hit=False
-source=python-3.13-docs-text/library/functools.txt page=4 page_id=lib-functools#p004 doc_type=library section="functools" --- Higher-order functions and operations on callable objects (cont.)
-
+### rank 3 A:colorme3:p021:t00 score=0.5664 hit=False
+source=EBOOK COLORME 3.pdf page=21 printed=20 chapter=ch1 type=text
 ```text
-tutorial, see Sorting
-   Techniques.
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Các thao tác cơ bản với lớp | trang 20 (PDF p21)]
+Các thao tác cơ bản với lớp
 
-   Added in version 3.2.
+Danh sách phím tắt thao tác với layer
+Tạo Layer (Ctrl + Shift + N)
 
-@functools.lru_cache(user_function)
-@functools.lru_cache(maxsize=128, typed=False)
+Xóa Layer (Chọn layer - Delete)
 
-   Decorator to wrap a function with a memoizing callable that saves
-   up to the *maxsize* most recent calls.  It can save time when an
-   expensive or I/O bound function is periodically called with the
-   same arguments.
+Thay đổi thứ tự các layer (Kéo thả trong layers panel)
 
-   The cache is threadsafe so that the wrapped function can be used in
-   multiple threads.  This means that the underlying data
+Gộp 2 hoặc nhiều layer lại (chọn Layer, Ctrl + E)
+
+Đặt tên Layer (Double click vào tên layer)
+
+Chọn nhanh Layer (Ấn ctrl hoặc chọn auto-select)
+
+Tạo nhóm các layer (Ctrl + G)
+
+Xem qua clip sau để hiểu hơn về demo layer bạn nhé
+
+https://www.youtube.com/watch?v=1fpfSEF0aJk&index=2&list=PL9_
+gOzpFilwpSPzpPu6Z8gWXID3woj7Wn
+
+Chú ý
+1, Layer Menu chứa hết tất cả các tùy chỉnh cho layer
+
+2, Nhớ chọn đúng layer trước khi xử lý
 ```
 
 
-## A t05 filter_applied=None
+## A t05 (visual) filter_applied=None
 
-Q: In the library reference: why may a dictionary not equal the original after converting it to JSON and back?
-Gold: [('lib-json', [5])]
+Q: Trong bảng màu và cảm nhận (8 ô màu tiếng Anh), màu orange gắn với những từ khóa nào?
+Expected: HEALTH, ATTRACTION, STAND OUT, THIRST, WEALTH, YOUTHFUL, HAPPINESS.
+Gold: [([77], 'HEALTH')]
 
 
-### rank 1 A:lib-json:p001:c001 score=0.4906 hit=False
-source=python-3.13-docs-text/library/json.txt page=1 page_id=lib-json#p001 doc_type=library section="json" --- JSON encoder and decoder
-
+### rank 1 A:colorme3:p067:t00 score=0.5377 hit=False
+source=EBOOK COLORME 3.pdf page=67 printed=66 chapter=ch3 type=text
 ```text
-term "object" in the context of JSON processing in Python can be
-  ambiguous. All values in Python are objects. In JSON, an object
-  refers to any data wrapped in curly braces, similar to a Python
-  dictionary.
+[Chương 3 – Sử dụng màu sắc | Dùng 1 màu | trang 66 (PDF p67)]
+Dùng 1 màu
 
-Warning:
+Từ thực tiễn quanh ta
+Bạn có nhận thấy 2 dải màu trên là 2 dải màu của mạng xã hội nào không?
 
-  Be cautious when parsing JSON data from untrusted sources. A
-  malicious JSON string may cause the decoder to consume considerable
-  CPU and memory resources. Limiting the size of data to be parsed is
-  recommended.
+Chính xác, là Facebook và Twitter. Giờ hãy dành chút thời gian để quay lại Facebook và nhìn xem, liệu số lượn
+màu xanh mà bạn nhớ về Facebook liệu có chiếm quá nhiều không gian của nó không?
 
-This module exposes an API familiar to users of the standar
+Như vậy bạn đã hiểu được ý mà tôi muốn truyền đạt. Tuyệt đối đừng tham, hãy bắt đầu sử dụng từ 1 màu.
+Một khi đã quen với việc sử dụng 1 màu duy nhất trong thiết kế, bạn sẽ có thể bát đầu trôi chảy hơn với
+việc…
 ```
 
 
-### rank 2 A:lib-json:p005:c000 score=0.4733 hit=True
-source=python-3.13-docs-text/library/json.txt page=5 page_id=lib-json#p005 doc_type=library section="json" --- JSON encoder and decoder > Basic Usage (cont.)
-
+### rank 2 A:colorme3:p082:t00 score=0.5362 hit=False
+source=EBOOK COLORME 3.pdf page=82 printed=81 chapter=ch3 type=text
 ```text
-      * **sort_keys** (*bool*) -- If "True", dictionaries will be
-        outputted sorted by key. Default "False".
+[Chương 3 – Sử dụng màu sắc | Các nhóm màu thường gặp | trang 81 (PDF p82)]
+Các nhóm màu thường gặp
 
-   Note:
+Neon chói lóa
+Những màu neon đặc trưng đem lại cảm xúc rất mạnh mẽ cho người xem.
 
-     Keys in key/value pairs of JSON are always of the type "str".
-     When a dictionary is converted into JSON, all the keys of the
-     dictionary are converted to strings. As a result of this, if a
-     dictionary is converted into JSON and then back into a
-     dictionary, the dictionary may not equal the original one. That
-     is, "loads(dumps(x)) != x" if x has n
+Những màu neon có một nhược điểm, chúng chỉ có thể dùng được trên nền tối để phát ra ánh sáng như
+những gìc húng ta thường thấy ở đèn led.
 ```
 
 
-### rank 3 A:lib-json:p010:c001 score=0.4685 hit=False
-source=python-3.13-docs-text/library/json.txt page=10 page_id=lib-json#p010 doc_type=library section="json" --- JSON encoder and decoder > Encoders and Decoders (cont.)
-
+### rank 3 A:colorme3:p077:t00 score=0.5223 hit=False
+source=EBOOK COLORME 3.pdf page=77 printed=76 chapter=ch3 type=text
 ```text
-e the document ended.
+[Chương 3 – Sử dụng màu sắc | Ý nghĩa của màu sắc | trang 76 (PDF p77)]
+Ý nghĩa của màu sắc
 
-      This can be used to decode a JSON document from a string that
-      may have extraneous data at the end.
+Mỗi màu sắc đều có tiếng nói riêng
+Trong một cuộc thống kê lớn về những cảm nhận của mỗi người về một màu sắc nhất định nào đó. Các nhà
+khoa học nhận ra rằng các màu sắc đều đem đến một số cảm nhận chung cho cộng động,.
 
-class json.JSONEncoder(*, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, sort_keys=False, indent=None, separators=None, default=None)
+Phần lớn mọi người thấy sự an toàn khi thấy màu xanh, thấy cồn cào khi nhìn màu đỏ, cảm nhận được sự tinh
+tế dịu dàng trong màu hồng, sự quý phái trong màu tím và năng lượng trong màu vàng.
 
-   Extensible JSON encoder for Python data structures.
-
-   Supports the following objects and types by default:
-
-   +------------------------------------------+-----------------+
-   | Python               
+Rất rất nhiều những cảm nhận khác nữa về màu sắc mà bạn có thể tìm thấy trong bức hình trên
 ```
 
 
-## A t06 filter_applied=None
+## A t06 (visual) filter_applied=None
 
-Q: Following the tutorial, how do I activate a virtual environment on Windows?
-Gold: [('tut-venv', [1])]
+Q: (Đang đọc chương nhận diện thương hiệu) Trong bảng màu cho logo, nhóm tính từ 'Uy quyền, đỉnh đạc, an toàn, đáng tin cậy' được đặt trên thanh màu gì?
+Expected: Xanh dương.
+Gold: [([136], 'xanh dương')]
 
 
-### rank 1 A:lib-venv:p004:c001 score=0.5902 hit=False
-source=python-3.13-docs-text/library/venv.txt page=4 page_id=lib-venv#p004 doc_type=library section="venv" --- Creation of virtual environments > How venvs work
-
+### rank 1 A:colorme3:p136:t00 score=0.7126 hit=False
+source=EBOOK COLORME 3.pdf page=136 printed=135 chapter=ch6 type=text
 ```text
- environment may be "activated" using a script in its binary
-directory ("bin" on POSIX; "Scripts" on Windows). This will prepend
-that directory to your "PATH", so that running **python** will invoke
-the environment's Python interpreter and you can run installed scripts
-without having to use their full path. The invocation of the
-activation script is platform-specific ("*<venv>*" must be replaced by
-the path to the directory containing the virtual environment):
+[Chương 6 – Nhận diện thương hiệu | Logo – Phân loại | trang 135 (PDF p136)]
+Logo – Phân loại
 
-+---------------+--------------+--
+Trang trọng, đặc biệt, mạnh mẽ, quyền lực, tinh tế, truyền thống
+
+Uy quyền, đỉnh đạc, an toàn, đáng tin cậy, truyền thống, ổn định, trung thành
+
+Cổ điển, lợi ích, trần tục, giàu sang, truyền thống, bảo thủ
+
+Ảm đạm, quyền lực, thực tế, tâm linh, tin tưởng
+
+Yên tĩnh, lành mạnh, khoẻ khoắn, ổn định, thèm muốn
+
+Nữ tính, ngây thơ, dịu dàng, khoẻ mạnh, trẻ trung
+
+Tinh tế, tâm lý, giàu sang, hoàng tộc, trẻ trung, bí ẩn
+
+Hung hăng, mạnh mẽ, bền bỉ, đầy sức sống, kinh sợ
+
+Yên vui, nhiều quyền hành
+
+Hãy nhớ chọn màu cho logo
+Bạn vẫn chưa quên ý nghĩa của màu sắc đúng không?
 ```
 
 
-### rank 2 A:lib-venv:p005:c000 score=0.5834 hit=False
-source=python-3.13-docs-text/library/venv.txt page=5 page_id=lib-venv#p005 doc_type=library section="venv" --- Creation of virtual environments > How venvs work (cont.)
-
+### rank 2 A:colorme3:p136:t01 score=0.6264 hit=False
+source=EBOOK COLORME 3.pdf page=136 printed=135 chapter=ch6 type=text
 ```text
-Added in version 3.4: **fish** and **csh** activation scripts.
-
-Added in version 3.8: PowerShell activation scripts installed under
-POSIX for PowerShell Core support.
-
-You don't specifically *need* to activate a virtual environment, as
-you can just specify the full path to that environment's Python
-interpreter when invoking Python. Furthermore, all scripts installed
-in the environment should be runnable without activating it.
-
-In order to achieve this, scripts installed into virtual environments
+[Chương 6 – Nhận diện thương hiệu | Logo – Phân loại | trang 135 (PDF p136)]
+Đây là lúc bạn ứng dụng lại những kiến thức đã học để đưa vào logo những màu sắc phù hợp với giá trị của
+công ty/ tổ chức mà bạn đang nhận thiết kế nhé.
 ```
 
 
-### rank 3 A:lib-venv:p008:c002 score=0.5134 hit=False
-source=python-3.13-docs-text/library/venv.txt page=8 page_id=lib-venv#p008 doc_type=library section="venv" --- Creation of virtual environments > API (cont.)
-
+### rank 3 A:colorme3:p139:t00 score=0.6142 hit=False
+source=EBOOK COLORME 3.pdf page=139 printed=138 chapter=ch6 type=text
 ```text
- - The name of the virtual environment. Used for
-        "__VENV_NAME__" in activation scripts (see
-        "install_scripts()").
+[Chương 6 – Nhận diện thương hiệu | Logo – Chú ý | trang 138 (PDF p139)]
+Logo – Chú ý
 
-      * "prompt" - The prompt to be used by the activation scripts.
-        Used for "__VENV_PROMPT__" in activation scripts (see
-        "install_scripts()").
+Simple Unique Identifiable
 
-      * "executable" - The underlying Python executable used by the
-        virtual environment. This takes into account the case where a
-        virtual environment is created from another virtual
-        en
+Tự kiểm tra và đánh giá logo
+Simple: Logo có thể được mô tả hoặc phác thảo một cách dễ dàng không?
+
+Unique: Logo có bị trùng ý tưởng với logo khác không?
+
+Identifiable: Logo có dễ được nhận biết không?
 ```
 
 
-## B t01 filter_applied=None
+## A t07 (text) filter_applied=None
 
-Q: If both the try block and the finally block contain a return statement, which value is returned?
-Gold: [('tut-errors', [6])]
+Q: (Đang xem phụ lục phím tắt) Phím tắt nào dùng để nhân đôi Layer?
+Expected: CTRL + J.
+Gold: [([174], 'CTRL + J: Nhân đôi Layer')]
 
 
-### rank 1 B:tut-errors:p006:c002 score=0.5563 hit=True
-source=python-3.13-docs-text/tutorial/errors.txt page=6 page_id=tut-errors#p006 doc_type=tutorial section=8.7. Defining Clean-up Actions
-
+### rank 1 A:colorme3:p174:t00 score=0.6951 hit=True
+source=EBOOK COLORME 3.pdf page=174 printed=173 chapter=appendix type=text
 ```text
-[8.7. Defining Clean-up Actions]
-* An exception could occur during execution of an "except" or "else"
-  clause. Again, the exception is re-raised after the "finally" clause
-  has been executed.
+[Phụ lục và lời kết | Danh sách phím tắt | trang 173 (PDF p174)]
+Danh sách phím tắt
 
-* If the "finally" clause executes a "break", "continue" or "return"
-  statement, exceptions are not re-raised.
-
-* If the "try" statement reaches a "break", "continue" or "return"
-  statement, the "finally" clause will execute just prior to the
-  "break", "continue" or "return" statement's execution.
-
-* If a "finally" clause includes a "return" statement, the returned
-  value will be the one from the "finally" clause's "return"
-  statement, not the value from the "try" clause's "return" statement.
-
-For example:
-
-   >>> def bool_return():
-   ...     try:
-   ...         return True
-   ...     finally:
-   ...         return False
-   ...
-   >>> bool_return()
-   False
-
-A more complicated example:
+Nhóm Phím Tắt Hệ Thống FILE
+- CTRL + N (New): Tạo File mới
+- CTRL + O (Open): Mở file
+- CTRL + ALT + O (Open As): Mở file từ Adobe Bridge
+- CTRL + W (Close): Đóng File
+- CTRL + S (Save): Lưu file
+- CTRL + SHIFT + S (Save As): Lưu ra các dạng khác
+- CTRL + ALT + S (Save a Copy): Lưu thêm 1 bản copy
+- CTRL + P (Print): In ảnh
+Nhóm Lệnh Thao Tác Với Layer
+- CTRL + SHIFT + N: Tạo Layer mới
+- CTRL + J: Nhân đôi Layer
+- CTRL + SHIFT + J: Cắt Layer
+- CTRL + G: Tạo nhóm Layer
+- CTRL + SHIFT + G: Bỏ nhóm Layer
+- CTRL + SHIFT + ]: Chuyển Layer lên trên cùng
+- CTRL + ]: Chuyển Layer lên trên
+- CTRL + [: Chuyển Layer xuống dưới
+- CTRL + SHIFT + [: Chuyển Layer xuống dưới cùng
+- CTRL + E: Ghép các Layer được chọn
 ```
 
 
-### rank 2 B:tut-errors:p006:c001 score=0.4685 hit=False
-source=python-3.13-docs-text/tutorial/errors.txt page=6 page_id=tut-errors#p006 doc_type=tutorial section=8.7. Defining Clean-up Actions
-
+### rank 2 A:colorme3:p174:t01 score=0.6486 hit=False
+source=EBOOK COLORME 3.pdf page=174 printed=173 chapter=appendix type=text
 ```text
-[8.7. Defining Clean-up Actions]
-The "try" statement has another optional clause which is intended to
-define clean-up actions that must be executed under all circumstances.
-For example:
-
-   >>> try:
-   ...     raise KeyboardInterrupt
-   ... finally:
-   ...     print('Goodbye, world!')
-   ...
-   Goodbye, world!
-   Traceback (most recent call last):
-     File "<stdin>", line 2, in <module>
-       raise KeyboardInterrupt
-   KeyboardInterrupt
-
-If a "finally" clause is present, the "finally" clause will execute as
-the last task before the "try" statement completes. The "finally"
-clause runs whether or not the "try" statement produces an exception.
-The following points discuss more complex cases when an exception
-occurs:
-
-* If an exception occurs during execution of the "try" clause, the
-  exception may be handled by an "except" clause. If the exception is
-  not handled by an "except" clause, the exception is re-raised after
-  the "finally" clause has been executed.
+[Phụ lục và lời kết | Danh sách phím tắt | trang 173 (PDF p174)]
+- CTRL + SHIFT + E: Ghép tất cả các Layer
+Các Lệnh Chọn SELECT Trong Photoshop
+- CTRL + A: Chọn tất cả
+- CTRL + D: Bỏ vùng chọn
+- CTRL + SHIFT + D: Chọn lại vùng chọn
+- CTRL + SHIFT + I: Nghịch đảo vùng chọn
+- CTRL + ALT + D: Mờ biên vùng chọn
+- CTRL + F: Lặp lại Filter cuối cùng
+- CTRL + SHIFT + F: Chỉnh Opacity Brush
 ```
 
 
-### rank 3 B:tut-controlflow:p003:c003 score=0.4395 hit=False
-source=python-3.13-docs-text/tutorial/controlflow.txt page=3 page_id=tut-controlflow#p003 doc_type=tutorial section=4.5. "else" Clauses on Loops
-
+### rank 3 A:colorme3:p021:t00 score=0.6329 hit=False
+source=EBOOK COLORME 3.pdf page=21 printed=20 chapter=ch1 type=text
 ```text
-[4.5. "else" Clauses on Loops]
-When used with a loop, the "else" clause has more in common with the
-"else" clause of a "try" statement than it does with that of "if"
-statements: a "try" statement's "else" clause runs when no exception
-occurs, and a loop's "else" clause runs when no "break" occurs. For
-more on the "try" statement and exceptions, see Handling Exceptions.
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Các thao tác cơ bản với lớp | trang 20 (PDF p21)]
+Các thao tác cơ bản với lớp
+
+Danh sách phím tắt thao tác với layer
+Tạo Layer (Ctrl + Shift + N)
+
+Xóa Layer (Chọn layer - Delete)
+
+Thay đổi thứ tự các layer (Kéo thả trong layers panel)
+
+Gộp 2 hoặc nhiều layer lại (chọn Layer, Ctrl + E)
+
+Đặt tên Layer (Double click vào tên layer)
+
+Chọn nhanh Layer (Ấn ctrl hoặc chọn auto-select)
+
+Tạo nhóm các layer (Ctrl + G)
+
+Xem qua clip sau để hiểu hơn về demo layer bạn nhé
+
+https://www.youtube.com/watch?v=1fpfSEF0aJk&index=2&list=PL9_
+gOzpFilwpSPzpPu6Z8gWXID3woj7Wn
+
+Chú ý
+1, Layer Menu chứa hết tất cả các tùy chỉnh cho layer
+
+2, Nhớ chọn đúng layer trước khi xử lý
 ```
 
 
-## B t02 filter_applied=None
+## B t01 (text) filter_applied=None
 
-Q: Which locations is sys.path initialized from?
-Gold: [('tut-modules', [3])]
+Q: Phần mềm Lightroom thiên về việc gì?
+Expected: Retouch và blend (chỉnh màu ảnh), được giới photographer ưa chuộng.
+Gold: [([8], 'thiên nặng về retouch và blend')]
 
 
-### rank 1 B:tut-modules:p005:c001 score=0.6185 hit=False
-source=python-3.13-docs-text/tutorial/modules.txt page=5 page_id=tut-modules#p005 doc_type=tutorial section=6.2. Standard Modules
-
+### rank 1 B:colorme3:p008:t01 score=0.6199 hit=True
+source=EBOOK COLORME 3.pdf page=8 printed=7 chapter=ch1 type=text
 ```text
-[6.2. Standard Modules]
-The variable "sys.path" is a list of strings that determines the
-interpreter's search path for modules. It is initialized to a default
-path taken from the environment variable "PYTHONPATH", or from a
-built-in default if "PYTHONPATH" is not set.  You can modify it using
-standard list operations:
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Các phần mềm thiết kế thường gặp | trang 7 (PDF p8)]
+Adobe Indesign
+Những ấn phẩm chuyên dùng trong trường hợp in ấn, những ấn
+phẩm có nhiều trang như những cuốn sách, những brochure, leaveleft
+thường được tạo ra bởi Indesign. Phần mềm này khá mờ nhạt với rất
+nhiều người. Tuy nhiên, nếu dành thời gian học thử, bạn sẽ thấy rất
+hứng thú với nó.
 
-   >>> import sys
-   >>> sys.path.append('/ufs/guido/lib/python')
+Adobe Lightroom
+Là phần mềm được giới Photographer cực kì ưa chuộng, Lighrtoom
+thiên nặng về retouch và blend. Một kĩ năng mà bạn cần có nếu muốn
+tự tạo ra những bức hình có màu sắc “ảo diệu”. Với những preset cung
+cấp sẵn cực kì nhiều trên mạng. Bạn sẽ có thể tự học rất nhanh phần
+mềm này.
 ```
 
 
-### rank 2 B:tut-modules:p003:c002 score=0.5161 hit=False
-source=python-3.13-docs-text/tutorial/modules.txt page=3 page_id=tut-modules#p003 doc_type=tutorial section=6.1.2. The Module Search Path
-
+### rank 2 B:colorme3:p008:v03 score=0.5857 hit=False
+source=EBOOK COLORME 3.pdf page=8 printed=7 chapter=ch1 type=visual
 ```text
-[6.1.2. The Module Search Path]
-  On file systems which support symlinks, the directory containing the
-  input script is calculated after the symlink is followed. In other
-  words the directory containing the symlink is **not** added to the
-  module search path.
-
-After initialization, Python programs can modify "sys.path".  The
-directory containing the script being run is placed at the beginning
-of the search path, ahead of the standard library path. This means
-that scripts in that directory will be loaded instead of modules of
-the same name in the library directory. This is an error unless the
-replacement is intended.  See section Standard Modules for more
-information.
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Các phần mềm thiết kế thường gặp | trang 7 (PDF p8)]
+Nội dung trang: Trang liệt kê và mô tả các phần mềm thiết kế đồ họa phổ biến như Adobe Photoshop, Illustrator, Indesign và Lightroom kèm biểu tượng nhận diện từng phần mềm.
+Phần tử trực quan (hình minh họa, giữa/trái): Biểu tượng phần mềm Adobe Lightroom hình vuông nền xanh đen đậm, chữ 'Lr' màu xanh dương nhạt ở giữa, viền ngoài màu xanh dương nhạt.
+Chữ trong hình: Lr
 ```
 
 
-### rank 3 B:tut-modules:p003:c001 score=0.5066 hit=True
-source=python-3.13-docs-text/tutorial/modules.txt page=3 page_id=tut-modules#p003 doc_type=tutorial section=6.1.2. The Module Search Path
-
+### rank 3 B:colorme3:p126:t00 score=0.5633 hit=False
+source=EBOOK COLORME 3.pdf page=126 printed=125 chapter=ch5 type=text
 ```text
-[6.1.2. The Module Search Path]
-When a module named "spam" is imported, the interpreter first searches
-for a built-in module with that name. These module names are listed in
-"sys.builtin_module_names". If not found, it then searches for a file
-named "spam.py" in a list of directories given by the variable
-"sys.path".  "sys.path" is initialized from these locations:
+[Chương 5 – Một số hiệu ứng cơ bản | Hue, Brightness & Contrast | trang 125 (PDF p126)]
+Hue, Brightness & Contrast
 
-* The directory containing the input script (or the current directory
-  when no file is specified).
-
-* "PYTHONPATH" (a list of directory names, with the same syntax as the
-  shell variable "PATH").
-
-* The installation-dependent default (by convention including a "site-
-  packages" directory, handled by the "site" module).
-
-More details are at The initialization of the sys.path module search
-path.
-
-Note:
+Retouch
+Hơn thế nữa, bạn có thể làm làn da cô người mẫu trở nên sáng lóa chỉ sau 1 bước thực hiện
 ```
 
 
-## B t03 filter_applied=None
+## B t02 (text) filter_applied=None
 
-Q: How should a file be opened before passing it to csv.reader?
-Gold: [('lib-csv', [2])]
+Q: (Đang đọc chương typography) Kĩ thuật nghịch đảo màu được thực hiện thế nào?
+Expected: Chỗ có chữ màu trắng thì cho nền màu gốc, chỗ có nền màu trắng thì cho chữ màu gốc.
+Gold: [([109], 'Chỗ có chữ màu trắng, chúng ta cho nền màu gốc, chỗ có nền màu trắng, ta cho chữ có màu gốc.')]
 
 
-### rank 1 B:lib-csv:p002:c000 score=0.5886 hit=True
-source=python-3.13-docs-text/library/csv.txt page=2 page_id=lib-csv#p002 doc_type=library section=Module Contents
-
+### rank 1 B:colorme3:p112:v01 score=0.6562 hit=False
+source=EBOOK COLORME 3.pdf page=112 printed=111 chapter=ch4 type=visual
 ```text
-[Module Contents]
-The "csv" module defines the following functions:
-
-csv.reader(csvfile, /, dialect='excel', **fmtparams)
-
-   Return a reader object that will process lines from the given
-   *csvfile*.  A csvfile must be an iterable of strings, each in the
-   reader's defined csv format. A csvfile is most commonly a file-like
-   object or list. If *csvfile* is a file object, it should be opened
-   with "newline=''". [1]  An optional *dialect* parameter can be
-   given which is used to define a set of parameters specific to a
-   particular CSV dialect.  It may be an instance of a subclass of the
-   "Dialect" class or one of the strings returned by the
-   "list_dialects()" function.  The other optional *fmtparams* keyword
-   arguments can be given to override individual formatting parameters
-   in the current dialect.  For full details about the dialect and
-   formatting parameters, see section Dialects and Formatting
-   Parameters.
+[Chương 4 – Những điều cần biết về Typography | Các kĩ thuật dùng chữ | trang 111 (PDF p112)]
+Nội dung trang: Trang trình bày về kỹ thuật dùng chữ với ví dụ minh họa và lời gợi ý liên hệ colorME để biết cách thực hiện.
+Phần tử trực quan (bảng/ô màu, dưới/giữa): Màu đỏ dùng làm nền chữ trong ảnh minh họa và tiêu đề phụ.
+Chữ trong hình: Một bài toán thú vị
+Dữ liệu: đỏ: tiêu đề phụ, nền chữ trong ảnh minh họa
 ```
 
 
-### rank 2 B:lib-csv:p013:c000 score=0.5876 hit=False
-source=python-3.13-docs-text/library/csv.txt page=13 page_id=lib-csv#p013 doc_type=library section=Examples
-
+### rank 2 B:colorme3:p112:t00 score=0.6504 hit=False
+source=EBOOK COLORME 3.pdf page=112 printed=111 chapter=ch4 type=text
 ```text
-[Examples]
-The simplest example of reading a CSV file:
+[Chương 4 – Những điều cần biết về Typography | Các kĩ thuật dùng chữ | trang 111 (PDF p112)]
+Các kĩ thuật dùng chữ
 
-   import csv
-   with open('some.csv', newline='') as f:
-       reader = csv.reader(f)
-       for row in reader:
-           print(row)
+Một bài toán thú vị
+Vậy liệu có cách nào để xây dựng được tác phẩm này không?
 
-Reading a file with an alternate format:
+Gợi ý nhỏ cho bạn, mọi thứ vẫn chỉ quay quanh clipping mask nhé. Hãy liên hệ với colorME để biết câu trả lời
+cho bài toán này.
 
-   import csv
-   with open('passwd', newline='') as f:
-       reader = csv.reader(f, delimiter=':', quoting=csv.QUOTE_NONE)
-       for row in reader:
-           print(row)
-
-The corresponding simplest possible writing example is:
-
-   import csv
-   with open('some.csv', 'w', newline='') as f:
-       writer = csv.writer(f)
-       writer.writerows(someiterable)
-
-Since "open()" is used to open a CSV file for reading, the file will
-by default be decoded into unicode using the system default encoding
-(see "locale.getencoding()").  To decode a file using a different
-encoding, use the "encoding" argument of open:
-
-   import csv
-   with open('some.csv', newline='', encoding='utf-8') as f:
-       reader = csv.reader(f)
-       for row in reader:
-           print(row)
+http://www.Facebook.com/colorME.hanoi
 ```
 
 
-### rank 3 B:lib-csv:p008:c001 score=0.5531 hit=False
-source=python-3.13-docs-text/library/csv.txt page=8 page_id=lib-csv#p008 doc_type=library section="csv" --- CSV File Reading and Writing > Module Contents (cont.)
-
+### rank 3 B:colorme3:p109:t00 score=0.6458 hit=True
+source=EBOOK COLORME 3.pdf page=109 printed=108 chapter=ch4 type=text
 ```text
-["csv" --- CSV File Reading and Writing > Module Contents (cont.)]
-   with open('example.csv', newline='') as csvfile:
-       dialect = csv.Sniffer().sniff(csvfile.read(1024))
-       csvfile.seek(0)
-       reader = csv.reader(csvfile, dialect)
-       # ... process CSV file contents here ...
+[Chương 4 – Những điều cần biết về Typography | Các kĩ thuật dùng chữ | trang 108 (PDF p109)]
+Các kĩ thuật dùng chữ
 
-The "csv" module defines the following constants:
+Kĩ thuật nghịch đảo màu
+ONE OF A KIND – Ca khúc tuyệt vời của chàng thủ lĩnh tài ba G Dragon đã tạo hiệu ứng lan tỏa mạnh mẽ đến
+giới thời trang.
 
-csv.QUOTE_ALL
+Đã có hàng triệu chiếc áo như trên được bán ra trên toàn thế giới.
 
-   Instructs "writer" objects to quote all fields.
-
-csv.QUOTE_MINIMAL
-
-   Instructs "writer" objects to only quote those fields which contain
-   special characters such as *delimiter*, *quotechar*, "'\r'", "'\n'"
-   or any of the characters in *lineterminator*. If *doublequote* is
-   "False" and *escapechar* is set, the *quotechar* is escaped instead
-   of causing the field to be quoted.
-
-csv.QUOTE_NONNUMERIC
-
-   Instructs "writer" objects to quote all non-numeric fields.
+Các con chữ trong ONE OF A KIND trên đây được ứng dụng kĩ thuật nghịch đảo màu để xây dựng nên. Chỗ
+có chữ màu trắng, chúng ta cho nền màu gốc, chỗ có nền màu trắng, ta cho chữ có màu gốc. Không quá khó
+để thực hiện đúng không?
 ```
 
 
-## B t04 filter_applied=None
+## B t03 (text) filter_applied=None
 
-Q: What happens to lru_cache when maxsize is None?
-Gold: [('lib-functools', [5])]
+Q: Kiểu logo không gian âm có nguồn gốc từ thương hiệu nào?
+Expected: Hãng chuyển phát nhanh FedEx.
+Gold: [([146], 'Bắt nguồn từ hãng chuyển phát nhanh fedex')]
 
 
-### rank 1 B:lib-functools:p005:c000 score=0.6161 hit=True
-source=python-3.13-docs-text/library/functools.txt page=5 page_id=lib-functools#p005 doc_type=library section="functools" --- Higher-order functions and operations on callable objects (cont.)
-
+### rank 1 B:colorme3:p147:t00 score=0.6202 hit=False
+source=EBOOK COLORME 3.pdf page=147 printed=146 chapter=ch6 type=text
 ```text
-["functools" --- Higher-order functions and operations on callable objects (cont.)]
-   If *user_function* is specified, it must be a callable. This allows
-   the *lru_cache* decorator to be applied directly to a user
-   function, leaving the *maxsize* at its default value of 128:
+[Chương 6 – Nhận diện thương hiệu | Negative Space Logos | trang 146 (PDF p147)]
+Negative Space Logos
 
-      @lru_cache
-      def count_vowels(sentence):
-          return sum(sentence.count(vowel) for vowel in 'AEIOUaeiou')
+Logo không gian âm
+Con ngựa bị cắm sừng và bóng đèn.
 
-   If *maxsize* is set to "None", the LRU feature is disabled and the
-   cache can grow without bound.
+Hay đơn giản là chuỗi số 1 2 3 4.
 
-   If *typed* is set to true, function arguments of different types
-   will be cached separately.  If *typed* is false, the implementation
-   will usually regard them as equivalent calls and only cache a
-   single result. (Some types such as *str* and *int* may be cached
-   separately even when *typed* is false.)
+Đều có thể ứng dụng không gian âm.
 ```
 
 
-### rank 2 B:lib-functools:p006:c000 score=0.5563 hit=False
-source=python-3.13-docs-text/library/functools.txt page=6 page_id=lib-functools#p006 doc_type=library section="functools" --- Higher-order functions and operations on callable objects (cont.)
-
+### rank 2 B:colorme3:p147:v00 score=0.5926 hit=False
+source=EBOOK COLORME 3.pdf page=147 printed=146 chapter=ch6 type=visual
 ```text
-["functools" --- Higher-order functions and operations on callable objects (cont.)]
-   The decorator also provides a "cache_clear()" function for clearing
-   or invalidating the cache.
-
-   The original underlying function is accessible through the
-   "__wrapped__" attribute.  This is useful for introspection, for
-   bypassing the cache, or for rewrapping the function with a
-   different cache.
-
-   The cache keeps references to the arguments and return values until
-   they age out of the cache or until the cache is cleared.
-
-   If a method is cached, the "self" instance argument is included in
-   the cache.  See How do I cache method calls?
-
-   An LRU (least recently used) cache works best when the most recent
-   calls are the best predictors of upcoming calls (for example, the
-   most popular articles on a news server tend to change each day).
-   The cache's size limit assures that the cache does not grow without
-   bound on long-running processes such as web servers.
+[Chương 6 – Nhận diện thương hiệu | Negative Space Logos | trang 146 (PDF p147)]
+Nội dung trang: Trang trình bày về logo không gian âm với hai ví dụ minh họa: logo con ngựa kết hợp bóng đèn và chuỗi số 1 2 3 4.
+Phần tử trực quan (hình minh họa, giữa): Logo màu trắng trên nền đen, hình con ngựa có sừng (giống kỳ lân) với phần thân là bóng đèn, phía dưới có chữ 'Unique Idea' màu trắng.
+Chữ trong hình: Unique Idea
 ```
 
 
-### rank 3 B:lib-functools:p006:c001 score=0.5318 hit=False
-source=python-3.13-docs-text/library/functools.txt page=6 page_id=lib-functools#p006 doc_type=library section="functools" --- Higher-order functions and operations on callable objects (cont.)
-
+### rank 3 B:colorme3:p147:v01 score=0.5886 hit=False
+source=EBOOK COLORME 3.pdf page=147 printed=146 chapter=ch6 type=visual
 ```text
-["functools" --- Higher-order functions and operations on callable objects (cont.)]
-   In general, the LRU cache should only be used when you want to
-   reuse previously computed values.  Accordingly, it doesn't make
-   sense to cache functions with side-effects, functions that need to
-   create distinct mutable objects on each call (such as generators
-   and async functions), or impure functions such as time() or
-   random().
-
-   Example of an LRU cache for static web content:
-
-      @lru_cache(maxsize=32)
-      def get_pep(num):
-          'Retrieve text of a Python Enhancement Proposal'
-          resource = f'https://peps.python.org/pep-{num:04d}'
-          try:
-              with urllib.request.urlopen(resource) as s:
-                  return s.read()
-          except urllib.error.HTTPError:
-              return 'Not Found'
+[Chương 6 – Nhận diện thương hiệu | Negative Space Logos | trang 146 (PDF p147)]
+Nội dung trang: Trang trình bày về logo không gian âm với hai ví dụ minh họa: logo con ngựa kết hợp bóng đèn và chuỗi số 1 2 3 4.
+Phần tử trực quan (hình minh họa, giữa): Logo chuỗi số 1 2 3 4 màu trắng trên nền đen, số 3 có khoảng trống tạo hình ngôi sao nhỏ màu trắng, bên cạnh có chữ 'club' màu trắng.
+Chữ trong hình: 1234 club
 ```
 
 
-## B t05 filter_applied=None
+## B t04 (text) filter_applied=None
 
-Q: In the library reference: why may a dictionary not equal the original after converting it to JSON and back?
-Gold: [('lib-json', [5])]
+Q: Layer style là gì?
+Expected: Tập hợp các hiệu ứng được dùng chung cho một layer.
+Gold: [([130], 'Tập hợp các hiệu ứng được dùng chung cho một layer, được gọi là layer style.')]
 
 
-### rank 1 B:tut-datastructures:p008:c001 score=0.5286 hit=False
-source=python-3.13-docs-text/tutorial/datastructures.txt page=8 page_id=tut-datastructures#p008 doc_type=tutorial section=5.5. Dictionaries
-
+### rank 1 B:colorme3:p130:t00 score=0.5861 hit=True
+source=EBOOK COLORME 3.pdf page=130 printed=129 chapter=ch5 type=text
 ```text
-[5.5. Dictionaries]
-It is best to think of a dictionary as a set of *key: value* pairs,
-with the requirement that the keys are unique (within one dictionary).
-A pair of braces creates an empty dictionary: "{}". Placing a comma-
-separated list of key:value pairs within the braces adds initial
-key:value pairs to the dictionary; this is also the way dictionaries
-are written on output.
+[Chương 5 – Một số hiệu ứng cơ bản | Color Overlay | trang 129 (PDF p130)]
+Color Overlay
 
-The main operations on a dictionary are storing a value with some key
-and extracting the value given the key.  It is also possible to delete
-a key:value pair with "del". If you store using a key that is already
-in use, the old value associated with that key is forgotten.
+Kết hợp các hiệu ứng
+Tập hợp các hiệu ứng được dùng chung cho một layer, được gọi là layer style.
 
-Extracting a value for a non-existent key by subscripting ("d[key]")
-raises a "KeyError". To avoid getting this error when trying to access
-a possibly non-existent key, use the "get()" method instead, which
-returns "None" (or a specified default value) if the key is not in the
-dictionary.
+Cặp bài trùng stroke – drop shadow trả về cho chúng ta kết quả như trên. Cùng tìm hiểu thêm tại đây bạn
+nhé:
+
+https://www.youtube.com/watch?v=d8cJ3WuhoEE&index=2&list=PL9_gOzpFilwol3lyOj3jH4iDBMzVIPrea
 ```
 
 
-### rank 2 B:lib-json:p005:c000 score=0.4801 hit=True
-source=python-3.13-docs-text/library/json.txt page=5 page_id=lib-json#p005 doc_type=library section="json" --- JSON encoder and decoder > Basic Usage (cont.)
-
+### rank 2 B:colorme3:p020:t01 score=0.5694 hit=False
+source=EBOOK COLORME 3.pdf page=20 printed=19 chapter=ch1 type=text
 ```text
-["json" --- JSON encoder and decoder > Basic Usage (cont.)]
-      * **sort_keys** (*bool*) -- If "True", dictionaries will be
-        outputted sorted by key. Default "False".
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Khái niệm về lớp (layer) | trang 19 (PDF p20)]
+Như ví dụ trên bạn có thể thấy, chúng ta có 3 layer chồng lên nhau. Layer đầu tiên chỉ gồm những mảng màu
+vàng và chữ trắng. Layer thứ 2 chỉ có hình các bạn đội hộp nắm tay nhau. Và layer cuối cùng là một
+background gổm rất nhiều chuối.
 
-   Note:
-
-     Keys in key/value pairs of JSON are always of the type "str".
-     When a dictionary is converted into JSON, all the keys of the
-     dictionary are converted to strings. As a result of this, if a
-     dictionary is converted into JSON and then back into a
-     dictionary, the dictionary may not equal the original one. That
-     is, "loads(dumps(x)) != x" if x has non-string keys. *sort_keys*
-     sorts the keys before they are converted to strings, so numeric
-     keys are sorted by value, not by their string representation.
-
-   Changed in version 3.2: Allow strings for *indent* in addition to
-   integers.
-
-   Changed in version 3.4: Use "(',', ': ')" as default if *indent* is
-   not "None".
-
-   Changed in version 3.6: All optional parameters are now keyword-
-   only.
+Bạn đã nắm được khái niệm về layer rồi đúng không? Giờ hãy nắm một số thao tác với layer nhé.
 ```
 
 
-### rank 3 B:lib-json:p001:c000 score=0.474 hit=False
-source=python-3.13-docs-text/library/json.txt page=1 page_id=lib-json#p001 doc_type=library section="json" --- JSON encoder and decoder
-
+### rank 3 B:colorme3:p021:t00 score=0.5664 hit=False
+source=EBOOK COLORME 3.pdf page=21 printed=20 chapter=ch1 type=text
 ```text
-["json" --- JSON encoder and decoder]
-**Source code:** Lib/json/__init__.py
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Các thao tác cơ bản với lớp | trang 20 (PDF p21)]
+Các thao tác cơ bản với lớp
 
-======================================================================
+Danh sách phím tắt thao tác với layer
+Tạo Layer (Ctrl + Shift + N)
 
-JSON (JavaScript Object Notation), specified by **RFC 7159** (which
-obsoletes **RFC 4627**) and by ECMA-404, is a lightweight data
-interchange format inspired by JavaScript object literal syntax
-(although it is not a strict subset of JavaScript [1] ).
+Xóa Layer (Chọn layer - Delete)
 
-Note:
+Thay đổi thứ tự các layer (Kéo thả trong layers panel)
 
-  The term "object" in the context of JSON processing in Python can be
-  ambiguous. All values in Python are objects. In JSON, an object
-  refers to any data wrapped in curly braces, similar to a Python
-  dictionary.
+Gộp 2 hoặc nhiều layer lại (chọn Layer, Ctrl + E)
 
-Warning:
+Đặt tên Layer (Double click vào tên layer)
 
-  Be cautious when parsing JSON data from untrusted sources. A
-  malicious JSON string may cause the decoder to consume considerable
-  CPU and memory resources. Limiting the size of data to be parsed is
-  recommended.
+Chọn nhanh Layer (Ấn ctrl hoặc chọn auto-select)
 
-This module exposes an API familiar to users of the standard library
-"marshal" and "pickle" modules.
+Tạo nhóm các layer (Ctrl + G)
 
-Encoding basic Python object hierarchies:
+Xem qua clip sau để hiểu hơn về demo layer bạn nhé
+
+https://www.youtube.com/watch?v=1fpfSEF0aJk&index=2&list=PL9_
+gOzpFilwpSPzpPu6Z8gWXID3woj7Wn
+
+Chú ý
+1, Layer Menu chứa hết tất cả các tùy chỉnh cho layer
+
+2, Nhớ chọn đúng layer trước khi xử lý
 ```
 
 
-## B t06 filter_applied=None
+## B t05 (visual) filter_applied=None
 
-Q: Following the tutorial, how do I activate a virtual environment on Windows?
-Gold: [('tut-venv', [1])]
+Q: Trong bảng màu và cảm nhận (8 ô màu tiếng Anh), màu orange gắn với những từ khóa nào?
+Expected: HEALTH, ATTRACTION, STAND OUT, THIRST, WEALTH, YOUTHFUL, HAPPINESS.
+Gold: [([77], 'HEALTH')]
 
 
-### rank 1 B:lib-venv:p005:c000 score=0.5826 hit=False
-source=python-3.13-docs-text/library/venv.txt page=5 page_id=lib-venv#p005 doc_type=library section="venv" --- Creation of virtual environments > How venvs work (cont.)
-
+### rank 1 B:colorme3:p077:v00 score=0.669 hit=True
+source=EBOOK COLORME 3.pdf page=77 printed=76 chapter=ch3 type=visual
 ```text
-["venv" --- Creation of virtual environments > How venvs work (cont.)]
-Added in version 3.4: **fish** and **csh** activation scripts.
-
-Added in version 3.8: PowerShell activation scripts installed under
-POSIX for PowerShell Core support.
-
-You don't specifically *need* to activate a virtual environment, as
-you can just specify the full path to that environment's Python
-interpreter when invoking Python. Furthermore, all scripts installed
-in the environment should be runnable without activating it.
+[Chương 3 – Sử dụng màu sắc | Ý nghĩa của màu sắc | trang 76 (PDF p77)]
+Nội dung trang: Trang trình bày ý nghĩa của các màu sắc qua bảng màu với các từ khóa mô tả cảm nhận chung về từng màu.
+Phần tử trực quan (bảng/ô màu, giữa trang): Bảng màu gồm 8 ô màu, mỗi ô màu có tên màu viết tay và các từ khóa mô tả cảm nhận liên quan.
+Chữ trong hình: blue
+TRUST
+SMART
+CALM
+FAITH
+NATURAL
+STABLE
+POWER
+red
+LOVE
+IMMEDIACY
+ENERGY
+SALE
+PASSION
+ANGER
+HUNGER
+black
+BOLD
+RICH
+POWER
+MYSTERY
+ELEGANCE
+EVIL
+STRENGTH
+green
+SOOTHING
+ECO-FREINDLY
+NATURAL
+ENVY
+JEALOUSY
+BALANCE
+RESTFUL
+yellow
+CHEER
+ATTENTION
+CHILDISH
+FRESH
+WARMTH
+ENERGY
+OPTIMISM
+orange
+HEALTH
+ATTRACTION
+STAND OUT
+THIRST
+WEALTH
+YOUTHFUL
+HAPPINESS
+pink
+TENDERNESS
+SENSITIVE
+CARING
+EMOTIONAL
+SYMPATHETIC
+LOVE
+SEXUALITY
+purple
+ROYAL
+MYSTERIOUS
+ARROGANT
+LUXURY
+CHILDISH
+CREATIVE
+SADNESS
+Dữ liệu: xanh dương: TRUST, SMART, CALM, FAITH, NATURAL, STABLE, POWER | đỏ: LOVE, IMMEDIACY, ENERGY, SALE, PASSION, ANGER, HUNGER | đen: BOLD, RICH, POWER, MYSTERY, ELEGANCE, EVIL, STRENGTH | xanh lá: SOOTHING, ECO-FREINDLY, NATURAL, ENVY, JEALOUSY, BALANCE, RESTFUL | vàng: CHEER, ATTENTION, CHILDISH, FRESH, WARMTH, ENERGY, OPTIMISM | cam: HEALTH, ATTRACTION, STAND OUT, THIRST, WEALTH, YOUTHFUL, HAPPINESS | hồng: TENDERNESS, SENSITIVE, CARING, EMOTIONAL, SYMPATHETIC, LOVE, SEXUALITY | tím: ROYAL, MYSTERIOUS, ARROGANT, LUXURY, CHILDISH, CREATIVE, SADNESS
 ```
 
 
-### rank 2 B:lib-venv:p008:c001 score=0.521 hit=False
-source=python-3.13-docs-text/library/venv.txt page=8 page_id=lib-venv#p008 doc_type=library section="venv" --- Creation of virtual environments > API (cont.)
-
+### rank 2 B:colorme3:p078:v00 score=0.6225 hit=False
+source=EBOOK COLORME 3.pdf page=78 printed=77 chapter=ch3 type=visual
 ```text
-["venv" --- Creation of virtual environments > API (cont.)]
-      * "env_name" - The name of the virtual environment. Used for
-        "__VENV_NAME__" in activation scripts (see
-        "install_scripts()").
-
-      * "prompt" - The prompt to be used by the activation scripts.
-        Used for "__VENV_PROMPT__" in activation scripts (see
-        "install_scripts()").
-
-      * "executable" - The underlying Python executable used by the
-        virtual environment. This takes into account the case where a
-        virtual environment is created from another virtual
-        environment.
-
-      * "inc_path" - The include path for the virtual environment.
-
-      * "lib_path" - The purelib path for the virtual environment.
+[Chương 3 – Sử dụng màu sắc | Ý nghĩa của màu sắc | trang 77 (PDF p78)]
+Nội dung trang: Trang trình bày biểu đồ hướng dẫn cảm xúc màu sắc với các ví dụ logo thương hiệu tương ứng từng màu.
+Phần tử trực quan (hình minh họa, giữa/trái): Biểu đồ COLOR EMOTION GUIDE phân loại các cảm xúc theo màu sắc với các ví dụ logo thương hiệu tương ứng.
+Chữ trong hình: COLOR EMOTION GUIDE
+OPTIMISM CLARITY WARMTH
+FRIENDLY CHEERFUL CONFIDENCE
+EXCITEMENT YOUTHFUL BOLD
+CREATIVE IMAGINITIVE WISE
+TRUST DEPENDABLE STRENGTH
+PEACEFUL GROWTH HEALTH
+BALANCE NEUTRAL CALM
+Dữ liệu: màu vàng cam: OPTIMISM, CLARITY, WARMTH | màu cam: FRIENDLY, CHEERFUL, CONFIDENCE | màu đỏ: EXCITEMENT, YOUTHFUL, BOLD | màu tím: CREATIVE, IMAGINITIVE, WISE | màu xanh dương: TRUST, DEPENDABLE, STRENGTH | màu xanh lá: PEACEFUL, GROWTH, HEALTH | màu xám: BALANCE, NEUTRAL, CALM; các logo thương hiệu tương ứng màu sắc như Nikon, UPS, Google (vàng); CocaCola, Nintendo (đỏ); Dell, Facebook (xanh dương); Whole Foods, Animal Planet (xanh lá); Apple, Wikipedia (xám); McDonald's, Shell (vàng-cam); nhiều logo khác phân bố theo màu sắc.
 ```
 
 
-### rank 3 B:tut-venv:p001:c003 score=0.5172 hit=True
-source=python-3.13-docs-text/tutorial/venv.txt page=1 page_id=tut-venv#p001 doc_type=tutorial section=12. Virtual Environments and Packages > 12.2. Creating Virtual Environments
-
+### rank 3 B:colorme3:p070:v00 score=0.5731 hit=False
+source=EBOOK COLORME 3.pdf page=70 printed=69 chapter=ch3 type=visual
 ```text
-[12. Virtual Environments and Packages > 12.2. Creating Virtual Environments]
-A common directory location for a virtual environment is ".venv". This
-name keeps the directory typically hidden in your shell and thus out
-of the way while giving it a name that explains why the directory
-exists. It also prevents clashing with ".env" environment variable
-definition files that some tooling supports.
-
-Once you've created a virtual environment, you may activate it.
-
-On Windows, run:
-
-   tutorial-env\Scripts\activate
-
-On Unix or MacOS, run:
-
-   source tutorial-env/bin/activate
-
-(This script is written for the bash shell.  If you use the **csh** or
-**fish** shells, there are alternate "activate.csh" and
-"activate.fish" scripts you should use instead.)
-
-Activating the virtual environment will change your shell's prompt to
-show what virtual environment you're using, and modify the environment
-so that running "python" will get you that particular version and
-installation of Python. For example:
+[Chương 3 – Sử dụng màu sắc | Dùng 2 màu – Màu bổ túc | trang 69 (PDF p70)]
+Nội dung trang: Trang trình bày về màu bổ túc, màu tương phản và ví dụ bộ nhận diện thương hiệu TPBank sử dụng màu vàng và tím.
+Phần tử trực quan (sơ đồ, giữa): 6 vòng tròn màu minh họa các cặp màu bổ túc với mũi tên chỉ cặp màu đối nhau trên vòng tròn màu.
+Chữ trong hình: RED + GREEN | RED-ORANGE + BLUE-GREEN | ORANGE + BLUE | YELLOW-ORANGE + BLUE-PURPLE | YELLOW + PURPLE | YELLOW-GREEN + RED-PURPLE
+Dữ liệu: vòng 1: đỏ và xanh lá | vòng 2: đỏ cam và xanh lơ | vòng 3: cam và xanh dương | vòng 4: vàng cam và xanh tím | vòng 5: vàng và tím | vòng 6: vàng xanh và đỏ tím
 ```
 
 
-## C t01 filter_applied=None
+## B t06 (visual) filter_applied=None
 
-Q: If both the try block and the finally block contain a return statement, which value is returned?
-Gold: [('tut-errors', [6])]
+Q: (Đang đọc chương nhận diện thương hiệu) Trong bảng màu cho logo, nhóm tính từ 'Uy quyền, đỉnh đạc, an toàn, đáng tin cậy' được đặt trên thanh màu gì?
+Expected: Xanh dương.
+Gold: [([136], 'xanh dương')]
 
 
-### rank 1 C:tut-errors:p006:c002 score=0.5563 hit=True
-source=python-3.13-docs-text/tutorial/errors.txt page=6 page_id=tut-errors#p006 doc_type=tutorial section=8.7. Defining Clean-up Actions
-
+### rank 1 B:colorme3:p136:t00 score=0.7126 hit=False
+source=EBOOK COLORME 3.pdf page=136 printed=135 chapter=ch6 type=text
 ```text
-[8.7. Defining Clean-up Actions]
-* An exception could occur during execution of an "except" or "else"
-  clause. Again, the exception is re-raised after the "finally" clause
-  has been executed.
+[Chương 6 – Nhận diện thương hiệu | Logo – Phân loại | trang 135 (PDF p136)]
+Logo – Phân loại
 
-* If the "finally" clause executes a "break", "continue" or "return"
-  statement, exceptions are not re-raised.
+Trang trọng, đặc biệt, mạnh mẽ, quyền lực, tinh tế, truyền thống
 
-* If the "try" statement reaches a "break", "continue" or "return"
-  statement, the "finally" clause will execute just prior to the
-  "break", "continue" or "return" statement's execution.
+Uy quyền, đỉnh đạc, an toàn, đáng tin cậy, truyền thống, ổn định, trung thành
 
-* If a "finally" clause includes a "return" statement, the returned
-  value will be the one from the "finally" clause's "return"
-  statement, not the value from the "try" clause's "return" statement.
+Cổ điển, lợi ích, trần tục, giàu sang, truyền thống, bảo thủ
 
-For example:
+Ảm đạm, quyền lực, thực tế, tâm linh, tin tưởng
 
-   >>> def bool_return():
-   ...     try:
-   ...         return True
-   ...     finally:
-   ...         return False
-   ...
-   >>> bool_return()
-   False
+Yên tĩnh, lành mạnh, khoẻ khoắn, ổn định, thèm muốn
 
-A more complicated example:
+Nữ tính, ngây thơ, dịu dàng, khoẻ mạnh, trẻ trung
+
+Tinh tế, tâm lý, giàu sang, hoàng tộc, trẻ trung, bí ẩn
+
+Hung hăng, mạnh mẽ, bền bỉ, đầy sức sống, kinh sợ
+
+Yên vui, nhiều quyền hành
+
+Hãy nhớ chọn màu cho logo
+Bạn vẫn chưa quên ý nghĩa của màu sắc đúng không?
 ```
 
 
-### rank 2 C:tut-errors:p006:c001 score=0.4685 hit=False
-source=python-3.13-docs-text/tutorial/errors.txt page=6 page_id=tut-errors#p006 doc_type=tutorial section=8.7. Defining Clean-up Actions
-
+### rank 2 B:colorme3:p136:v00 score=0.6966 hit=True
+source=EBOOK COLORME 3.pdf page=136 printed=135 chapter=ch6 type=visual
 ```text
-[8.7. Defining Clean-up Actions]
-The "try" statement has another optional clause which is intended to
-define clean-up actions that must be executed under all circumstances.
-For example:
-
-   >>> try:
-   ...     raise KeyboardInterrupt
-   ... finally:
-   ...     print('Goodbye, world!')
-   ...
-   Goodbye, world!
-   Traceback (most recent call last):
-     File "<stdin>", line 2, in <module>
-       raise KeyboardInterrupt
-   KeyboardInterrupt
-
-If a "finally" clause is present, the "finally" clause will execute as
-the last task before the "try" statement completes. The "finally"
-clause runs whether or not the "try" statement produces an exception.
-The following points discuss more complex cases when an exception
-occurs:
-
-* If an exception occurs during execution of the "try" clause, the
-  exception may be handled by an "except" clause. If the exception is
-  not handled by an "except" clause, the exception is re-raised after
-  the "finally" clause has been executed.
+[Chương 6 – Nhận diện thương hiệu | Logo – Phân loại | trang 135 (PDF p136)]
+Nội dung trang: Trang trình bày phân loại ý nghĩa màu sắc trong logo qua các thanh màu kèm mô tả.
+Phần tử trực quan (bảng/ô màu, giữa/trái): Các thanh màu kèm mô tả ý nghĩa màu sắc trong logo
+Chữ trong hình: Trang trọng, đặc biệt, mạnh mẽ, quyền lực, tinh tế, truyền thống
+Uy quyền, đỉnh đạc, an toàn, đáng tin cậy, truyền thống, ổn định, trung thành
+Cổ điển, lợi ích, trần tục, giàu sang, truyền thống, bảo thủ
+Ảm đạm, quyền lực, thực tế, tâm linh, tin tưởng
+Yên tĩnh, lành mạnh, khoẻ khoắn, ổn định, thèm muốn
+Nữ tính, ngây thơ, dịu dàng, khoẻ mạnh, trẻ trung
+Tinh tế, tâm lý, giàu sang, hoàng tộc, trẻ trung, bí ẩn
+Hung hăng, mạnh mẽ, bền bỉ, đầy sức sống, kinh sợ
+Yên vui, nhiều quyền hành
+Dữ liệu: đen: Trang trọng, đặc biệt, mạnh mẽ, quyền lực, tinh tế, truyền thống | xanh dương: Uy quyền, đỉnh đạc, an toàn, đáng tin cậy, truyền thống, ổn định, trung thành | vàng nhạt: Cổ điển, lợi ích, trần tục, giàu sang, truyền thống, bảo thủ | xám: Ảm đạm, quyền lực, thực tế, tâm linh, tin tưởng | xanh lá đậm: Yên tĩnh, lành mạnh, khoẻ khoắn, ổn định, thèm muốn | hồng: Nữ tính, ngây thơ, dịu dàng, khoẻ mạnh, trẻ trung | tím: Tinh tế, tâm lý, giàu sang, hoàng tộc, trẻ trung, bí ẩn | đỏ: Hung hăng, mạnh mẽ, bền bỉ, đầy sức sống, kinh sợ | cam: Yên vui, nhiều quyền hành
 ```
 
 
-### rank 3 C:tut-controlflow:p003:c003 score=0.4395 hit=False
-source=python-3.13-docs-text/tutorial/controlflow.txt page=3 page_id=tut-controlflow#p003 doc_type=tutorial section=4.5. "else" Clauses on Loops
-
+### rank 3 B:colorme3:p140:v00 score=0.6672 hit=False
+source=EBOOK COLORME 3.pdf page=140 printed=139 chapter=ch6 type=visual
 ```text
-[4.5. "else" Clauses on Loops]
-When used with a loop, the "else" clause has more in common with the
-"else" clause of a "try" statement than it does with that of "if"
-statements: a "try" statement's "else" clause runs when no exception
-occurs, and a loop's "else" clause runs when no "break" occurs. For
-more on the "try" statement and exceptions, see Handling Exceptions.
+[Chương 6 – Nhận diện thương hiệu | Logo – Chú ý | trang 139 (PDF p140)]
+Nội dung trang: Trang này trình bày các tiêu chí để tự kiểm tra và đánh giá logo gồm Durable, Meaningful và Flexible.
+Phần tử trực quan (hình minh họa, giữa/trung tâm): Ba vòng tròn xếp ngang, mỗi vòng tròn chứa một từ: Durable, Meaningful, Flexible
+Chữ trong hình: Durable | Meaningful | Flexible
 ```
 
 
-## C t02 filter_applied=None
+## B t07 (text) filter_applied=None
 
-Q: Which locations is sys.path initialized from?
-Gold: [('tut-modules', [3])]
+Q: (Đang xem phụ lục phím tắt) Phím tắt nào dùng để nhân đôi Layer?
+Expected: CTRL + J.
+Gold: [([174], 'CTRL + J: Nhân đôi Layer')]
 
 
-### rank 1 C:tut-modules:p005:c001 score=0.6185 hit=False
-source=python-3.13-docs-text/tutorial/modules.txt page=5 page_id=tut-modules#p005 doc_type=tutorial section=6.2. Standard Modules
-
+### rank 1 B:colorme3:p174:t00 score=0.6951 hit=True
+source=EBOOK COLORME 3.pdf page=174 printed=173 chapter=appendix type=text
 ```text
-[6.2. Standard Modules]
-The variable "sys.path" is a list of strings that determines the
-interpreter's search path for modules. It is initialized to a default
-path taken from the environment variable "PYTHONPATH", or from a
-built-in default if "PYTHONPATH" is not set.  You can modify it using
-standard list operations:
+[Phụ lục và lời kết | Danh sách phím tắt | trang 173 (PDF p174)]
+Danh sách phím tắt
 
-   >>> import sys
-   >>> sys.path.append('/ufs/guido/lib/python')
+Nhóm Phím Tắt Hệ Thống FILE
+- CTRL + N (New): Tạo File mới
+- CTRL + O (Open): Mở file
+- CTRL + ALT + O (Open As): Mở file từ Adobe Bridge
+- CTRL + W (Close): Đóng File
+- CTRL + S (Save): Lưu file
+- CTRL + SHIFT + S (Save As): Lưu ra các dạng khác
+- CTRL + ALT + S (Save a Copy): Lưu thêm 1 bản copy
+- CTRL + P (Print): In ảnh
+Nhóm Lệnh Thao Tác Với Layer
+- CTRL + SHIFT + N: Tạo Layer mới
+- CTRL + J: Nhân đôi Layer
+- CTRL + SHIFT + J: Cắt Layer
+- CTRL + G: Tạo nhóm Layer
+- CTRL + SHIFT + G: Bỏ nhóm Layer
+- CTRL + SHIFT + ]: Chuyển Layer lên trên cùng
+- CTRL + ]: Chuyển Layer lên trên
+- CTRL + [: Chuyển Layer xuống dưới
+- CTRL + SHIFT + [: Chuyển Layer xuống dưới cùng
+- CTRL + E: Ghép các Layer được chọn
 ```
 
 
-### rank 2 C:tut-modules:p003:c002 score=0.5161 hit=False
-source=python-3.13-docs-text/tutorial/modules.txt page=3 page_id=tut-modules#p003 doc_type=tutorial section=6.1.2. The Module Search Path
-
+### rank 2 B:colorme3:p174:t01 score=0.6486 hit=False
+source=EBOOK COLORME 3.pdf page=174 printed=173 chapter=appendix type=text
 ```text
-[6.1.2. The Module Search Path]
-  On file systems which support symlinks, the directory containing the
-  input script is calculated after the symlink is followed. In other
-  words the directory containing the symlink is **not** added to the
-  module search path.
-
-After initialization, Python programs can modify "sys.path".  The
-directory containing the script being run is placed at the beginning
-of the search path, ahead of the standard library path. This means
-that scripts in that directory will be loaded instead of modules of
-the same name in the library directory. This is an error unless the
-replacement is intended.  See section Standard Modules for more
-information.
+[Phụ lục và lời kết | Danh sách phím tắt | trang 173 (PDF p174)]
+- CTRL + SHIFT + E: Ghép tất cả các Layer
+Các Lệnh Chọn SELECT Trong Photoshop
+- CTRL + A: Chọn tất cả
+- CTRL + D: Bỏ vùng chọn
+- CTRL + SHIFT + D: Chọn lại vùng chọn
+- CTRL + SHIFT + I: Nghịch đảo vùng chọn
+- CTRL + ALT + D: Mờ biên vùng chọn
+- CTRL + F: Lặp lại Filter cuối cùng
+- CTRL + SHIFT + F: Chỉnh Opacity Brush
 ```
 
 
-### rank 3 C:tut-modules:p003:c001 score=0.5066 hit=True
-source=python-3.13-docs-text/tutorial/modules.txt page=3 page_id=tut-modules#p003 doc_type=tutorial section=6.1.2. The Module Search Path
-
+### rank 3 B:colorme3:p174:v00 score=0.6436 hit=True
+source=EBOOK COLORME 3.pdf page=174 printed=173 chapter=appendix type=visual
 ```text
-[6.1.2. The Module Search Path]
-When a module named "spam" is imported, the interpreter first searches
-for a built-in module with that name. These module names are listed in
-"sys.builtin_module_names". If not found, it then searches for a file
-named "spam.py" in a list of directories given by the variable
-"sys.path".  "sys.path" is initialized from these locations:
-
-* The directory containing the input script (or the current directory
-  when no file is specified).
-
-* "PYTHONPATH" (a list of directory names, with the same syntax as the
-  shell variable "PATH").
-
-* The installation-dependent default (by convention including a "site-
-  packages" directory, handled by the "site" module).
-
-More details are at The initialization of the sys.path module search
-path.
-
-Note:
+[Phụ lục và lời kết | Danh sách phím tắt | trang 173 (PDF p174)]
+Nội dung trang: Trang liệt kê danh sách các phím tắt trong Photoshop theo nhóm chức năng.
+Phần tử trực quan (hình, giữa/trái): Danh sách phím tắt trong Photoshop được chia thành ba nhóm: Nhóm Phím Tắt Hệ Thống FILE, Nhóm Lệnh Thao Tác Với Layer, Các Lệnh Chọn SELECT Trong Photoshop. Mỗi nhóm gồm các phím tắt với tổ hợp phím và chức năng tương ứng.
+Chữ trong hình: Danh sách phím tắt
+Nhóm Phím Tắt Hệ Thống FILE
+- CTRL + N (New): Tạo File mới
+- CTRL + O (Open): Mở file
+- CTRL + ALT + O (Open As): Mở file từ Adobe Bridge
+- CTRL + W (Close): Đóng File
+- CTRL + S (Save): Lưu file
+- CTRL + SHIFT + S (Save As): Lưu ra các dạng khác
+- CTRL + ALT + S (Save a Copy): Lưu thêm 1 bản copy
+- CTRL + P (Print): In ảnh
+Nhóm Lệnh Thao Tác Với Layer
+- CTRL + SHIFT + N: Tạo Layer mới
+- CTRL + J: Nhân đôi Layer
+- CTRL + SHIFT + J: Cắt Layer
+- CTRL + G: Tạo nhóm Layer
+- CTRL + SHIFT + G: Bỏ nhóm Layer
+- CTRL + SHIFT + ]: Chuyển Layer lên trên cùng
+- CTRL + ]: Chuyển Layer lên trên
+- CTRL + [: Chuyển Layer xuống dưới
+- CTRL + SHIFT + [: Chuyển Layer xuống dưới cùng
+- CTRL + E: Ghép các Layer được chọn
+- CTRL + SHIFT + E: Ghép tất cả các Layer
+Các Lệnh Chọn SELECT Trong Photoshop
+- CTRL + A: Chọn tất cả
+- CTRL + D: Bỏ vùng chọn
+- CTRL + SHIFT + D: Chọn lại vùng chọn
+- CTRL + SHIFT + I: Nghịch đảo vùng chọn
+- CTRL + ALT + D: Mờ biên vùng chọn
+- CTRL + F: Lặp lại Filter cuối cùng
+- CTRL + SHIFT + F: Chỉnh Opacity Brush
 ```
 
 
-## C t03 filter_applied=None
+## C t01 (text) filter_applied=None
 
-Q: How should a file be opened before passing it to csv.reader?
-Gold: [('lib-csv', [2])]
+Q: Phần mềm Lightroom thiên về việc gì?
+Expected: Retouch và blend (chỉnh màu ảnh), được giới photographer ưa chuộng.
+Gold: [([8], 'thiên nặng về retouch và blend')]
 
 
-### rank 1 C:lib-csv:p002:c000 score=0.5886 hit=True
-source=python-3.13-docs-text/library/csv.txt page=2 page_id=lib-csv#p002 doc_type=library section=Module Contents
-
+### rank 1 C:colorme3:p008:t01 score=0.6199 hit=True
+source=EBOOK COLORME 3.pdf page=8 printed=7 chapter=ch1 type=text
 ```text
-[Module Contents]
-The "csv" module defines the following functions:
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Các phần mềm thiết kế thường gặp | trang 7 (PDF p8)]
+Adobe Indesign
+Những ấn phẩm chuyên dùng trong trường hợp in ấn, những ấn
+phẩm có nhiều trang như những cuốn sách, những brochure, leaveleft
+thường được tạo ra bởi Indesign. Phần mềm này khá mờ nhạt với rất
+nhiều người. Tuy nhiên, nếu dành thời gian học thử, bạn sẽ thấy rất
+hứng thú với nó.
 
-csv.reader(csvfile, /, dialect='excel', **fmtparams)
-
-   Return a reader object that will process lines from the given
-   *csvfile*.  A csvfile must be an iterable of strings, each in the
-   reader's defined csv format. A csvfile is most commonly a file-like
-   object or list. If *csvfile* is a file object, it should be opened
-   with "newline=''". [1]  An optional *dialect* parameter can be
-   given which is used to define a set of parameters specific to a
-   particular CSV dialect.  It may be an instance of a subclass of the
-   "Dialect" class or one of the strings returned by the
-   "list_dialects()" function.  The other optional *fmtparams* keyword
-   arguments can be given to override individual formatting parameters
-   in the current dialect.  For full details about the dialect and
-   formatting parameters, see section Dialects and Formatting
-   Parameters.
+Adobe Lightroom
+Là phần mềm được giới Photographer cực kì ưa chuộng, Lighrtoom
+thiên nặng về retouch và blend. Một kĩ năng mà bạn cần có nếu muốn
+tự tạo ra những bức hình có màu sắc “ảo diệu”. Với những preset cung
+cấp sẵn cực kì nhiều trên mạng. Bạn sẽ có thể tự học rất nhanh phần
+mềm này.
 ```
 
 
-### rank 2 C:lib-csv:p013:c000 score=0.5876 hit=False
-source=python-3.13-docs-text/library/csv.txt page=13 page_id=lib-csv#p013 doc_type=library section=Examples
-
+### rank 2 C:colorme3:p008:v03 score=0.5857 hit=False
+source=EBOOK COLORME 3.pdf page=8 printed=7 chapter=ch1 type=visual
 ```text
-[Examples]
-The simplest example of reading a CSV file:
-
-   import csv
-   with open('some.csv', newline='') as f:
-       reader = csv.reader(f)
-       for row in reader:
-           print(row)
-
-Reading a file with an alternate format:
-
-   import csv
-   with open('passwd', newline='') as f:
-       reader = csv.reader(f, delimiter=':', quoting=csv.QUOTE_NONE)
-       for row in reader:
-           print(row)
-
-The corresponding simplest possible writing example is:
-
-   import csv
-   with open('some.csv', 'w', newline='') as f:
-       writer = csv.writer(f)
-       writer.writerows(someiterable)
-
-Since "open()" is used to open a CSV file for reading, the file will
-by default be decoded into unicode using the system default encoding
-(see "locale.getencoding()").  To decode a file using a different
-encoding, use the "encoding" argument of open:
-
-   import csv
-   with open('some.csv', newline='', encoding='utf-8') as f:
-       reader = csv.reader(f)
-       for row in reader:
-           print(row)
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Các phần mềm thiết kế thường gặp | trang 7 (PDF p8)]
+Nội dung trang: Trang liệt kê và mô tả các phần mềm thiết kế đồ họa phổ biến như Adobe Photoshop, Illustrator, Indesign và Lightroom kèm biểu tượng nhận diện từng phần mềm.
+Phần tử trực quan (hình minh họa, giữa/trái): Biểu tượng phần mềm Adobe Lightroom hình vuông nền xanh đen đậm, chữ 'Lr' màu xanh dương nhạt ở giữa, viền ngoài màu xanh dương nhạt.
+Chữ trong hình: Lr
 ```
 
 
-### rank 3 C:lib-csv:p008:c001 score=0.5531 hit=False
-source=python-3.13-docs-text/library/csv.txt page=8 page_id=lib-csv#p008 doc_type=library section="csv" --- CSV File Reading and Writing > Module Contents (cont.)
-
+### rank 3 C:colorme3:p126:t00 score=0.5633 hit=False
+source=EBOOK COLORME 3.pdf page=126 printed=125 chapter=ch5 type=text
 ```text
-["csv" --- CSV File Reading and Writing > Module Contents (cont.)]
-   with open('example.csv', newline='') as csvfile:
-       dialect = csv.Sniffer().sniff(csvfile.read(1024))
-       csvfile.seek(0)
-       reader = csv.reader(csvfile, dialect)
-       # ... process CSV file contents here ...
+[Chương 5 – Một số hiệu ứng cơ bản | Hue, Brightness & Contrast | trang 125 (PDF p126)]
+Hue, Brightness & Contrast
 
-The "csv" module defines the following constants:
-
-csv.QUOTE_ALL
-
-   Instructs "writer" objects to quote all fields.
-
-csv.QUOTE_MINIMAL
-
-   Instructs "writer" objects to only quote those fields which contain
-   special characters such as *delimiter*, *quotechar*, "'\r'", "'\n'"
-   or any of the characters in *lineterminator*. If *doublequote* is
-   "False" and *escapechar* is set, the *quotechar* is escaped instead
-   of causing the field to be quoted.
-
-csv.QUOTE_NONNUMERIC
-
-   Instructs "writer" objects to quote all non-numeric fields.
+Retouch
+Hơn thế nữa, bạn có thể làm làn da cô người mẫu trở nên sáng lóa chỉ sau 1 bước thực hiện
 ```
 
 
-## C t04 filter_applied=None
+## C t02 (text) filter_applied={'chapter': 'ch4'}
 
-Q: What happens to lru_cache when maxsize is None?
-Gold: [('lib-functools', [5])]
+Q: (Đang đọc chương typography) Kĩ thuật nghịch đảo màu được thực hiện thế nào?
+Expected: Chỗ có chữ màu trắng thì cho nền màu gốc, chỗ có nền màu trắng thì cho chữ màu gốc.
+Gold: [([109], 'Chỗ có chữ màu trắng, chúng ta cho nền màu gốc, chỗ có nền màu trắng, ta cho chữ có màu gốc.')]
 
 
-### rank 1 C:lib-functools:p005:c000 score=0.6161 hit=True
-source=python-3.13-docs-text/library/functools.txt page=5 page_id=lib-functools#p005 doc_type=library section="functools" --- Higher-order functions and operations on callable objects (cont.)
-
+### rank 1 C:colorme3:p112:v01 score=0.6562 hit=False
+source=EBOOK COLORME 3.pdf page=112 printed=111 chapter=ch4 type=visual
 ```text
-["functools" --- Higher-order functions and operations on callable objects (cont.)]
-   If *user_function* is specified, it must be a callable. This allows
-   the *lru_cache* decorator to be applied directly to a user
-   function, leaving the *maxsize* at its default value of 128:
-
-      @lru_cache
-      def count_vowels(sentence):
-          return sum(sentence.count(vowel) for vowel in 'AEIOUaeiou')
-
-   If *maxsize* is set to "None", the LRU feature is disabled and the
-   cache can grow without bound.
-
-   If *typed* is set to true, function arguments of different types
-   will be cached separately.  If *typed* is false, the implementation
-   will usually regard them as equivalent calls and only cache a
-   single result. (Some types such as *str* and *int* may be cached
-   separately even when *typed* is false.)
+[Chương 4 – Những điều cần biết về Typography | Các kĩ thuật dùng chữ | trang 111 (PDF p112)]
+Nội dung trang: Trang trình bày về kỹ thuật dùng chữ với ví dụ minh họa và lời gợi ý liên hệ colorME để biết cách thực hiện.
+Phần tử trực quan (bảng/ô màu, dưới/giữa): Màu đỏ dùng làm nền chữ trong ảnh minh họa và tiêu đề phụ.
+Chữ trong hình: Một bài toán thú vị
+Dữ liệu: đỏ: tiêu đề phụ, nền chữ trong ảnh minh họa
 ```
 
 
-### rank 2 C:lib-functools:p006:c000 score=0.5563 hit=False
-source=python-3.13-docs-text/library/functools.txt page=6 page_id=lib-functools#p006 doc_type=library section="functools" --- Higher-order functions and operations on callable objects (cont.)
-
+### rank 2 C:colorme3:p112:t00 score=0.6504 hit=False
+source=EBOOK COLORME 3.pdf page=112 printed=111 chapter=ch4 type=text
 ```text
-["functools" --- Higher-order functions and operations on callable objects (cont.)]
-   The decorator also provides a "cache_clear()" function for clearing
-   or invalidating the cache.
+[Chương 4 – Những điều cần biết về Typography | Các kĩ thuật dùng chữ | trang 111 (PDF p112)]
+Các kĩ thuật dùng chữ
 
-   The original underlying function is accessible through the
-   "__wrapped__" attribute.  This is useful for introspection, for
-   bypassing the cache, or for rewrapping the function with a
-   different cache.
+Một bài toán thú vị
+Vậy liệu có cách nào để xây dựng được tác phẩm này không?
 
-   The cache keeps references to the arguments and return values until
-   they age out of the cache or until the cache is cleared.
+Gợi ý nhỏ cho bạn, mọi thứ vẫn chỉ quay quanh clipping mask nhé. Hãy liên hệ với colorME để biết câu trả lời
+cho bài toán này.
 
-   If a method is cached, the "self" instance argument is included in
-   the cache.  See How do I cache method calls?
-
-   An LRU (least recently used) cache works best when the most recent
-   calls are the best predictors of upcoming calls (for example, the
-   most popular articles on a news server tend to change each day).
-   The cache's size limit assures that the cache does not grow without
-   bound on long-running processes such as web servers.
+http://www.Facebook.com/colorME.hanoi
 ```
 
 
-### rank 3 C:lib-functools:p006:c001 score=0.5318 hit=False
-source=python-3.13-docs-text/library/functools.txt page=6 page_id=lib-functools#p006 doc_type=library section="functools" --- Higher-order functions and operations on callable objects (cont.)
-
+### rank 3 C:colorme3:p109:t00 score=0.6458 hit=True
+source=EBOOK COLORME 3.pdf page=109 printed=108 chapter=ch4 type=text
 ```text
-["functools" --- Higher-order functions and operations on callable objects (cont.)]
-   In general, the LRU cache should only be used when you want to
-   reuse previously computed values.  Accordingly, it doesn't make
-   sense to cache functions with side-effects, functions that need to
-   create distinct mutable objects on each call (such as generators
-   and async functions), or impure functions such as time() or
-   random().
+[Chương 4 – Những điều cần biết về Typography | Các kĩ thuật dùng chữ | trang 108 (PDF p109)]
+Các kĩ thuật dùng chữ
 
-   Example of an LRU cache for static web content:
+Kĩ thuật nghịch đảo màu
+ONE OF A KIND – Ca khúc tuyệt vời của chàng thủ lĩnh tài ba G Dragon đã tạo hiệu ứng lan tỏa mạnh mẽ đến
+giới thời trang.
 
-      @lru_cache(maxsize=32)
-      def get_pep(num):
-          'Retrieve text of a Python Enhancement Proposal'
-          resource = f'https://peps.python.org/pep-{num:04d}'
-          try:
-              with urllib.request.urlopen(resource) as s:
-                  return s.read()
-          except urllib.error.HTTPError:
-              return 'Not Found'
+Đã có hàng triệu chiếc áo như trên được bán ra trên toàn thế giới.
+
+Các con chữ trong ONE OF A KIND trên đây được ứng dụng kĩ thuật nghịch đảo màu để xây dựng nên. Chỗ
+có chữ màu trắng, chúng ta cho nền màu gốc, chỗ có nền màu trắng, ta cho chữ có màu gốc. Không quá khó
+để thực hiện đúng không?
 ```
 
 
-## C t05 filter_applied={'doc_type': 'library'}
+## C t03 (text) filter_applied=None
 
-Q: In the library reference: why may a dictionary not equal the original after converting it to JSON and back?
-Gold: [('lib-json', [5])]
+Q: Kiểu logo không gian âm có nguồn gốc từ thương hiệu nào?
+Expected: Hãng chuyển phát nhanh FedEx.
+Gold: [([146], 'Bắt nguồn từ hãng chuyển phát nhanh fedex')]
 
 
-### rank 1 C:lib-json:p005:c000 score=0.4801 hit=True
-source=python-3.13-docs-text/library/json.txt page=5 page_id=lib-json#p005 doc_type=library section="json" --- JSON encoder and decoder > Basic Usage (cont.)
-
+### rank 1 C:colorme3:p147:t00 score=0.6202 hit=False
+source=EBOOK COLORME 3.pdf page=147 printed=146 chapter=ch6 type=text
 ```text
-["json" --- JSON encoder and decoder > Basic Usage (cont.)]
-      * **sort_keys** (*bool*) -- If "True", dictionaries will be
-        outputted sorted by key. Default "False".
+[Chương 6 – Nhận diện thương hiệu | Negative Space Logos | trang 146 (PDF p147)]
+Negative Space Logos
 
-   Note:
+Logo không gian âm
+Con ngựa bị cắm sừng và bóng đèn.
 
-     Keys in key/value pairs of JSON are always of the type "str".
-     When a dictionary is converted into JSON, all the keys of the
-     dictionary are converted to strings. As a result of this, if a
-     dictionary is converted into JSON and then back into a
-     dictionary, the dictionary may not equal the original one. That
-     is, "loads(dumps(x)) != x" if x has non-string keys. *sort_keys*
-     sorts the keys before they are converted to strings, so numeric
-     keys are sorted by value, not by their string representation.
+Hay đơn giản là chuỗi số 1 2 3 4.
 
-   Changed in version 3.2: Allow strings for *indent* in addition to
-   integers.
-
-   Changed in version 3.4: Use "(',', ': ')" as default if *indent* is
-   not "None".
-
-   Changed in version 3.6: All optional parameters are now keyword-
-   only.
+Đều có thể ứng dụng không gian âm.
 ```
 
 
-### rank 2 C:lib-json:p001:c000 score=0.474 hit=False
-source=python-3.13-docs-text/library/json.txt page=1 page_id=lib-json#p001 doc_type=library section="json" --- JSON encoder and decoder
-
+### rank 2 C:colorme3:p147:v00 score=0.5926 hit=False
+source=EBOOK COLORME 3.pdf page=147 printed=146 chapter=ch6 type=visual
 ```text
-["json" --- JSON encoder and decoder]
-**Source code:** Lib/json/__init__.py
-
-======================================================================
-
-JSON (JavaScript Object Notation), specified by **RFC 7159** (which
-obsoletes **RFC 4627**) and by ECMA-404, is a lightweight data
-interchange format inspired by JavaScript object literal syntax
-(although it is not a strict subset of JavaScript [1] ).
-
-Note:
-
-  The term "object" in the context of JSON processing in Python can be
-  ambiguous. All values in Python are objects. In JSON, an object
-  refers to any data wrapped in curly braces, similar to a Python
-  dictionary.
-
-Warning:
-
-  Be cautious when parsing JSON data from untrusted sources. A
-  malicious JSON string may cause the decoder to consume considerable
-  CPU and memory resources. Limiting the size of data to be parsed is
-  recommended.
-
-This module exposes an API familiar to users of the standard library
-"marshal" and "pickle" modules.
-
-Encoding basic Python object hierarchies:
+[Chương 6 – Nhận diện thương hiệu | Negative Space Logos | trang 146 (PDF p147)]
+Nội dung trang: Trang trình bày về logo không gian âm với hai ví dụ minh họa: logo con ngựa kết hợp bóng đèn và chuỗi số 1 2 3 4.
+Phần tử trực quan (hình minh họa, giữa): Logo màu trắng trên nền đen, hình con ngựa có sừng (giống kỳ lân) với phần thân là bóng đèn, phía dưới có chữ 'Unique Idea' màu trắng.
+Chữ trong hình: Unique Idea
 ```
 
 
-### rank 3 C:lib-json:p011:c001 score=0.4422 hit=False
-source=python-3.13-docs-text/library/json.txt page=11 page_id=lib-json#p011 doc_type=library section="json" --- JSON encoder and decoder > Encoders and Decoders (cont.)
-
+### rank 3 C:colorme3:p147:v01 score=0.5886 hit=False
+source=EBOOK COLORME 3.pdf page=147 printed=146 chapter=ch6 type=visual
 ```text
-["json" --- JSON encoder and decoder > Encoders and Decoders (cont.)]
-   If *check_circular* is true (the default), then lists, dicts, and
-   custom encoded objects will be checked for circular references
-   during encoding to prevent an infinite recursion (which would cause
-   a "RecursionError"). Otherwise, no such check takes place.
-
-   If *allow_nan* is true (the default), then "NaN", "Infinity", and
-   "-Infinity" will be encoded as such.  This behavior is not JSON
-   specification compliant, but is consistent with most JavaScript
-   based encoders and decoders.  Otherwise, it will be a "ValueError"
-   to encode such floats.
-
-   If *sort_keys* is true (default: "False"), then the output of
-   dictionaries will be sorted by key; this is useful for regression
-   tests to ensure that JSON serializations can be compared on a day-
-   to-day basis.
+[Chương 6 – Nhận diện thương hiệu | Negative Space Logos | trang 146 (PDF p147)]
+Nội dung trang: Trang trình bày về logo không gian âm với hai ví dụ minh họa: logo con ngựa kết hợp bóng đèn và chuỗi số 1 2 3 4.
+Phần tử trực quan (hình minh họa, giữa): Logo chuỗi số 1 2 3 4 màu trắng trên nền đen, số 3 có khoảng trống tạo hình ngôi sao nhỏ màu trắng, bên cạnh có chữ 'club' màu trắng.
+Chữ trong hình: 1234 club
 ```
 
 
-## C t06 filter_applied={'doc_type': 'tutorial'}
+## C t04 (text) filter_applied=None
 
-Q: Following the tutorial, how do I activate a virtual environment on Windows?
-Gold: [('tut-venv', [1])]
+Q: Layer style là gì?
+Expected: Tập hợp các hiệu ứng được dùng chung cho một layer.
+Gold: [([130], 'Tập hợp các hiệu ứng được dùng chung cho một layer, được gọi là layer style.')]
 
 
-### rank 1 C:tut-venv:p001:c003 score=0.5172 hit=True
-source=python-3.13-docs-text/tutorial/venv.txt page=1 page_id=tut-venv#p001 doc_type=tutorial section=12. Virtual Environments and Packages > 12.2. Creating Virtual Environments
-
+### rank 1 C:colorme3:p130:t00 score=0.5861 hit=True
+source=EBOOK COLORME 3.pdf page=130 printed=129 chapter=ch5 type=text
 ```text
-[12. Virtual Environments and Packages > 12.2. Creating Virtual Environments]
-A common directory location for a virtual environment is ".venv". This
-name keeps the directory typically hidden in your shell and thus out
-of the way while giving it a name that explains why the directory
-exists. It also prevents clashing with ".env" environment variable
-definition files that some tooling supports.
+[Chương 5 – Một số hiệu ứng cơ bản | Color Overlay | trang 129 (PDF p130)]
+Color Overlay
 
-Once you've created a virtual environment, you may activate it.
+Kết hợp các hiệu ứng
+Tập hợp các hiệu ứng được dùng chung cho một layer, được gọi là layer style.
 
-On Windows, run:
+Cặp bài trùng stroke – drop shadow trả về cho chúng ta kết quả như trên. Cùng tìm hiểu thêm tại đây bạn
+nhé:
 
-   tutorial-env\Scripts\activate
-
-On Unix or MacOS, run:
-
-   source tutorial-env/bin/activate
-
-(This script is written for the bash shell.  If you use the **csh** or
-**fish** shells, there are alternate "activate.csh" and
-"activate.fish" scripts you should use instead.)
-
-Activating the virtual environment will change your shell's prompt to
-show what virtual environment you're using, and modify the environment
-so that running "python" will get you that particular version and
-installation of Python. For example:
+https://www.youtube.com/watch?v=d8cJ3WuhoEE&index=2&list=PL9_gOzpFilwol3lyOj3jH4iDBMzVIPrea
 ```
 
 
-### rank 2 C:tut-venv:p001:c002 score=0.4825 hit=False
-source=python-3.13-docs-text/tutorial/venv.txt page=1 page_id=tut-venv#p001 doc_type=tutorial section=12. Virtual Environments and Packages > 12.2. Creating Virtual Environments
-
+### rank 2 C:colorme3:p020:t01 score=0.5694 hit=False
+source=EBOOK COLORME 3.pdf page=20 printed=19 chapter=ch1 type=text
 ```text
-[12. Virtual Environments and Packages > 12.2. Creating Virtual Environments]
-The module used to create and manage virtual environments is called
-"venv".  "venv" will install the Python version from which the command
-was run (as reported by the "--version" option). For instance,
-executing the command with "python3.12" will install version 3.12.
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Khái niệm về lớp (layer) | trang 19 (PDF p20)]
+Như ví dụ trên bạn có thể thấy, chúng ta có 3 layer chồng lên nhau. Layer đầu tiên chỉ gồm những mảng màu
+vàng và chữ trắng. Layer thứ 2 chỉ có hình các bạn đội hộp nắm tay nhau. Và layer cuối cùng là một
+background gổm rất nhiều chuối.
 
-To create a virtual environment, decide upon a directory where you
-want to place it, and run the "venv" module as a script with the
-directory path:
-
-   python -m venv tutorial-env
-
-This will create the "tutorial-env" directory if it doesn't exist, and
-also create directories inside it containing a copy of the Python
-interpreter and various supporting files.
+Bạn đã nắm được khái niệm về layer rồi đúng không? Giờ hãy nắm một số thao tác với layer nhé.
 ```
 
 
-### rank 3 C:tut-venv:p001:c004 score=0.4191 hit=False
-source=python-3.13-docs-text/tutorial/venv.txt page=1 page_id=tut-venv#p001 doc_type=tutorial section=12. Virtual Environments and Packages > 12.2. Creating Virtual Environments
-
+### rank 3 C:colorme3:p021:t00 score=0.5664 hit=False
+source=EBOOK COLORME 3.pdf page=21 printed=20 chapter=ch1 type=text
 ```text
-[12. Virtual Environments and Packages > 12.2. Creating Virtual Environments]
-   $ source ~/envs/tutorial-env/bin/activate
-   (tutorial-env) $ python
-   Python 3.5.1 (default, May  6 2016, 10:59:36)
-     ...
-   >>> import sys
-   >>> sys.path
-   ['', '/usr/local/lib/python35.zip', ...,
-   '~/envs/tutorial-env/lib/python3.5/site-packages']
-   >>>
+[Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số | Các thao tác cơ bản với lớp | trang 20 (PDF p21)]
+Các thao tác cơ bản với lớp
 
-Note that the activated virtual environment does not alter the
-"PYTHONPATH" variable in any way. This may lead to unexpected results
-if the path includes references to code which is incompatible with the
-Python version the virtual environment is using. The best practice is
-to "unset PYTHONPATH" in bash or the equivalent for the shell you are
-using.
+Danh sách phím tắt thao tác với layer
+Tạo Layer (Ctrl + Shift + N)
 
-To deactivate a virtual environment, type:
+Xóa Layer (Chọn layer - Delete)
 
-   deactivate
+Thay đổi thứ tự các layer (Kéo thả trong layers panel)
 
-into the terminal.
+Gộp 2 hoặc nhiều layer lại (chọn Layer, Ctrl + E)
+
+Đặt tên Layer (Double click vào tên layer)
+
+Chọn nhanh Layer (Ấn ctrl hoặc chọn auto-select)
+
+Tạo nhóm các layer (Ctrl + G)
+
+Xem qua clip sau để hiểu hơn về demo layer bạn nhé
+
+https://www.youtube.com/watch?v=1fpfSEF0aJk&index=2&list=PL9_
+gOzpFilwpSPzpPu6Z8gWXID3woj7Wn
+
+Chú ý
+1, Layer Menu chứa hết tất cả các tùy chỉnh cho layer
+
+2, Nhớ chọn đúng layer trước khi xử lý
+```
+
+
+## C t05 (visual) filter_applied=None
+
+Q: Trong bảng màu và cảm nhận (8 ô màu tiếng Anh), màu orange gắn với những từ khóa nào?
+Expected: HEALTH, ATTRACTION, STAND OUT, THIRST, WEALTH, YOUTHFUL, HAPPINESS.
+Gold: [([77], 'HEALTH')]
+
+
+### rank 1 C:colorme3:p077:v00 score=0.669 hit=True
+source=EBOOK COLORME 3.pdf page=77 printed=76 chapter=ch3 type=visual
+```text
+[Chương 3 – Sử dụng màu sắc | Ý nghĩa của màu sắc | trang 76 (PDF p77)]
+Nội dung trang: Trang trình bày ý nghĩa của các màu sắc qua bảng màu với các từ khóa mô tả cảm nhận chung về từng màu.
+Phần tử trực quan (bảng/ô màu, giữa trang): Bảng màu gồm 8 ô màu, mỗi ô màu có tên màu viết tay và các từ khóa mô tả cảm nhận liên quan.
+Chữ trong hình: blue
+TRUST
+SMART
+CALM
+FAITH
+NATURAL
+STABLE
+POWER
+red
+LOVE
+IMMEDIACY
+ENERGY
+SALE
+PASSION
+ANGER
+HUNGER
+black
+BOLD
+RICH
+POWER
+MYSTERY
+ELEGANCE
+EVIL
+STRENGTH
+green
+SOOTHING
+ECO-FREINDLY
+NATURAL
+ENVY
+JEALOUSY
+BALANCE
+RESTFUL
+yellow
+CHEER
+ATTENTION
+CHILDISH
+FRESH
+WARMTH
+ENERGY
+OPTIMISM
+orange
+HEALTH
+ATTRACTION
+STAND OUT
+THIRST
+WEALTH
+YOUTHFUL
+HAPPINESS
+pink
+TENDERNESS
+SENSITIVE
+CARING
+EMOTIONAL
+SYMPATHETIC
+LOVE
+SEXUALITY
+purple
+ROYAL
+MYSTERIOUS
+ARROGANT
+LUXURY
+CHILDISH
+CREATIVE
+SADNESS
+Dữ liệu: xanh dương: TRUST, SMART, CALM, FAITH, NATURAL, STABLE, POWER | đỏ: LOVE, IMMEDIACY, ENERGY, SALE, PASSION, ANGER, HUNGER | đen: BOLD, RICH, POWER, MYSTERY, ELEGANCE, EVIL, STRENGTH | xanh lá: SOOTHING, ECO-FREINDLY, NATURAL, ENVY, JEALOUSY, BALANCE, RESTFUL | vàng: CHEER, ATTENTION, CHILDISH, FRESH, WARMTH, ENERGY, OPTIMISM | cam: HEALTH, ATTRACTION, STAND OUT, THIRST, WEALTH, YOUTHFUL, HAPPINESS | hồng: TENDERNESS, SENSITIVE, CARING, EMOTIONAL, SYMPATHETIC, LOVE, SEXUALITY | tím: ROYAL, MYSTERIOUS, ARROGANT, LUXURY, CHILDISH, CREATIVE, SADNESS
+```
+
+
+### rank 2 C:colorme3:p078:v00 score=0.6225 hit=False
+source=EBOOK COLORME 3.pdf page=78 printed=77 chapter=ch3 type=visual
+```text
+[Chương 3 – Sử dụng màu sắc | Ý nghĩa của màu sắc | trang 77 (PDF p78)]
+Nội dung trang: Trang trình bày biểu đồ hướng dẫn cảm xúc màu sắc với các ví dụ logo thương hiệu tương ứng từng màu.
+Phần tử trực quan (hình minh họa, giữa/trái): Biểu đồ COLOR EMOTION GUIDE phân loại các cảm xúc theo màu sắc với các ví dụ logo thương hiệu tương ứng.
+Chữ trong hình: COLOR EMOTION GUIDE
+OPTIMISM CLARITY WARMTH
+FRIENDLY CHEERFUL CONFIDENCE
+EXCITEMENT YOUTHFUL BOLD
+CREATIVE IMAGINITIVE WISE
+TRUST DEPENDABLE STRENGTH
+PEACEFUL GROWTH HEALTH
+BALANCE NEUTRAL CALM
+Dữ liệu: màu vàng cam: OPTIMISM, CLARITY, WARMTH | màu cam: FRIENDLY, CHEERFUL, CONFIDENCE | màu đỏ: EXCITEMENT, YOUTHFUL, BOLD | màu tím: CREATIVE, IMAGINITIVE, WISE | màu xanh dương: TRUST, DEPENDABLE, STRENGTH | màu xanh lá: PEACEFUL, GROWTH, HEALTH | màu xám: BALANCE, NEUTRAL, CALM; các logo thương hiệu tương ứng màu sắc như Nikon, UPS, Google (vàng); CocaCola, Nintendo (đỏ); Dell, Facebook (xanh dương); Whole Foods, Animal Planet (xanh lá); Apple, Wikipedia (xám); McDonald's, Shell (vàng-cam); nhiều logo khác phân bố theo màu sắc.
+```
+
+
+### rank 3 C:colorme3:p070:v00 score=0.5731 hit=False
+source=EBOOK COLORME 3.pdf page=70 printed=69 chapter=ch3 type=visual
+```text
+[Chương 3 – Sử dụng màu sắc | Dùng 2 màu – Màu bổ túc | trang 69 (PDF p70)]
+Nội dung trang: Trang trình bày về màu bổ túc, màu tương phản và ví dụ bộ nhận diện thương hiệu TPBank sử dụng màu vàng và tím.
+Phần tử trực quan (sơ đồ, giữa): 6 vòng tròn màu minh họa các cặp màu bổ túc với mũi tên chỉ cặp màu đối nhau trên vòng tròn màu.
+Chữ trong hình: RED + GREEN | RED-ORANGE + BLUE-GREEN | ORANGE + BLUE | YELLOW-ORANGE + BLUE-PURPLE | YELLOW + PURPLE | YELLOW-GREEN + RED-PURPLE
+Dữ liệu: vòng 1: đỏ và xanh lá | vòng 2: đỏ cam và xanh lơ | vòng 3: cam và xanh dương | vòng 4: vàng cam và xanh tím | vòng 5: vàng và tím | vòng 6: vàng xanh và đỏ tím
+```
+
+
+## C t06 (visual) filter_applied={'chapter': 'ch6'}
+
+Q: (Đang đọc chương nhận diện thương hiệu) Trong bảng màu cho logo, nhóm tính từ 'Uy quyền, đỉnh đạc, an toàn, đáng tin cậy' được đặt trên thanh màu gì?
+Expected: Xanh dương.
+Gold: [([136], 'xanh dương')]
+
+
+### rank 1 C:colorme3:p136:t00 score=0.7126 hit=False
+source=EBOOK COLORME 3.pdf page=136 printed=135 chapter=ch6 type=text
+```text
+[Chương 6 – Nhận diện thương hiệu | Logo – Phân loại | trang 135 (PDF p136)]
+Logo – Phân loại
+
+Trang trọng, đặc biệt, mạnh mẽ, quyền lực, tinh tế, truyền thống
+
+Uy quyền, đỉnh đạc, an toàn, đáng tin cậy, truyền thống, ổn định, trung thành
+
+Cổ điển, lợi ích, trần tục, giàu sang, truyền thống, bảo thủ
+
+Ảm đạm, quyền lực, thực tế, tâm linh, tin tưởng
+
+Yên tĩnh, lành mạnh, khoẻ khoắn, ổn định, thèm muốn
+
+Nữ tính, ngây thơ, dịu dàng, khoẻ mạnh, trẻ trung
+
+Tinh tế, tâm lý, giàu sang, hoàng tộc, trẻ trung, bí ẩn
+
+Hung hăng, mạnh mẽ, bền bỉ, đầy sức sống, kinh sợ
+
+Yên vui, nhiều quyền hành
+
+Hãy nhớ chọn màu cho logo
+Bạn vẫn chưa quên ý nghĩa của màu sắc đúng không?
+```
+
+
+### rank 2 C:colorme3:p136:v00 score=0.6966 hit=True
+source=EBOOK COLORME 3.pdf page=136 printed=135 chapter=ch6 type=visual
+```text
+[Chương 6 – Nhận diện thương hiệu | Logo – Phân loại | trang 135 (PDF p136)]
+Nội dung trang: Trang trình bày phân loại ý nghĩa màu sắc trong logo qua các thanh màu kèm mô tả.
+Phần tử trực quan (bảng/ô màu, giữa/trái): Các thanh màu kèm mô tả ý nghĩa màu sắc trong logo
+Chữ trong hình: Trang trọng, đặc biệt, mạnh mẽ, quyền lực, tinh tế, truyền thống
+Uy quyền, đỉnh đạc, an toàn, đáng tin cậy, truyền thống, ổn định, trung thành
+Cổ điển, lợi ích, trần tục, giàu sang, truyền thống, bảo thủ
+Ảm đạm, quyền lực, thực tế, tâm linh, tin tưởng
+Yên tĩnh, lành mạnh, khoẻ khoắn, ổn định, thèm muốn
+Nữ tính, ngây thơ, dịu dàng, khoẻ mạnh, trẻ trung
+Tinh tế, tâm lý, giàu sang, hoàng tộc, trẻ trung, bí ẩn
+Hung hăng, mạnh mẽ, bền bỉ, đầy sức sống, kinh sợ
+Yên vui, nhiều quyền hành
+Dữ liệu: đen: Trang trọng, đặc biệt, mạnh mẽ, quyền lực, tinh tế, truyền thống | xanh dương: Uy quyền, đỉnh đạc, an toàn, đáng tin cậy, truyền thống, ổn định, trung thành | vàng nhạt: Cổ điển, lợi ích, trần tục, giàu sang, truyền thống, bảo thủ | xám: Ảm đạm, quyền lực, thực tế, tâm linh, tin tưởng | xanh lá đậm: Yên tĩnh, lành mạnh, khoẻ khoắn, ổn định, thèm muốn | hồng: Nữ tính, ngây thơ, dịu dàng, khoẻ mạnh, trẻ trung | tím: Tinh tế, tâm lý, giàu sang, hoàng tộc, trẻ trung, bí ẩn | đỏ: Hung hăng, mạnh mẽ, bền bỉ, đầy sức sống, kinh sợ | cam: Yên vui, nhiều quyền hành
+```
+
+
+### rank 3 C:colorme3:p140:v00 score=0.6672 hit=False
+source=EBOOK COLORME 3.pdf page=140 printed=139 chapter=ch6 type=visual
+```text
+[Chương 6 – Nhận diện thương hiệu | Logo – Chú ý | trang 139 (PDF p140)]
+Nội dung trang: Trang này trình bày các tiêu chí để tự kiểm tra và đánh giá logo gồm Durable, Meaningful và Flexible.
+Phần tử trực quan (hình minh họa, giữa/trung tâm): Ba vòng tròn xếp ngang, mỗi vòng tròn chứa một từ: Durable, Meaningful, Flexible
+Chữ trong hình: Durable | Meaningful | Flexible
+```
+
+
+## C t07 (text) filter_applied={'chapter': 'appendix'}
+
+Q: (Đang xem phụ lục phím tắt) Phím tắt nào dùng để nhân đôi Layer?
+Expected: CTRL + J.
+Gold: [([174], 'CTRL + J: Nhân đôi Layer')]
+
+
+### rank 1 C:colorme3:p174:t00 score=0.6951 hit=True
+source=EBOOK COLORME 3.pdf page=174 printed=173 chapter=appendix type=text
+```text
+[Phụ lục và lời kết | Danh sách phím tắt | trang 173 (PDF p174)]
+Danh sách phím tắt
+
+Nhóm Phím Tắt Hệ Thống FILE
+- CTRL + N (New): Tạo File mới
+- CTRL + O (Open): Mở file
+- CTRL + ALT + O (Open As): Mở file từ Adobe Bridge
+- CTRL + W (Close): Đóng File
+- CTRL + S (Save): Lưu file
+- CTRL + SHIFT + S (Save As): Lưu ra các dạng khác
+- CTRL + ALT + S (Save a Copy): Lưu thêm 1 bản copy
+- CTRL + P (Print): In ảnh
+Nhóm Lệnh Thao Tác Với Layer
+- CTRL + SHIFT + N: Tạo Layer mới
+- CTRL + J: Nhân đôi Layer
+- CTRL + SHIFT + J: Cắt Layer
+- CTRL + G: Tạo nhóm Layer
+- CTRL + SHIFT + G: Bỏ nhóm Layer
+- CTRL + SHIFT + ]: Chuyển Layer lên trên cùng
+- CTRL + ]: Chuyển Layer lên trên
+- CTRL + [: Chuyển Layer xuống dưới
+- CTRL + SHIFT + [: Chuyển Layer xuống dưới cùng
+- CTRL + E: Ghép các Layer được chọn
+```
+
+
+### rank 2 C:colorme3:p174:t01 score=0.6486 hit=False
+source=EBOOK COLORME 3.pdf page=174 printed=173 chapter=appendix type=text
+```text
+[Phụ lục và lời kết | Danh sách phím tắt | trang 173 (PDF p174)]
+- CTRL + SHIFT + E: Ghép tất cả các Layer
+Các Lệnh Chọn SELECT Trong Photoshop
+- CTRL + A: Chọn tất cả
+- CTRL + D: Bỏ vùng chọn
+- CTRL + SHIFT + D: Chọn lại vùng chọn
+- CTRL + SHIFT + I: Nghịch đảo vùng chọn
+- CTRL + ALT + D: Mờ biên vùng chọn
+- CTRL + F: Lặp lại Filter cuối cùng
+- CTRL + SHIFT + F: Chỉnh Opacity Brush
+```
+
+
+### rank 3 C:colorme3:p174:v00 score=0.6436 hit=True
+source=EBOOK COLORME 3.pdf page=174 printed=173 chapter=appendix type=visual
+```text
+[Phụ lục và lời kết | Danh sách phím tắt | trang 173 (PDF p174)]
+Nội dung trang: Trang liệt kê danh sách các phím tắt trong Photoshop theo nhóm chức năng.
+Phần tử trực quan (hình, giữa/trái): Danh sách phím tắt trong Photoshop được chia thành ba nhóm: Nhóm Phím Tắt Hệ Thống FILE, Nhóm Lệnh Thao Tác Với Layer, Các Lệnh Chọn SELECT Trong Photoshop. Mỗi nhóm gồm các phím tắt với tổ hợp phím và chức năng tương ứng.
+Chữ trong hình: Danh sách phím tắt
+Nhóm Phím Tắt Hệ Thống FILE
+- CTRL + N (New): Tạo File mới
+- CTRL + O (Open): Mở file
+- CTRL + ALT + O (Open As): Mở file từ Adobe Bridge
+- CTRL + W (Close): Đóng File
+- CTRL + S (Save): Lưu file
+- CTRL + SHIFT + S (Save As): Lưu ra các dạng khác
+- CTRL + ALT + S (Save a Copy): Lưu thêm 1 bản copy
+- CTRL + P (Print): In ảnh
+Nhóm Lệnh Thao Tác Với Layer
+- CTRL + SHIFT + N: Tạo Layer mới
+- CTRL + J: Nhân đôi Layer
+- CTRL + SHIFT + J: Cắt Layer
+- CTRL + G: Tạo nhóm Layer
+- CTRL + SHIFT + G: Bỏ nhóm Layer
+- CTRL + SHIFT + ]: Chuyển Layer lên trên cùng
+- CTRL + ]: Chuyển Layer lên trên
+- CTRL + [: Chuyển Layer xuống dưới
+- CTRL + SHIFT + [: Chuyển Layer xuống dưới cùng
+- CTRL + E: Ghép các Layer được chọn
+- CTRL + SHIFT + E: Ghép tất cả các Layer
+Các Lệnh Chọn SELECT Trong Photoshop
+- CTRL + A: Chọn tất cả
+- CTRL + D: Bỏ vùng chọn
+- CTRL + SHIFT + D: Chọn lại vùng chọn
+- CTRL + SHIFT + I: Nghịch đảo vùng chọn
+- CTRL + ALT + D: Mờ biên vùng chọn
+- CTRL + F: Lặp lại Filter cuối cùng
+- CTRL + SHIFT + F: Chỉnh Opacity Brush
 ```

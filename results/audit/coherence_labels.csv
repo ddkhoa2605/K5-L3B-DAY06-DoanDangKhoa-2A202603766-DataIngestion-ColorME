@@ -1,31 +1,31 @@
-position,strategy,chunk_id,score_0_2,reason,reviewed_by_student
-lib-csv#p002@745,A,A:lib-csv:p002:c001,1,"Starts mid-word (""l *dialect*""), ends mid-word (""Pa""); subject csv.reader() is missing, sentence about fmtparams readable",agree
-lib-csv#p002@745,B,B:lib-csv:p002:c000,2,Whole csv.reader() description with heading prefix; self-contained,agree
-lib-csv#p002@745,C,C:lib-csv:p002:c000,2,Same chunk as B,agree
-lib-functools#p002@822,A,A:lib-functools:p002:c001,1,"Starts inside a code example; target sentence about cached_property lookups is cut (""When it d"")",agree
-lib-functools#p002@822,B,B:lib-functools:p002:c001,2,Full paragraph on when cached_property runs and how to clear it; subject named,agree
-lib-functools#p002@822,C,C:lib-functools:p002:c001,2,Same chunk as B,agree
-lib-json#p002@1303,A,A:lib-json:p002:c002,1,"Starts mid-identifier (""gIO(""); decoding example complete but its first lines missing",agree
-lib-json#p002@1303,B,B:lib-json:p002:c001,2,Whole 'Decoding JSON' + 'Customizing decoding' examples intact,agree
-lib-json#p002@1303,C,C:lib-json:p002:c001,2,Same chunk as B,agree
-lib-venv#p002@740,A,A:lib-venv:p002:c001,1,"Starts mid-sentence (subject 'venv' missing), ends ""virtual en""",agree
-lib-venv#p002@740,B,B:lib-venv:p002:c000,2,Complete explanation of what python -m venv creates,agree
-lib-venv#p002@740,C,C:lib-venv:p002:c000,2,Same chunk as B,agree
-tut-controlflow#p002@970,A,A:tut-controlflow:p002:c002,1,Starts in example output; 'In most such cases' refers to context partially cut; ends mid-sentence,agree
-tut-controlflow#p002@970,B,B:tut-controlflow:p002:c000,2,range() explanation + complete examples up to the position,agree
-tut-controlflow#p002@970,C,C:tut-controlflow:p002:c000,2,Same chunk as B,agree
-tut-datastructures#p002@812,A,A:tut-datastructures:p002:c001,1,"Code example cut on both ends (""fruits.sor"")",agree
-tut-datastructures#p002@812,B,B:tut-datastructures:p002:c001,2,Full list-methods example plus the explanatory paragraph,agree
-tut-datastructures#p002@812,C,C:tut-datastructures:p002:c001,2,Same chunk as B,agree
-tut-errors#p002@861,A,A:tut-errors:p002:c001,1,"Bullet list of how try works cut mid-bullet (""If an exception occurs during execution of the"")",agree
-tut-errors#p002@861,B,B:tut-errors:p002:c000,1,"Intro + first 2 bullets complete, but the 'try works as follows' list continues in next chunk (bullets 3-4 missing)",agree
-tut-errors#p002@861,C,C:tut-errors:p002:c000,1,Same chunk as B,agree
-tut-inputoutput#p002@917,A,A:tut-inputoutput:p002:c001,1,"Starts mid-word, ends mid-word (""funct"")",agree
-tut-inputoutput#p002@917,B,B:tut-inputoutput:p002:c001,2,Full str()/repr() paragraph; ends with dangling 'Some examples:' but idea is complete,agree
-tut-inputoutput#p002@917,C,C:tut-inputoutput:p002:c001,2,Same chunk as B,agree
-tut-modules#p002@1448,A,A:tut-modules:p002:c003,1,Has 'from fibo import *' and its explanation but starts/ends mid-sentence,agree
-tut-modules#p002@1448,B,B:tut-modules:p002:c001,1,Ends right after 'from fibo import *' example; the explanation (names starting with _ excluded) is in the next chunk,agree
-tut-modules#p002@1448,C,C:tut-modules:p002:c001,1,Same chunk as B,agree
-tut-venv#p002@837,A,A:tut-venv:p002:c001,1,Starts with stray '.)'; pin-version sentence + example present,agree
-tut-venv#p002@837,B,B:tut-venv:p002:c000,1,Ends at 'followed by == and the version number:' - the example command is in the next chunk,agree
-tut-venv#p002@837,C,C:tut-venv:p002:c000,1,Same chunk as B,agree
+strategy,position,kind,page,score_0_2,reason,labeler,reviewed_by_student
+A,POS01,text,19,2,"Chunk = cả trang 'Khởi tạo file mới', đủ ngữ cảnh",agent,
+A,POS02,text,55,2,"Cả trang 'Ô cầu vồng', câu tự hiểu",agent,
+A,POS03,text,93,2,Trang nhóm font Script đủ danh sách + mô tả,agent,
+A,POS04,text,129,2,"Trang Color Overlay ngắn, đầy đủ",agent,
+A,POS05,text,165,2,Đoạn Metro Design trọn ý,agent,
+A,POS06,figure,74,0,Trang chỉ có hình (poster Seattle vs Houston) -> A không có chunk nào,agent,
+A,POS07,figure,85,0,Trang chỉ có hình pastel -> không có chunk,agent,
+A,POS08,figure,121,0,Trang tác phẩm học viên chỉ có ảnh -> không có chunk,agent,
+A,POS09,figure,144,1,"Chỉ có câu định nghĩa logo hình khối, không mô tả 6 logo ví dụ",agent,
+A,POS10,figure,178,0,Trang ảnh lớp học -> không có chunk,agent,
+B,POS01,text,19,2,giống A,agent,
+B,POS02,text,55,2,giống A,agent,
+B,POS03,text,93,2,giống A (thêm chunk visual mẫu font),agent,
+B,POS04,text,129,2,giống A,agent,
+B,POS05,text,165,2,giống A,agent,
+B,POS06,figure,74,2,Mô tả poster 2 nửa xanh lá/đỏ cam tự hiểu được; prefix thiếu tiêu đề trang (trang không có chữ),agent,
+B,POS07,figure,85,2,"2 chunk mô tả 2 ảnh pastel, mỗi chunk tự hiểu",agent,
+B,POS08,figure,121,2,Mô tả biển quảng cáo xe đạp + chữ trong hình đầy đủ,agent,
+B,POS09,figure,144,2,Mô tả 6 logo + chữ trong hình,agent,
+B,POS10,figure,178,2,Mô tả ảnh lớp học tự hiểu,agent,
+C,POS01,text,19,2,C dùng đúng chunk của B: giống A,agent,
+C,POS02,text,55,2,C dùng đúng chunk của B: giống A,agent,
+C,POS03,text,93,2,C dùng đúng chunk của B: giống A (thêm chunk visual mẫu font),agent,
+C,POS04,text,129,2,C dùng đúng chunk của B: giống A,agent,
+C,POS05,text,165,2,C dùng đúng chunk của B: giống A,agent,
+C,POS06,figure,74,2,C dùng đúng chunk của B: Mô tả poster 2 nửa xanh lá/đỏ cam tự hiểu được; prefix thiếu tiêu đề trang (trang không có chữ),agent,
+C,POS07,figure,85,2,"C dùng đúng chunk của B: 2 chunk mô tả 2 ảnh pastel, mỗi chunk tự hiểu",agent,
+C,POS08,figure,121,2,C dùng đúng chunk của B: Mô tả biển quảng cáo xe đạp + chữ trong hình đầy đủ,agent,
+C,POS09,figure,144,2,C dùng đúng chunk của B: Mô tả 6 logo + chữ trong hình,agent,
+C,POS10,figure,178,2,C dùng đúng chunk của B: Mô tả ảnh lớp học tự hiểu,agent,

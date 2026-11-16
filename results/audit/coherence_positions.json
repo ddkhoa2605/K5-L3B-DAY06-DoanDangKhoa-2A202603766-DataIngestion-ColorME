@@ -1,0 +1,62 @@
+[
+  {
+    "pos": "POS01",
+    "kind": "text",
+    "page": 19,
+    "line": "Và thật may mắn, tất cả những thông số quan trọng như hệ màu, độ phân giải, kích thước ảnh bạn đều đã"
+  },
+  {
+    "pos": "POS02",
+    "kind": "text",
+    "page": 55,
+    "line": "những năm 2008."
+  },
+  {
+    "pos": "POS03",
+    "kind": "text",
+    "page": 93,
+    "line": "Script tự do phóng khoáng"
+  },
+  {
+    "pos": "POS04",
+    "kind": "text",
+    "page": 129,
+    "line": "Chắc hẳn bạn còn nhớ trào lưu “Ngưng ngược đãi” làm mưa làm gió nhiều ngày trên mạng xã hội?"
+  },
+  {
+    "pos": "POS05",
+    "kind": "text",
+    "page": 165,
+    "line": "Flat Design, ban đầu còn được gọi là Metro Design. Giải thích cho cái tên này, kĩ sư trưởng của Windows 8 cho"
+  },
+  {
+    "pos": "POS06",
+    "kind": "figure",
+    "page": 74,
+    "line": null
+  },
+  {
+    "pos": "POS07",
+    "kind": "figure",
+    "page": 85,
+    "line": null
+  },
+  {
+    "pos": "POS08",
+    "kind": "figure",
+    "page": 121,
+    "line": null
+  },
+  {
+    "pos": "POS09",
+    "kind": "figure",
+    "page": 144,
+    "line": null
+  },
+  {
+    "pos": "POS10",
+    "kind": "figure",
+    "page": 178,
+    "line": null
+  }
+]

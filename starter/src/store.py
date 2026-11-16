@@ -8,7 +8,20 @@ import chromadb
 
 from .models import Chunk
 
-ALLOWED_FILTERS = {"doc_type", "document_id", "python_version"}
+ALLOWED_FILTERS = {"chapter", "content_type", "page", "document_id", "visual_kind"}
+COLLECTION_PREFIX = "colorme3_"
+
+
+def build_where(filters: dict[str, Any] | None):
+    if not filters:
+        return None
+    bad = set(filters) - ALLOWED_FILTERS
+    if bad:
+        raise ValueError(f"filter fields not allowed: {bad}")
+    items = []
+    for k, v in filters.items():
+        items.append({k: {"$in": list(v)}} if isinstance(v, (list, tuple)) else {k: {"$eq": v}})
+    return items[0] if len(items) == 1 else {"$and": items}
 
 
 class ChromaStore:
@@ -19,12 +32,10 @@ class ChromaStore:
         self.client = chromadb.PersistentClient(path=str(self.path))
 
     def collection(self, strategy: str):
-        name = f"pydocs313_{strategy}"
+        name = f"{COLLECTION_PREFIX}{strategy}"
         col = self.client.get_or_create_collection(
-            name=name,
-            configuration={"hnsw": {"space": "cosine"}},
-            metadata={"embedding_model": self.model_name, "dimensions": self.dimensions},
-        )
+            name=name, configuration={"hnsw": {"space": "cosine"}},
+            metadata={"embedding_model": self.model_name, "dimensions": self.dimensions})
         meta = col.metadata or {}
         if meta.get("embedding_model") not in (None, self.model_name):
             raise RuntimeError(f"{name} was built with {meta.get('embedding_model')}; "
@@ -52,8 +63,7 @@ class ChromaStore:
             col.delete(ids=stale)
         metas = []
         for c in chunks:
-            m = {"document_id": c.document_id, "source": c.source, "page": c.page,
-                 "strategy": strategy}
+            m = {"document_id": c.document_id, "source": c.source, "page": c.page, "strategy": strategy}
             m.update({k: v for k, v in c.metadata.items() if isinstance(v, (str, int, float, bool))})
             metas.append(m)
         for i in range(0, len(ids), 1000):
@@ -63,15 +73,8 @@ class ChromaStore:
 
     def search(self, strategy: str, query_vector: list[float], top_k: int = 3,
                filters: dict[str, Any] | None = None) -> list[dict[str, Any]]:
-        where = None
-        if filters:
-            bad = set(filters) - ALLOWED_FILTERS
-            if bad:
-                raise ValueError(f"filter fields not allowed: {bad}")
-            items = [{k: {"$eq": v}} for k, v in filters.items()]
-            where = items[0] if len(items) == 1 else {"$and": items}
         res = self.collection(strategy).query(
-            query_embeddings=[query_vector], n_results=top_k, where=where,
+            query_embeddings=[query_vector], n_results=top_k, where=build_where(filters),
             include=["documents", "metadatas", "distances"])
         out = []
         for rank, (cid, doc, meta, dist) in enumerate(zip(

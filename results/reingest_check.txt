@@ -1,3 +1,4 @@
-first ingest : {'before': 0, 'after': 10, 'stale_deleted': 0}  (chunks=10)
-same version : {'before': 10, 'after': 10, 'stale_deleted': 0}  duplicates=NO
-changed doc  : {'before': 10, 'after': 8, 'stale_deleted': 2}  (new chunks=8) stale removed=OK
+first ingest : {'before': 0, 'after': 29, 'stale_deleted': 0}  (chunks=29)
+same version : {'before': 29, 'after': 29, 'stale_deleted': 0}  duplicates=NO
+changed doc  : {'before': 29, 'after': 28, 'stale_deleted': 1}  (new chunks=28) stale removed=OK
+embedding tokens used: 16361 ($0.000327)

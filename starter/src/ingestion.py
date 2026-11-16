@@ -1,180 +1,134 @@
-"""Read and normalize the Python 3.13 documentation (plain-text build).
+"""Read and normalize the colorME ebook PDF (EBOOK COLORME 3.pdf, 183 pages).
 
-The official text archive has no physical pages, so each document is split in
-reading order into *page units*: consecutive heading-delimited sections are
-merged until the unit holds at least ``MIN_PAGE_CHARS`` normalized characters
-(GUIDE.md §1). A section is never split across two units, so every unit starts
-on a heading and can be traced back to it.
+Every PDF page becomes one ``DocumentPage`` (page = 1-based PDF page index; the
+number printed in the red footer is ``page - 1`` and is kept as ``printed_page``).
+
+Per page we keep:
+- normalized text (PyMuPDF, reading order ``sort=True``; the footer page number is removed)
+- ``page_title`` (the text in the red title bar) and the chapter it belongs to
+- bounding boxes of *content* images (template images that repeat on >=10 pages,
+  i.e. the colorME header logo and chapter-cover background, are excluded)
+- a PNG render of the page (input for the vision step and for checking evidence)
 """
 from __future__ import annotations
 
+import collections
 import hashlib
 import re
 import unicodedata
-import zipfile
-from dataclasses import dataclass
 from pathlib import Path
 
 from .models import DocumentPage
 
-PYTHON_VERSION = "3.13"
-ARCHIVE_URL = "https://docs.python.org/3.13/archives/python-3.13-docs-text.zip"
-ARCHIVE_PREFIX = "python-3.13-docs-text/"
-MIN_PAGE_CHARS = 1500
+DOCUMENT_ID = "colorme-ebook-3"
+PDF_NAME = "EBOOK COLORME 3.pdf"
+RENDER_DPI = 120
+TEMPLATE_MIN_PAGES = 10  # an image xref used on >= 10 pages is page decoration
 
-# document_id -> (path inside archive without .txt, doc_type)
-CORPUS: dict[str, tuple[str, str]] = {
-    "tut-controlflow": ("tutorial/controlflow", "tutorial"),
-    "tut-datastructures": ("tutorial/datastructures", "tutorial"),
-    "tut-errors": ("tutorial/errors", "tutorial"),
-    "tut-modules": ("tutorial/modules", "tutorial"),
-    "tut-inputoutput": ("tutorial/inputoutput", "tutorial"),
-    "tut-venv": ("tutorial/venv", "tutorial"),
-    "lib-json": ("library/json", "library"),
-    "lib-csv": ("library/csv", "library"),
-    "lib-functools": ("library/functools", "library"),
-    "lib-venv": ("library/venv", "library"),
+# Chapter titles as printed on the chapter cover pages (MỤC LỤC uses short forms).
+CHAPTER_TITLES = {
+    "front": "Mở đầu (bìa, lời giới thiệu, mục lục)",
+    "ch1": "Chương 1 – Kiến thức cơ bản về thiết kế kĩ thuật số",
+    "ch2": "Chương 2 – Các bố cục thường gặp và ứng dụng",
+    "ch3": "Chương 3 – Sử dụng màu sắc",
+    "ch4": "Chương 4 – Những điều cần biết về Typography",
+    "ch5": "Chương 5 – Một số hiệu ứng cơ bản",
+    "ch6": "Chương 6 – Nhận diện thương hiệu",
+    "ch7": "Chương 7 – Ứng dụng thiết kế CV",
+    "ch8": "Chương 8 – Các xu hướng thiết kế",
+    "appendix": "Phụ lục và lời kết",
 }
 
-# Sphinx text writer underline characters, in heading-level order.
-_UNDERLINE = re.compile(r"^([*=\-~^\"#+])\1{2,}$")
-_LEVEL = {"*": 1, "=": 2, "-": 3}
-
-
-@dataclass
-class Section:
-    level: int
-    title: str
-    path: str      # "8. Errors and Exceptions > 8.3. Handling Exceptions"
-    text: str      # heading lines + body
+_CHAPTER_RE = re.compile(r"^\s*CHƯƠNG\s+(\d+)", re.M)
+_APPENDIX_RE = re.compile(r"^\s*(PHỤ LỤC\s+\d+|LỜI KẾT)", re.M)
 
 
 def normalize_text(text: str) -> str:
-    """NFC-normalize, unify newlines/spaces; keep blank lines and indentation (code)."""
+    """NFC, unify newlines/spaces, collapse runs of spaces inside a line and blank lines."""
     text = unicodedata.normalize("NFC", text)
-    text = text.replace("\r\n", "\n").replace("\r", "\n")
-    text = text.replace(" ", " ").replace("\t", "    ")
-    text = "\n".join(line.rstrip() for line in text.split("\n"))
+    text = text.replace("\r\n", "\n").replace("\r", "\n").replace(" ", " ").replace("\t", " ")
+    text = text.replace("​", "").replace("", "-")
+    lines = [re.sub(r" {2,}", " ", line).strip() for line in text.split("\n")]
+    text = "\n".join(lines)
     text = re.sub(r"\n{3,}", "\n\n", text)
-    return text.strip() + "\n"
+    return text.strip()
 
 
-def extract_corpus(archive: Path, out_dir: Path) -> list[dict]:
-    """Copy the selected files out of the archive; return raw-file records."""
-    out_dir.mkdir(parents=True, exist_ok=True)
-    records = []
-    with zipfile.ZipFile(archive) as zf:
-        for doc_id, (rel, doc_type) in CORPUS.items():
-            raw = zf.read(f"{ARCHIVE_PREFIX}{rel}.txt")
-            target = out_dir / f"{rel.replace('/', '__')}.txt"
-            target.write_bytes(raw)
-            records.append({"document_id": doc_id, "rel": rel, "doc_type": doc_type,
-                            "path": target, "sha256": hashlib.sha256(raw).hexdigest(),
-                            "raw_bytes": len(raw)})
-    return records
+def _strip_footer_number(text: str, printed: int) -> str:
+    """Remove the footer page number (last non-empty line equal to the printed number)."""
+    lines = text.rstrip().split("\n")
+    while lines and not lines[-1].strip():
+        lines.pop()
+    if lines and lines[-1].strip() == str(printed):
+        lines.pop()
+    return "\n".join(lines).strip()
 
 
-def parse_sections(text: str) -> list[Section]:
-    """Split normalized text at Sphinx-style underlined headings."""
-    lines = text.split("\n")
-    heads: list[tuple[int, int, str]] = []  # (line index, level, title)
-    for i in range(len(lines) - 1):
-        title, under = lines[i], lines[i + 1]
-        m = _UNDERLINE.match(under)
-        if (m and title.strip() and not title.startswith(" ")
-                and len(under) >= len(title.strip()) and not _UNDERLINE.match(title)):
-            heads.append((i, _LEVEL.get(m.group(1), 4), title.strip()))
-    sections: list[Section] = []
-    stack: list[tuple[int, str]] = []
-    if not heads or heads[0][0] > 0:
-        end = heads[0][0] if heads else len(lines)
-        sections.append(Section(0, "", "", "\n".join(lines[:end])))
-    for n, (start, level, title) in enumerate(heads):
-        end = heads[n + 1][0] if n + 1 < len(heads) else len(lines)
-        while stack and stack[-1][0] >= level:
-            stack.pop()
-        stack.append((level, title))
-        path = " > ".join(t for _, t in stack)
-        sections.append(Section(level, title, path, "\n".join(lines[start:end]).strip("\n")))
-    return [s for s in sections if s.text.strip()]
+def template_xrefs(doc) -> set[int]:
+    count = collections.Counter()
+    for page in doc:
+        for xref in {img[0] for img in page.get_images(full=True)}:
+            count[xref] += 1
+    return {x for x, c in count.items() if c >= TEMPLATE_MIN_PAGES}
 
 
-LONG_SECTION_CHARS = 3000
-
-
-def _split_long_sections(sections: list[Section]) -> list[Section]:
-    """A section longer than LONG_SECTION_CHARS (e.g. a library page with no
-    sub-headings) is cut at paragraph boundaries into parts of >= MIN_PAGE_CHARS.
-    Continuation parts keep the section path (marked " (cont.)")."""
-    out: list[Section] = []
-    for sec in sections:
-        if len(sec.text) <= LONG_SECTION_CHARS:
-            out.append(sec)
+def content_image_regions(page, template: set[int]) -> list[list[float]]:
+    """Bounding boxes (PDF points, clipped to the page) of non-template images."""
+    regions = []
+    W, H = page.rect.width, page.rect.height
+    for img in page.get_images(full=True):
+        if img[0] in template:
             continue
-        parts: list[str] = []
-        buf: list[str] = []
-        for para in sec.text.split("\n\n"):
-            buf.append(para)
-            if len("\n\n".join(buf)) >= MIN_PAGE_CHARS:
-                parts.append("\n\n".join(buf))
-                buf = []
-        if buf:
-            if parts:
-                parts[-1] = parts[-1] + "\n\n" + "\n\n".join(buf)
-            else:
-                parts.append("\n\n".join(buf))
-        for i, part in enumerate(parts):
-            path = sec.path if i == 0 else f"{sec.path} (cont.)"
-            out.append(Section(sec.level, sec.title, path, part))
-    return out
+        for r in page.get_image_rects(img[0]):
+            box = [max(0, r.x0), max(0, r.y0), min(W, r.x1), min(H, r.y1)]
+            if box[2] - box[0] > 5 and box[3] - box[1] > 5:
+                regions.append([round(v, 1) for v in box])
+    return regions
 
 
-def split_pages(document_id: str, source: str, doc_type: str, url: str,
-                text: str) -> tuple[list[DocumentPage], list[str]]:
-    """Merge consecutive sections into page units of >= MIN_PAGE_CHARS chars."""
+def load_pdf(pdf_path: Path, render_dir: Path | None = None) -> tuple[list[DocumentPage], list[str], dict]:
+    import pymupdf  # PyMuPDF
+
     errors: list[str] = []
-    sections = _split_long_sections(parse_sections(text))
-    groups: list[list[Section]] = []
-    current: list[Section] = []
-    for sec in sections:
-        current.append(sec)
-        if sum(len(s.text) for s in current) >= MIN_PAGE_CHARS:
-            groups.append(current)
-            current = []
-    if current:  # short tail joins the previous unit so every unit is >= MIN
-        if groups:
-            groups[-1].extend(current)
-        else:
-            groups.append(current)
-            errors.append(f"{document_id}: whole document shorter than {MIN_PAGE_CHARS} chars")
-    pages = []
-    for n, group in enumerate(groups, start=1):
-        body = "\n\n".join(s.text for s in group)
-        if not body.strip():
-            errors.append(f"{document_id} page {n}: empty")
-            continue
+    raw = pdf_path.read_bytes()
+    doc = pymupdf.open(stream=raw, filetype="pdf")
+    template = template_xrefs(doc)
+    chapter = "front"
+    pages: list[DocumentPage] = []
+    if render_dir:
+        render_dir.mkdir(parents=True, exist_ok=True)
+    for i, pg in enumerate(doc):
+        n = i + 1
+        printed = n - 1
+        try:
+            text = normalize_text(pg.get_text("text", sort=True))
+        except Exception as exc:  # keep going, record the page as failed
+            errors.append(f"page {n}: text extraction failed: {exc}")
+            text = ""
+        text = _strip_footer_number(text, printed)
+        m = _CHAPTER_RE.search(text)
+        if m:
+            chapter = f"ch{int(m.group(1))}"
+        elif _APPENDIX_RE.search(text):
+            chapter = "appendix"
+        first_line = next((ln for ln in text.split("\n") if ln.strip()), "")
+        regions = content_image_regions(pg, template)
+        render_rel = None
+        if render_dir:
+            out = render_dir / f"p{n:03d}.png"
+            if not out.exists():
+                pg.get_pixmap(dpi=RENDER_DPI).save(out)
+            render_rel = out.name
         pages.append(DocumentPage(
-            document_id=document_id, source=source, page=n, text=body,
+            document_id=DOCUMENT_ID, source=PDF_NAME, page=n, text=text,
             metadata={
-                "doc_type": doc_type, "url": url, "python_version": PYTHON_VERSION,
-                "page_id": f"{document_id}#p{n:03d}",
-                "first_section": group[0].path,
-                "sections": [{"path": s.path, "level": s.level, "chars": len(s.text)} for s in group],
+                "page_id": f"{DOCUMENT_ID}#p{n:03d}", "printed_page": printed,
+                "chapter": chapter, "chapter_title": CHAPTER_TITLES[chapter],
+                "page_title": first_line[:120], "text_chars": len(text),
+                "content_images": len(regions), "image_regions": regions,
+                "drawings": len(pg.get_drawings()), "render": render_rel,
             }))
-    return pages, errors
-
-
-def load_document(record: dict) -> tuple[list[DocumentPage], list[str]]:
-    errors: list[str] = []
-    raw = record["path"].read_bytes()
-    try:
-        text = raw.decode("utf-8")
-    except UnicodeDecodeError as exc:  # record, then keep going with replacement chars
-        errors.append(f"{record['document_id']}: utf-8 decode error {exc}")
-        text = raw.decode("utf-8", errors="replace")
-    text = normalize_text(text)
-    rel = record["rel"]
-    source = f"{ARCHIVE_PREFIX}{rel}.txt"
-    url = f"https://docs.python.org/{PYTHON_VERSION}/{rel}.html"
-    pages, page_errors = split_pages(record["document_id"], source, record["doc_type"], url, text)
-    return pages, errors + page_errors
+    info = {"sha256": hashlib.sha256(raw).hexdigest(), "bytes": len(raw), "page_count": doc.page_count,
+            "pdf_metadata": {k: v for k, v in doc.metadata.items() if v}, "template_xrefs": sorted(template),
+            "page_size_pt": [round(doc[0].rect.width, 1), round(doc[0].rect.height, 1)]}
+    return pages, errors, info
